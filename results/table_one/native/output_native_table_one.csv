@@ -1,0 +1,39 @@
+,CASQ2 Native
+Wavelength,1.116
+Resolution range,53.94  - 1.88 (1.947  - 1.88)
+Space group,P 43 2 2
+Unit cell,62.5329 62.5329 213.189 90 90 90
+Total reflections,799275 (43016)
+Unique reflections,35501 (3425)
+Multiplicity,22.5 (12.6)
+Completeness (%),97.76 (79.77)
+Mean I/sigma(I),14.82 (0.52)
+Wilson B-factor,49.11
+R-merge,0.08401 (6.607)
+R-meas,0.08603 (6.904)
+R-pim,0.01815 (1.948)
+CC1/2,0.999 (0.422)
+CC*,1 (0.77)
+Reflections used in refinement,34746 (2761)
+Reflections used for R-free,1766 (127)
+R-work,0.2140 (0.4883)
+R-free,0.2498 (0.4803)
+CC(work),0.936 (0.626)
+CC(free),0.930 (0.685)
+Number of non-hydrogen atoms,2796
+  macromolecules,2728
+  ligands,35
+  solvent,33
+Protein residues,329
+RMS(bonds),0.009
+RMS(angles),1.27
+Ramachandran favored (%),95.67
+Ramachandran allowed (%),4.33
+Ramachandran outliers (%),0.00
+Rotamer outliers (%),0.00
+Clashscore,4.96
+Average B-factor,82.64
+  macromolecules,82.51
+  ligands,117.84
+  solvent,55.83
+Number of TLS groups,3

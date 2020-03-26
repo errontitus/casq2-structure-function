@@ -1,0 +1,47 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{texshade} % Pretty MSAs. Must be declared before other graphics packages.
+\usepackage{./styles/style_manuscript}
+\usepackage{./styles/style_scientific}
+\usepackage{./styles/style_figures}
+\usepackage{./styles/style_tables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ARTICLE SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./publication/nsmb/front_matter_nsmb.tex}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ARTICLE START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prevent section numbering.
+\setcounter{secnumdepth}{0} % sections are level 1
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BEGIN LINE NUMBERS
+%\linenumbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+\begin{abstract}
+\input{./text/abstract_short.tex}
+\vskip16pt
+%\textbf{KEYWORDS:} Calsequestrin, Calcium Binding Protein, Metal Binding Protein, Excitation-Contraction Coupling, Arrhythmia, Catecholaminergic Polymorphic Ventricular Tachycardia, CPVT.
+\end{abstract}
+\input{./text/body.tex}
+\input{./text/methods.tex}
+\input{./text/acknowledgments.tex}
+\input{./text/author_contributions.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% END LINE NUMBERS
+%\nolinenumbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+% This can be done if you have big figures that come all the way out to the edge of the page. But then other figures are off-center, so it's better to stick with nice 1" margins and then use a special landscape page for any wide figures.
+%\newgeometry{left=1cm,right=1cm}
+%\input{figures_and_tables.tex}
+\input{./figures/figures_and_tables.tex}
+\clearpage
+%\restoregeometry
+\input{./text/bibliography.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document} 

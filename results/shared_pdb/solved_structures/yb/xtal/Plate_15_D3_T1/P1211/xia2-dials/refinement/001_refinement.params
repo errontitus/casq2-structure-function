@@ -1,0 +1,45 @@
+refinement.refine.strategy=individual_adp+individual_adp+occupancies+individual_sites+rigid_body
+
+# Not until Yb added.
+# +group_anomalous
+
+# Refining this way is much slower:
+# refinement.input.xray_data.labels="I(+),SIGI(+),I(-),SIGI(-),merged"
+# So we are going to refine this way instead:
+refinement.input.xray_data.labels="F(+),SIGF(+),F(-),SIGF(-)"
+
+refinement.output.prefix=001_refined
+
+refinement.reference_model {
+  enabled = True 
+  file = Plate_15_D3_T1_P1211_xia2_dials_starting_model.pdb
+}
+
+refinement.input.xray_data.r_free_flags.label = FreeR_flag
+
+# Not until Yb added.
+# refinement.refine {
+#    occupancies {
+#        individual = element Yb
+#    }
+#}
+
+#refinement.refine.anomalous_scatterers {
+#  group {
+#    selection = chain Y
+#    f_prime = -19.7615
+#    f_double_prime = 10.5444
+#    refine = *f_prime *f_double_prime
+#  }
+#}
+
+
+refinement.target_weights {
+  wxc_scale = 0.1
+}
+
+refinement.mask {
+  solvent_radius = 1.0
+  shrink_truncation_radius = 0.8
+}
+

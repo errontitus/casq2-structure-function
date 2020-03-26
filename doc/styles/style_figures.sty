@@ -1,0 +1,154 @@
+\ProvidesPackage{style_figures}
+
+\DeclareUnicodeCharacter{2212}{-}
+
+% Figures are implemented using the caption package and then laid out as tikzpictures 
+
+% https://tex.stackexchange.com/questions/225910/how-to-add-left-top-aligned-letter-to-latex-subcaption-figure
+\usepackage[font=footnotesize,labelfont=bf,justification=justified,singlelinecheck=false]{caption}
+% \captionsetup{compatibility=false}
+% Left-align figure captions by default.
+%\captionsetup{justification=raggedright,singlelinecheck=false}
+% Support subfigures and subcaptions (figure and subfigure functionality superseded by caption and subcaption packages).
+\usepackage[labelformat = empty,position=top]{subcaption}
+% Embed figure graphics.
+\usepackage{graphicx}
+% Clipping graphics objects. Export parameter allows us to use adjustbox keys (functions) with \includegraphics
+\usepackage[export]{adjustbox}
+% Overlay graphics on graphics.
+% \usepackage{tikz, overpic}
+
+% For wide figures, prefer to use a rotated page rather than change the margins.
+\usepackage{pdflscape}
+
+\usepackage[utf8]{inputenc}
+% \usepackage{fontspec} % This line only for XeLaTeX and LuaLaTeX
+\usepackage{pgfplots}
+
+\usepackage{tikz}
+
+% https://tex.stackexchange.com/questions/47059/is-it-possible-to-apply-a-style-to-all-tikz-rectangles
+\tikzset{
+    dashedrectangle/.style args={#1,#2}{
+        draw,
+        black,
+        thick,
+        dash pattern=on 3pt off 2pt,
+        minimum width=#1 cm,
+        minimum height=#2 cm
+    },
+    dashedrectanglefit/.style={
+        draw,
+        black,
+        thick,
+        dash pattern=on 3pt off 2pt
+    },
+    rectanglefit/.style={
+        draw,
+        black,
+        thick
+    },
+    dashed edge/.style={
+        draw,
+        thick,
+        black,
+        dash pattern=on 3pt off 2pt
+    },
+    solid edge/.style={
+        draw,
+        thick,
+        black
+    }
+}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes,shapes.multipart}
+
+\usepackage{environ}
+
+\usepackage{varwidth}
+
+\usepackage{url}
+\usetikzlibrary{positioning}
+
+\usepackage{xparse,xfp}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\defineconstant}{mm}
+ {
+  \cs_new:Npx #1 { \fp_eval:n { #2 } }
+ }
+\ExplSyntaxOff
+
+\usetikzlibrary{arrows,shapes,backgrounds,fit}
+
+% Screen font
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\rowspacer}{
+    \vfill
+    \vspace{5mm}
+}
+
+\newcommand{\rowspacersmall}{
+    \vfill
+    \vspace{2.5mm}
+}
+
+\newcommand{\nospacer}{
+    \vfill
+}
+
+\newcommand{\figurepanela}{\textbf{a}}
+\newcommand{\figurepanelb}{\textbf{b}}
+\newcommand{\figurepanelc}{\textbf{c}}
+\newcommand{\figurepaneld}{\textbf{d}}
+\newcommand{\figurepanele}{\textbf{e}}
+\newcommand{\figurepanelf}{\textbf{f}}
+\newcommand{\figurepanelg}{\textbf{g}}
+\newcommand{\figurepanelh}{\textbf{h}}
+
+\newcommand{\figurepanelcaptiona}{\textbf{a}, }
+\newcommand{\figurepanelcaptionb}{\textbf{b}, }
+\newcommand{\figurepanelcaptionc}{\textbf{c}, }
+\newcommand{\figurepanelcaptiond}{\textbf{d}, }
+\newcommand{\figurepanelcaptione}{\textbf{e}, }
+\newcommand{\figurepanelcaptionf}{\textbf{f}, }
+\newcommand{\figurepanelcaptiong}{\textbf{g}, }
+\newcommand{\figurepanelcaptionh}{\textbf{h}, }
+
+% varwidth container for figures.
+\newenvironment{fullpanelvar}
+    {%\begin{lrbox}{\mybox}
+    \begin{varwidth}[t][][b]{\dimexpr \linewidth-2\fboxsep-2\fboxrule\relax}%
+    }%
+    {\end{varwidth}%\end{lrbox}\fbox{\usebox{\mybox}}
+    }%
+
+% tikzpicture container for figures. Can be used inside a varwidth or on its own.
+\newenvironment{emptypanel}[1]
+    {\textbf{#1}\\
+    \tikzstyle{background grid}=[draw, black!50,step=.5cm]
+    \tikzstyle{every node}=[font=\scriptsize]
+    \begin{tikzpicture}[graphicblock/.style = {draw, anchor=west, inner sep=2}]
+    }
+    {\end{tikzpicture}
+}
+
+\usepackage{etoolbox}
+
+\newcommand*{\figuretitle}[1]{%
+    {\Large\centering%   <--------  will only affect the title because of the grouping (by the
+    \textbf{#1}%              braces before \centering and behind \medskip). If you remove
+    \par\medskip}%            these braces the whole body of a {figure} env will be centered.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% For every picture that defines or uses external nodes, you'll have to
+% apply the 'remember picture' style. To avoid some typing, we'll apply
+% the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]

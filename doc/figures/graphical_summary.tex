@@ -1,0 +1,185 @@
+\newgeometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm}
+\begin{figure}
+\centering
+\figuretitle{Figure~\ref{fig:graphical_summary}}
+    % All about specifying coords: https://stuff.mit.edu/afs/athena/contrib/tex-contrib/beamer/pgf-1.01/doc/generic/pgf/version-for-tex4ht/en/pgfmanualse8.html
+    \tikzset{
+        monomerA/.pic = {
+            \draw[fill=orange,rounded corners] (-0.5,0)  
+            -- ++(0.75,0) 
+            -- ++(0.5,-1) 
+            -- ++(-1.25,0) 
+            -- cycle;
+        }
+    }
+    \tikzset{
+        monomerAmutantIntra/.pic = {
+            \draw[fill=red,rounded corners] (-0.5,0) node(monomerAanchor)[inner sep=14] {}
+            -- ++(0.75,0) 
+            -- ++(0.5,-1) 
+            -- ++(-1.25,0) 
+            -- cycle;
+            \draw[fill=LimeGreen,rounded corners] (-0.5,0) node(monomerAanchor2)[inner sep=14] {} 
+            -- ++(0.625,0) 
+            -- ++(0.5,-1) 
+            -- ++(-1.125,0) 
+            -- cycle;
+            % Was previously using a start to indicate the mutant.
+            % \node[star,star points=5, draw, fill=red,star point ratio=2.25,inner sep=0pt,minimum height=0.5cm] at ([xshift=-0.05cm]monomerAanchor.south east) {};
+        }
+    }
+    \tikzset{
+        monomerAmutantInter/.pic = {
+            \draw[fill=red,rounded corners] (-0.5,0) node(monomerAanchor)[inner sep=14] {}
+            -- ++(0.75,0) 
+            -- ++(0.5,-1) 
+            -- ++(-1.25,0) 
+            -- cycle;
+            \draw[fill=LimeGreen,rounded corners] (-0.375,0) node(monomerAanchor2)[inner sep=14] {} 
+            -- ++(0.625,0) 
+            -- ++(0.5,-1) 
+            -- ++(-1.125,0) 
+            -- cycle;
+        }
+    }
+    % "B" chain
+    \tikzset{
+        monomerB/.pic = {
+            \draw[fill=orange,rounded corners] (-0.5,0)  
+            -- ++(1.25,0) 
+            -- ++(0,-1) 
+            -- ++(-0.75,0) 
+            -- cycle;
+        }
+    }
+    \tikzset{
+        monomerBmutantIntra/.pic = {
+            \draw[fill=red,rounded corners] (-0.5,0) node(monomerBanchor)[inner sep=14] {}
+            -- ++(1.25,0) 
+            -- ++(0,-1) 
+            -- ++(-0.75,0) 
+            -- cycle;
+            \draw[fill=LimeGreen,rounded corners] (-0.375,0) node(monomerBanchor)[inner sep=14] {} 
+            -- ++(1.125,0) 
+            -- ++(0,-1) 
+            -- ++(-0.625,0) 
+            -- cycle;
+        }
+    }
+    \tikzset{
+        monomerBmutantInter/.pic = {
+            \draw[fill=red,rounded corners] (-0.5,0) node(monomerBanchor)[inner sep=14] {}
+            -- ++(1.25,0) 
+            -- ++(0,-1) 
+            -- ++(-0.75,0) 
+            -- cycle;
+            \draw[fill=LimeGreen,rounded corners] (-0.5,0) node(monomerBanchor)[inner sep=14] {} 
+            -- ++(1.125,0) 
+            -- ++(0,-1) 
+            -- ++(-0.625,0) 
+            -- cycle;
+        }
+    }
+    \begin{emptypanel}{}
+        % https://tex.stackexchange.com/questions/185279/anchoring-tikz-pics
+        %
+        \node(legendTitle)[align=center,font=\small,font=\bfseries, minimum size=2cm] at (current page.north) {Heterozygous Missense Genotypes};
+        \node(legendCenter)[align=center,below=0.125cm of legendTitle.south] {};
+        %
+%        \pic at ([xshift=-0.45cm,yshift=-0.6cm]legendWT.north) {monomerA};
+%        \pic at ([xshift=0.45cm,yshift=-0.6cm]legendWT.north) {monomerB};
+        %
+        \node(legendIntra)[left=1cm of legendCenter.west,align=center] {\textit{Intra}-Dimer Mutant};
+        %
+        \pic at ([xshift=-1cm,yshift=-0.6cm]legendIntra.north) {monomerA};
+        \node(X1)[align=center,color=red,font=\bfseries, font=\large, minimum size=2cm] at ([xshift=0cm,yshift=-0.7cm]legendIntra.south) {\Large \bf X};
+        \pic at ([xshift=0.75cm,yshift=-0.6cm]legendIntra.north) {monomerBmutantIntra};
+        %
+        \node(legendInter)[right=1cm of legendCenter.east,align=center] {\textit{Inter}-Dimer Mutant};
+        %
+        \pic at ([xshift=-0.45cm,yshift=-0.6cm]legendInter.north) {monomerA};
+        \pic at ([xshift=0.45cm,yshift=-0.6cm]legendInter.north) {monomerBmutantInter};
+        %
+        \draw[thick] ($(legendIntra.north west)+(-1,0.5)$) rectangle ($(legendInter.south east)+(1,-1.75)$);
+    \end{emptypanel}
+    \vspace{0.75cm}
+    \begin{emptypanel}{}
+        \node(genotypesLabel)[below right,align=center,font=\small,font=\bfseries, minimum size=2cm] {Genotype\\and\\Interface};
+        %
+%        \node(chainTypesLabel)[right=2cm of genotypesLabel.east,align=center,font=\small,font=\bfseries, minimum size=2cm] {Protomers};
+        %
+        \node(retainedLabel)[right=2.5cm of genotypesLabel.east,align=center,font=\small,font=\bfseries, minimum size=2cm] {Retained\\and\\Functional};
+        % 
+        \node(traffickedLabel)[right=2cm of retainedLabel.east,align=center,font=\small,font=\bfseries, minimum size=2cm] {Non-Filamented,\\Exported};
+        %
+        % First separator
+        %
+        \path (genotypesLabel.south)++(-2,-0.5) coordinate (Separator1Left);
+        \path (traffickedLabel.south)++(2,-0.5) coordinate (Separator1Right);
+        \path[-] (Separator1Left) edge (Separator1Right);
+        %
+        %
+        \node(hetIntraLabel)[below=1cm of genotypesLabel.south,align=center,font=\small] {Heterozygous\\\textit{Intra}-Dimer Mutant};
+        %
+        % \node(IntraChainTypes)[below=1cm of chainTypesLabel.south,align=center] {};
+        % %
+        % \pic at ([xshift=-0.75cm]IntraChainTypes.north) {monomerA};
+        % \pic at ([xshift=0.75cm]IntraChainTypes.south) {monomerBmutantIntra};
+        %
+        \node(hetIntraHomoWT)[below=1cm of retainedLabel.south,align=center] {};
+        %
+        \pic at ([xshift=-0.45cm]hetIntraHomoWT.north) {monomerA};
+        \pic at ([xshift=0.45cm]hetIntraHomoWT.north) {monomerB};
+        \node(retainedPctIntra)[below=1cm of hetIntraHomoWT.south,align=center,font=\bfseries] {\SI{50}{\percent}};
+        %
+        \node(hetIntraHomoMut)[below=1cm of traffickedLabel.south,align=center] {};
+        %
+        \pic at ([xshift=-1cm]hetIntraHomoMut.north) {monomerAmutantIntra};
+        \node(X2)[align=center,color=red,font=\large,font=\bfseries, minimum size=2cm] at ([xshift=0cm,yshift=-0.3cm]hetIntraHomoMut.south) {\Large \bf X};
+        \pic at ([xshift=0.75cm]hetIntraHomoMut.north) {monomerBmutantIntra};
+        %
+        %
+        %
+        \path (genotypesLabel.south)++(-2,-3) coordinate (separator2Left);
+        \path (traffickedLabel.south)++(2,-3) coordinate (separator2Right);
+        \path[-] (separator2Left) edge (separator2Right);
+        %
+        %
+        %
+        \node(hetInterLabel)[below=3.5cm of genotypesLabel.south,align=center,font=\small] {Heterozygous\\\textit{Inter}-Dimer Mutant};
+        %
+        % \node(hetInterChainTypes)[below=3.5cm of chainTypesLabel.south,align=center] {};
+        % %
+        % \pic at ([xshift=-0.75cm]hetInterChainTypes.north) {monomerA};
+        % \pic at ([xshift=0.75cm]hetInterChainTypes.south) {monomerBmutantInter};
+        %
+        % Retained
+        %
+        \node(hetInterHomoWT)[below=3.5cm of retainedLabel.south,align=center] {};
+        %
+        \pic at ([xshift=-0.45cm]hetInterHomoWT.north) {monomerA};
+        \pic at ([xshift=0.45cm]hetInterHomoWT.north) {monomerB};
+        \node(retainedPctInter)[below=1cm of hetInterHomoWT.south,align=center,font=\bfseries] {\SI{25}{\percent}};
+        %
+        % Exported
+        %
+        \node(hetInterHet1)[below=3.5cm of traffickedLabel.south,align=center] {};
+        %
+        \pic at ([xshift=-0.45cm]hetInterHet1.north) {monomerA};
+        \pic at ([xshift=0.45cm]hetInterHet1.north) {monomerBmutantInter};
+
+        \node(hetInterHet2)[below=1.25cm of hetInterHet1.south,align=center] {};
+
+        \pic at ([xshift=-0.45cm]hetInterHet2.north) {monomerAmutantInter};
+        \pic at ([xshift=0.45cm]hetInterHet2.north) {monomerB};
+
+        \node(hetInterHomoMut)[below=1.25cm of hetInterHet2.south,align=center] {};
+
+        \pic at ([xshift=-0.45cm]hetInterHomoMut.north) {monomerAmutantInter};
+        \pic at ([xshift=0.45cm]hetInterHomoMut.north) {monomerBmutantInter};
+    \end{emptypanel}
+    \vspace{0.75cm}
+\caption[Disease inheritance patterns differ by location of mutation]{\textbf{Heterozygously-carried mutations at different calsequestrin interfaces have different disease inheritance patterns.} Mutations that inhibit dimerization are likely to cause penetrant disease only when carried recessively - a consequence of export of mutant monomers from the ER/SR. However, mutations that inhibit dimer-dimer interaction are likely to have dominant effect - a consequence of the fact that only \SI{25}{\percent} of dimers are functional for the purpose of filamentation.}
+\label{fig:graphical_summary}
+\end{figure}
+\restoregeometry

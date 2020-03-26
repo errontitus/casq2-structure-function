@@ -1,0 +1,26 @@
+\ProvidesPackage{style_dissertation}
+
+% showframe
+\usepackage[top=1.0in,left=1.0in,footskip=1.0in,marginparwidth=1.0in]{geometry}
+
+% Paragraphs and fonts
+% double space (but single space floats and captions)
+% https://tex.stackexchange.com/questions/23957/how-to-set-font-to-arial-throughout-the-entire-document
+\usepackage{setspace}
+\doublespacing
+
+% To include the title page.
+\usepackage{pdfpages}
+
+% To insert a blank page where the copyright would go.
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \newpage}
+
+% Optimize for staying inside the margins (giving up on justification). Does not work very well.
+\usepackage{ragged2e}
+
+% TOC
+\usepackage{tocloft}

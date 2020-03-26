@@ -1,0 +1,36 @@
+,CASQ2 Yb
+Wavelength,1.386
+Resolution range,107.2  - 3.84 (3.977  - 3.84)
+Space group,P 1 21 1
+Unit cell,85.8318 86.0152 214.34 90 89.9072 90
+Total reflections,334567 (33781)
+Unique reflections,29897 (2924)
+Multiplicity,11.2 (11.5)
+Completeness (%),98.46 (98.05)
+Mean I/sigma(I),4.52 (0.96)
+Wilson B-factor,78.33
+R-merge,0.5226 (2.789)
+R-meas,0.5476 (2.918)
+R-pim,0.1617 (0.8496)
+CC1/2,0.992 (0.616)
+CC*,0.998 (0.873)
+Reflections used in refinement,29773 (2921)
+Reflections used for R-free,1441 (147)
+R-work,0.2987 (0.3637)
+R-free,0.3491 (0.4158)
+CC(work),0.894 (0.766)
+CC(free),0.856 (0.574)
+Number of non-hydrogen atoms,21809
+  macromolecules,21720
+  ligands,89
+Protein residues,2632
+RMS(bonds),0.005
+RMS(angles),0.85
+Ramachandran favored (%),95.90
+Ramachandran allowed (%),4.10
+Ramachandran outliers (%),0.00
+Rotamer outliers (%),0.00
+Clashscore,8.18
+Average B-factor,98.65
+  macromolecules,98.51
+  ligands,133.64

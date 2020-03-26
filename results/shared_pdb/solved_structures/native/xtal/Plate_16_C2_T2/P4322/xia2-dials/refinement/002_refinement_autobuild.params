@@ -1,0 +1,38 @@
+#
+#
+
+refinement.pdb_interpretation {
+  secondary_structure {
+    protein {
+      helix {
+        serial_number = "1"
+        helix_identifier = "1"
+        selection = chain 'A' and segid 'A   ' and resid 43 through 48
+      }
+      helix {
+        serial_number = "2"
+        helix_identifier = "2"
+        selection = chain 'A' and segid 'A   ' and resid 67 through 83
+      }
+      helix {
+        serial_number = "3"
+        helix_identifier = "3"
+        selection = chain 'A' and segid 'A   ' and resid 100 through 106
+      }
+# ...region of high-res data here (domain II)...
+       helix {
+         serial_number = "9"
+         helix_identifier = "9"
+         helix_type = "3_10"
+         selection = chain 'A' and segid 'A   ' and resid 256 through 262
+       }
+# ...region of high-res data (most of domain III)...
+      helix {
+        serial_number = "12"
+        helix_identifier = "11"
+        selection = chain 'A' and segid 'A   ' and resid 355 through 367
+      }
+    }
+    enabled = True
+  }
+}

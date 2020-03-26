@@ -1,0 +1,5 @@
+*.cbf
+*.hkl
+*.mtz
+!*refined_map_coefficients.mtz
+!*AUTOMATIC_DEFAULT_free.mtz

@@ -1,0 +1,29 @@
+Oligonucleotide Abbrev	Oligonucleotide Name	Sequence	Notes	
+hCASQ2_f	Primer to amplify H. sapiens CASQ2, forward	ATGAAGAGAACTCACTTGTTTATTGT		
+hCASQ2_r	Primer to amplify H. sapiens CASQ2, reverse	CTATTCATCATCATCGTCATCACTGT		
+hCASQ2_pet28_NheI_f	Primer to amplify H. sapiens CASQ2 with homology tails for the pET28 vector at NheI, forward (skips signal peptide sequence)	TTCCAGGGCCATATG GCTAGC AGGGCAGAAGAGGGGCTTA		
+hCASQ2_pet28_BamHI_r	Primer to amplify H. sapiens CASQ2 with homology tails for the pET28 vector at BamHI, reverse	CGGAGCTCGAATTC GGATCC CTATTCATCATCATCGTCATCACTGT		
+D50A_f	Primer for site-directed mutagenesis of H. sapiens CASQ2, D50A, forward	AAAGAAATATgccTTGCTTTGCC	GAC to GCC, 58 C recommended	Done
+D50A_r	Primer for site-directed mutagenesis of H. sapiens CASQ2, D50A, reverse	AAAACCTGCTTGAAGTTCTTC		
+SDM_D144A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, D144A, forward	CTAATTGAAGcCCCAGTGGAG		
+SDM_D144A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, D144A, reverse	ATCCAAGAGGAACTCCAC		
+SDM_E174A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, E174A, forward	TTCAAGAGTGccGACTCAGAATACTAC		
+SDM_E174A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, E174A, reverse	AAAGCCAATGAGTTTGATG		
+S173I_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, S173I, forward	CTTTTTCAAGattGAGGACTCAGAATAC	59	
+S173I_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, S173I, reverse	CCAATGAGTTTGATGTAGTC		
+K180R _F	Primer for site-directed mutagenesis of H. sapiens CASQ2, K180R, forward	AGAATACTACcggGCTTTTGAAGAAGC	K180R AAG to CGG, 59 C recommended	
+K180R _R	Primer for site-directed mutagenesis of H. sapiens CASQ2, K180R, reverse	GAGTCCTCACTCTTGAAAAAG		
+hCasq2_SDM_E184A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, E184A, forward	GCTTTTGAAGcAGCAGCTGAAC		
+hCasq2_SDM_E184A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, E184A, reverse	CTTGTAGTATTCTGAGTCC		
+SDM_E187AonE184A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, E187A on E184A background, forward	GCAGCAGCTGcACACTTCCAG		
+SDM_E187AonE184A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, E187A on E184A background, reverse	TTCAAAAGCCTTGTAGTATTCTG		
+SDM_D325A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, D325A, forward	TTCAAGATTGcCCTATTCAGGCC		
+SDM_D325A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, D325A, reverse	AGTCTTCTCCCAGTAGGC		
+hCasq2_SDM_D348A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, D348A, forward	GAGATTCCAGccGATGACGATCTTCC	Change to GCC	
+hCasq2_SDM_D348A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, D348A, reverse	CATCCAGACACTGTCAGC		
+SDM_D350AonD348A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, D350A on D348A background, forward	CCAGCCGATGcCGATCTTCCA		
+SDM_D350AonD348A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, D350A on D348A background, reverse	AATCTCCATCCAGACACTG		
+hCasq2_SDM_D351A_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, D351A, forward	GATGATGACGccCTTCCAACTGC		
+hCasq2_SDM_D351A_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, D351A, reverse	TGGAATCTCCATCCAGAC		
+SDM_E357AonD351A_GCC_F	Primer for site-directed mutagenesis of H. sapiens CASQ2, E357A on D351A background, forward	ACTGCTGAGGccCTGGAGGACTG		
+SDM_E357AonD351A_GCC_R	Primer for site-directed mutagenesis of H. sapiens CASQ2, E357A on D351A background, reverse	TGGAAGGGCGTCATCATC		

@@ -1,0 +1,21 @@
+\begin{figure}[!ht]
+\centering
+\figuretitle{Figure~\ref{fig:biochemistry_supplement}}
+\hfill
+\begin{fullpanelvar}
+    \begin{emptypanel}{}
+        \node(WT_EDTA_plot)[inner sep=0pt,above right]{\input{../results/assembly_kinetics/output/kinetics_WT_EDTA.pgf}};
+        %
+        \node(captionA)[inner sep=0pt,above left] at (WT_EDTA_plot.north west) {\normalsize\textbf{\figurepanela}};
+        %
+        \node(S173I_No_K_plot)[inner sep=0pt,right=2cm of WT_EDTA_plot.east, anchor=west]{\input{../results/assembly_kinetics/output/kinetics_CPVT_mutation_S173I_0mM_K.pgf}};
+        %
+        \node(captionB)[inner sep=0pt,above left] at (S173I_No_K_plot.north west) {\normalsize\textbf{\figurepanelb}};
+        %
+    \end{emptypanel}
+\end{fullpanelvar}        
+\hfill
+\rowspacer
+\caption[Multimerization kinetics of the S173I mutant observed in 0 mM KCl]{\textbf{Opacification of calsequestrin samples in the presence of calcium is reversible upon chelation. Multimerization Kinetics of the S173I Mutant Observed in 0 mM KCl show that S173I mutant is functional. Related to Figure~\ref{fig:S173I_genetics_and_biochemistry}.} \figurepanelcaptiona Turbidity assay with stoichiometric addition of EDTA demonstrates immediate reversal of opacification. \figurepanelcaptionb Turbidity assay for the S173I mutant.}
+\label{fig:biochemistry_supplement}
+\end{figure}

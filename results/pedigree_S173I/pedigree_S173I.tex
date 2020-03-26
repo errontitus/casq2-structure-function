@@ -1,0 +1,183 @@
+% \documentclass{standalone}
+% %    \usepackage[landscape]{geometry}
+%     \usepackage{pst-pdgr}
+% \begin{document}
+
+\newcommand{\heightgenone}{7}
+\newcommand{\heightgentwo}{5}
+\newcommand{\heightgenthree}{3}
+\newcommand{\heightgenfour}{1}
+\newcommand{\gensymbol}{0.5}
+
+\newcommand{\heightlegenditemone}{8}
+\newcommand{\heightlegenditemtwo}{7.25}
+\newcommand{\heightlegenditemthree}{6.5}
+\newcommand{\heightlegenditemfour}{5.75}
+\newcommand{\legendleft}{9.25}
+
+\begin{footnotesize}
+\begin{pspicture}(22,9)
+    \psset{descarmA=1.5, hatchsep=1.5pt}
+
+    % Palpitations (7 family members total)
+    %
+    % Paternal uncle w/ palpitations, pursued workup (deceased of non-cardiac causes)
+    \rput(5.25,\heightgentwo){\pstPerson[male, deceased, affected, belowtext=\parbox{2cm}{6}]{II6}}    
+    % Mother of proband.
+    \rput(13.25,\heightgentwo){\pstPerson[female, affected, belowtext=\parbox{2cm}{9}]{II9}}
+    % Twin T
+    \rput(7,\heightgenthree){\pstPerson[female, affected, belowtext=\parbox{1cm}{6}]{III6}}
+    % Twin J
+    \rput(8,\heightgenthree){\pstPerson[female, affected, belowtext=\parbox{1cm}{7}]{III7}}
+    % Proband
+    \rput(10.125,\heightgenthree){\pstPerson[female, affected, proband, belowtext=\parbox{1cm}{ 8\\35 y}, abovetext=]{III8}}
+    % Half-sister of proband
+    \rput(16.375,\heightgenthree){\pstPerson[female, affected, belowtext=\parbox{1cm}{12}]{III12}}
+    % Child of proband
+    \rput(9.75,\heightgenfour){\pstPerson[male, affected, belowtextrp=t, belowtext=\parbox{1cm}{\centering 4}]{IV4}}
+    % Legend item
+    \rput(\legendleft,\heightlegenditemone){\pstPerson[male, affected, righttext=\parbox{1cm}{Palpitations}]{legendPalp}}
+
+    % Early SCD
+    %
+    % Paternal grandfather of proband
+    \def\affectedstyle{fillstyle=crosshatch}
+    \rput(2.75,\heightgenone){\pstPerson[male, deceased, affected, belowtextrp=t, belowtext=\parbox{3cm}{\centering 1\\SCD at age 45\\(found deceased)}]{I1}}
+    % Also SIDS in generation IV, but not including this.
+    % Legend item
+    \rput(\legendleft,\heightlegenditemtwo){\pstPerson[male, affected, righttext=\parbox{2cm}{ SCD}]{legendSCD}}
+    
+    % SCD in the setting of other structural heart disease
+    %
+    \def\affectedstyle{fillstyle=vlines}
+    % Father of proband.
+    \rput(7,\heightgentwo){\pstPerson[male, deceased, affected, belowtext=\parbox{5cm}{ 8\\SCD at age 49 (during\\ETT; h/o MI, CABG)}]{II8}}
+    % Half-sibling of proband.
+    \rput(18.125,\heightgenthree){\pstPerson[male, deceased, affected, belowtext=\parbox{2cm}{ 13\\SCD at age 40\\(h/o CHD)}]{III13}}
+    % Legend item
+    \rput(\legendleft,\heightlegenditemthree){\pstPerson[male, affected, righttext=\parbox{4cm}{  SCD in setting of known\\CAD or CHD}]{legendSCDOther}}
+
+    \rput(4,8){Ireland}
+    \rput(16.5,8){Spain/France}
+
+    % Generation 1, Ireland side.
+    \rput(\gensymbol,\heightgenone){\Huge I}
+    \rput(5,\heightgenone){\pstPerson[female, deceased, normal, belowtextrp=t, belowtext=\parbox{2cm}{\centering 2}]{I2}}
+    \pstRelationship[descentnode=I1I2]{I1}{I2}
+
+    % Generation 1, Spain/France side.
+    \rput(15.5,\heightgenone){\pstPerson[male, deceased, belowtextrp=t, belowtext=\parbox{2cm}{\centering 3}]{I3}}
+    \rput(17.5,\heightgenone){\pstPerson[female, deceased, belowtextrp=t, belowtext=\parbox{2cm}{\centering 4}]{I4}}
+    \pstRelationship[descentnode=I3I4]{I3}{I4}
+
+    % Generation II, Ireland side.
+    \rput(\gensymbol,\heightgentwo){\Huge II}
+    \rput(1.5,\heightgentwo){\pstPerson[male, belowtextrp=t, belowtext=\parbox{2cm}{\centering 1}]{II1}}
+    \pstDescent{I1I2}{II1}
+    \rput(2.25,\heightgentwo){\pstPerson[male, deceased, belowtext=\parbox{1cm}{2}]{II2}}    
+    \pstDescent{I1I2}{II2}
+    \rput(3,\heightgentwo){\pstPerson[male, deceased, belowtextrp=t, belowtext=\parbox{2cm}{\centering 3}]{II3}}    
+    \pstDescent{I1I2}{II3}
+    \rput(3.75,\heightgentwo){\pstPerson[male, deceased, belowtext=\parbox{2cm}{4}]{II4}}    
+    \pstDescent{I1I2}{II4}
+    \rput(4.5,\heightgentwo){\pstPerson[male, deceased, belowtextrp=t, belowtext=\parbox{2cm}{\centering 5}]{II5}}    
+    \pstDescent{I1I2}{II5}
+    \pstDescent{I1I2}{II6}
+    \rput(6,\heightgentwo){\pstPerson[female, belowtext=\parbox{2cm}{7}]{II7}}
+    \pstDescent{I1I2}{II7}
+    \pstDescent{I1I2}{II8}
+
+    % Generation II, Spain/France side.
+    \pstRelationship[broken, descentnode=II8II9]{II8}{II9}
+    \pstDescent{I3I4}{II9}
+
+    \rput(18.5,\heightgentwo){\pstPerson[male, belowtextrp=t, belowtext=\parbox{2cm}{\centering 10}]{II10}}
+    \pstRelationship[broken, descentnode=II9II10]{II9}{II10}
+
+    \rput(20,\heightgentwo){\pstPerson[male, deceased, belowtext=\parbox{2cm}{11}, hatchsep=3pt]{II11}}
+    \pstDescent{I3I4}{II11}
+    \rput(21,\heightgentwo){\pstPerson[abovetext=, female, belowtext=\parbox{2cm}{12}]{II12}}
+    \pstDescent{I3I4}{II12}
+
+    % Generation III, proband and her siblings, half-siblings, and cousins.
+    % First, the cousins on the Ireland side. 
+    \rput(\gensymbol,\heightgenthree){\Huge III}
+    \rput(2.25,\heightgenthree){\pstPerson[insidetext=N, belowtextrp=t, belowtext=\parbox{1cm}{\centering 1}]{III1}}
+    \pstDescent{II2}{III1}
+    \rput(3.375,\heightgenthree){\pstPerson[female, deceased, belowtextrp=t, belowtext=\parbox{1cm}{\centering 2}, abovetext=]{III2}}
+    \pstDescent{II4}{III2}
+    \rput(4.125,\heightgenthree){\pstPerson[insidetext=N, belowtextrp=t, belowtext=\parbox{2cm}{\centering 3}]{III3}}
+    \pstDescent{II4}{III3}
+    \rput(5.25,\heightgenthree){\pstPerson[insidetext=N, belowtextrp=t, belowtext=\parbox{2cm}{\centering 4}]{III4}}
+    \pstDescent{II6}{III4}
+    \rput(6,\heightgenthree){\pstPerson[insidetext=N, belowtextrp=t, belowtext=\parbox{2cm}{\centering 5}]{III5}}
+    \pstDescent{II7}{III5}
+
+    % Proband and siblings.
+    \rput(7.5,3){\pnode{Twins1}}
+    \pstTwins[qzygotic]{II8II9}{Twins1}{III6}{III7}
+    \pstDescent{II8II9}{III8}
+    % Brother of proband, deceased of non-cardiac causes.
+    \rput(12.25,\heightgenthree){\pstPerson[male, deceased, belowtext=\parbox{1cm}{9}]{III9}}
+    \pstDescent{II8II9}{III9}
+
+    % Half-sibling group 1.
+    \rput(13.625,\heightgenthree){\pstPerson[female, belowtext=\parbox{1cm}{10}]{III10}}
+    \pstDescent{II9}{III10}
+
+    % Half-sibling group 2.
+    \rput(15,\heightgenthree){\pstPerson[female, belowtext=\parbox{1cm}{11}]{III11}}
+    \pstDescent{II9II10}{III11}
+    \pstDescent{II9II10}{III12}
+    \pstDescent{II9II10}{III13}
+
+    % Cousins
+    \rput(20,\heightgenthree){\pstPerson[insidetext=N, belowtextrp=t, belowtext=\parbox{1cm}{\centering 14}]{III14}}
+    \pstDescent{II11}{III14}
+    \rput(21,\heightgenthree){\pstPerson[insidetext=N, belowtextrp=t, belowtext=\parbox{1cm}{\centering 15}]{III15}}
+    \pstDescent{II12}{III15}
+
+    % Generation IV
+    \rput(\gensymbol,\heightgenfour){\Huge IV}
+
+    % Children of twins T and J
+    \rput(7,\heightgenfour){\pstPerson[belowtextrp=t, belowtext=\parbox{1cm}{\centering 1}]{IV1}}
+    \pstDescent{III6}{IV1}
+    \rput(8,\heightgenfour){\pstPerson[belowtextrp=t, belowtext=\parbox{1cm}{\centering 2}]{IV2}}
+    \pstDescent{III7}{IV2}
+
+    % Children of proband.
+    \rput(9,\heightgenfour){\pstPerson[female, belowtextrp=t, belowtext=\parbox{1cm}{\centering 3}]{IV3}}
+    \pstDescent{III8}{IV3}
+    \pstDescent{III8}{IV4}
+    \rput(10.5,\heightgenfour){\pstPerson[male, belowtextrp=t, belowtext=\parbox{1cm}{\centering 5}]{IV5}}
+    \pstDescent{III8}{IV5}
+    \rput(11.25,\heightgenfour){\pstPerson[female, belowtextrp=t, belowtext=\parbox{1cm}{\centering 6}]{IV6}}
+    \pstDescent{III8}{IV6}
+
+    % Child of proband's brother
+    \rput(12.25,\heightgenfour){\pstPerson[belowtextrp=t, belowtext=\parbox{1cm}{\centering 7}]{IV7}}
+    \pstDescent{III9}{IV7}
+
+    % Children of proband's half-sibling (group 1)
+    \rput(13.25,\heightgenfour){\pstPerson[belowtextrp=t, belowtext=\parbox{1cm}{\centering 8}]{IV8}}
+    \pstDescent{III10}{IV8}
+    \rput(14,\heightgenfour){\pstPerson[female, deceased, belowtextrp=t, belowtext=\parbox{1cm}{\centering 9}]{IV9}}
+    \pstDescent{III10}{IV9}
+
+    % Children of proband's half-siblings (group 2)
+    \rput(15,\heightgenfour){\pstPerson[belowtextrp=t, belowtext=\parbox{1cm}{\centering 10}]{IV10}}
+    \pstDescent{III11}{IV10}
+    \rput(16,\heightgenfour){\pstPerson[female, deceased, belowtextrp=t, belowtext=\parbox{2.5cm}{\centering 11\\SIDS}]{IV11}}
+    \pstDescent{III12}{IV11}
+    \rput(16.75,\heightgenfour){\pstPerson[belowtextrp=t, belowtext=\parbox{1cm}{\centering 12}]{IV12}}
+    \pstDescent{III12}{IV12}
+    \rput(17.75,\heightgenfour){\pstPerson[female, belowtextrp=t, belowtext=\parbox{1cm}{\centering 13}]{IV13}}
+    \pstDescent{III13}{IV13}
+    \rput(18.5,\heightgenfour){\pstPerson[male, belowtextrp=t, belowtext=\parbox{1cm}{\centering 14}]{IV14}}
+    \pstDescent{III13}{IV14}
+    
+\end{pspicture}
+\end{footnotesize}
+
+% \end{document} 

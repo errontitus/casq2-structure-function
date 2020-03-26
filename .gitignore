@@ -1,0 +1,7 @@
+target
+**/output
+**/\.DS_Store
+\.vscode/
+*.pyc
+*.gz
+*.tgz

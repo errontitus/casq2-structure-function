@@ -1,0 +1,4328 @@
+# Date 2020-03-19 Time 18:30:51 PDT -0700 (1584667852.00 s)
+#phil __OFF__
+
+Command line arguments: "Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz" "001_starting_model.pdb" "001_refinement.params"
+
+USER = errontitus
+PID = 49755
+
+-------------------------------------------------------------------------------
+  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
+  Version: 1.15.2
+  Release tag: 3472
+  Platform: mac-intel-osx-x86_64
+  User: errontitus
+-------------------------------------------------------------------------------
+
+              phenix.refine: Macromolecular Structure Refinement
+
+-------------------------------------------------------------------------------
+
+Phenix developers include:
+  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
+  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
+  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
+  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
+  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
+  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
+  Tom Terwilliger, Christopher Williams, Peter Zwart
+Phenix home page:
+  http://www.phenix-online.org/
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Phenix components are copyrighted by:
+  - Lawrence Berkeley National Laboratory
+  - Los Alamos National Laboratory
+  - University of Cambridge
+  - Duke University
+  - Texas Agricultural Experiment Station &
+    Texas Engineering Experiment Station
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Major third-party components of Phenix include:
+    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
+    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
+    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
+  Enter phenix.acknowledgments for details.
+-------------------------------------------------------------------------------
+
+Processing inputs. This may take a minute or two.
+
+  No user-defined map coefficients or files defined; will use default map
+  outputs instead.
+Working crystal symmetry after inspecting all inputs:
+  Unit cell: (85.8318, 86.0152, 214.34, 90, 89.9072, 90)
+  Space group: P 1 21 1 (No. 4)
+
+
+================================== X-ray data =================================
+
+F-obs:
+  Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz:F(+),SIGF(+),F(-),SIGF(-),merged
+
+Miller array info: Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz:F(+),SIGF(+),F(-),SIGF(-),merged
+Observation type: xray.amplitude
+Type of data: double, size=57834
+Type of sigmas: double, size=57834
+Number of Miller indices: 57834
+Anomalous flag: True
+Unit cell: (85.8318, 86.0152, 214.34, 90, 89.9072, 90)
+Space group: P 1 21 1 (No. 4)
+Systematic absences: 0
+Centric reflections: 1783
+Resolution range: 214.34 3.83963
+Completeness in resolution range: 0.987974
+Completeness with d_max=infinity: 0.987974
+Anomalous completeness in resolution range: 0.987839
+Bijvoet pairs: 27943
+Lone Bijvoet mates: 165
+Mean anomalous difference: 0.2250
+Wavelength: 1.3857
+
+Number of F-obs in resolution range:                   57834
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 0
+Refinement resolution range: d_max = 214.3402
+                             d_min =   3.8396
+
+R-free flags:
+  Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz:FreeR_flag
+
+Removing 11 systematic absences.
+
+Miller array info: Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz:FreeR_flag,systematic_absences_eliminated
+Observation type: None
+Type of data: int, size=29901
+Type of sigmas: None
+Number of Miller indices: 29901
+Anomalous flag: False
+Unit cell: (85.8318, 86.0152, 214.34, 90, 89.9072, 90)
+Space group: P 1 21 1 (No. 4)
+Systematic absences: 0
+Centric reflections: 1786
+Resolution range: 214.34 3.83963
+Completeness in resolution range: 0.98843
+Completeness with d_max=infinity: 0.98843
+Wavelength: 9.9990
+
+Test (R-free flags) flag value: 0
+
+Generating Bijvoet mates of R-free flags.
+
+Number of work/free reflections by resolution:
+                                           work  free  %free
+  bin  1: 214.6749 -   8.2721 [5781/5853]  5461   320   5.5%
+  bin  2:   8.2721 -   6.5656 [5829/5859]  5477   352   6.0%
+  bin  3:   6.5656 -   5.7356 [5753/5802]  5485   268   4.7%
+  bin  4:   5.7356 -   5.2112 [5884/5938]  5566   318   5.4%
+  bin  5:   5.2112 -   4.8376 [5773/5825]  5519   254   4.4%
+  bin  6:   4.8376 -   4.5524 [5752/5816]  5444   308   5.4%
+  bin  7:   4.5524 -   4.3244 [5786/5856]  5620   166   2.9%
+  bin  8:   4.3244 -   4.1361 [5855/5927]  5585   270   4.6%
+  bin  9:   4.1361 -   3.9769 [5743/5834]  5479   264   4.6%
+  bin 10:   3.9769 -   3.8396 [5678/5828]  5388   290   5.1%
+                                  overall 55024  2810   4.9%
+
+*** Automatic customization  **************************************************
+  nonbonded_weight=100.000 
+*******************************************************************************
+  Monomer Library directory:
+    "/Applications/phenix-1.15.2-3472/modules/chem_data/mon_lib"
+  Total number of atoms: 21720
+  Number of models: 1
+  Model: ""
+    Number of chains: 8
+    Chain: "A"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "B"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "C"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "D"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "E"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "F"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "G"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+    Chain: "H"
+      Number of atoms: 2715
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 329, 2715
+          Classifications: {'peptide': 329}
+          Incomplete info: {'truncation_to_alanine': 1}
+          Link IDs: {'PTRANS': 14, 'TRANS': 312, 'PCIS': 2}
+          Chain breaks: 2
+          Unresolved non-hydrogen bonds: 3
+          Unresolved non-hydrogen angles: 4
+          Unresolved non-hydrogen dihedrals: 2
+          Unresolved non-hydrogen chiralities: 1
+  Time building chain proxies: 6.22, per 1000 atoms: 0.29
+  Number of scatterers: 21720
+  At special positions: 0
+  Unit cell: (85.8318, 86.0152, 214.34, 90, 89.9072, 90)
+  Space group: P 1 21 1 (No. 4)
+  Number of sites at special positions: 0
+  Number of scattering types: 4
+    Type Number    sf(0)
+     S      48     16.00
+     O    4176      8.00
+     N    3328      7.00
+     C   14168      6.00
+    sf(0) = scattering factor at diffraction angle 0.
+
+
+No array of experimental phases found.
+
+
+============================== Scattering factors =============================
+
+
+                ----------X-ray scattering dictionary----------                
+
+Number of scattering types: 4
+  Type Number    sf(0)   Gaussians
+   S      48     15.91       1
+   O    4176      7.97       1
+   N    3328      6.97       1
+   C   14168      5.97       1
+  sf(0) = scattering factor at diffraction angle 0.
+
+
+==================== Fixing bad ADP in input model (if any) ===================
+
+
+========================== Anomalous scatterer groups =========================
+
+All atoms refined with f_prime=0 and f_double_prime=0.
+  Number of disulfides: simple=0, symmetry=0
+
+  Automatic linking
+    Parameters for automatic linking
+      Linking & cutoffs
+        Metal                : False - 3.50
+        Amimo acid           : False - 1.90
+        Carbohydrate         : True  - 1.99
+        Ligands              : True  - 1.99
+        Small molecules      : False - 1.98
+        Amino acid - RNA/DNA : False
+      
+  Number of custom bonds: simple=0, symmetry=0
+  Time building additional restraints: 4.58
+  Conformation dependent library (CDL) restraints added in 1.5 seconds
+  
+  Adding C-beta torsion restraints...
+  Number of C-beta restraints generated:  5088
+
+  Time building geometry restraints manager: 4.07 seconds
+
+  NOTE: a complete listing of the restraints can be obtained by requesting
+        output of .geo file.
+
+  Histogram of bond lengths:
+        1.19 -     1.32: 3936
+        1.32 -     1.44: 5548
+        1.44 -     1.56: 12630
+        1.56 -     1.68: 30
+        1.68 -     1.81: 88
+  Bond restraints: 22232
+  Sorted by residual:
+  bond pdb=" C   VAL E 333 "
+       pdb=" O   VAL E 333 "
+    ideal  model  delta    sigma   weight residual
+    1.237  1.193  0.043 1.07e-02 8.73e+03 1.63e+01
+  bond pdb=" C   VAL B 333 "
+       pdb=" O   VAL B 333 "
+    ideal  model  delta    sigma   weight residual
+    1.237  1.193  0.043 1.07e-02 8.73e+03 1.62e+01
+  bond pdb=" C   VAL A 333 "
+       pdb=" O   VAL A 333 "
+    ideal  model  delta    sigma   weight residual
+    1.237  1.194  0.043 1.07e-02 8.73e+03 1.61e+01
+  bond pdb=" C   VAL H 333 "
+       pdb=" O   VAL H 333 "
+    ideal  model  delta    sigma   weight residual
+    1.237  1.194  0.043 1.07e-02 8.73e+03 1.59e+01
+  bond pdb=" C   VAL D 333 "
+       pdb=" O   VAL D 333 "
+    ideal  model  delta    sigma   weight residual
+    1.237  1.194  0.042 1.07e-02 8.73e+03 1.58e+01
+  ... (remaining 22227 not shown)
+
+  Histogram of bond angle deviations from ideal:
+      100.14 -   106.89: 696
+      106.89 -   113.65: 11971
+      113.65 -   120.41: 9071
+      120.41 -   127.17: 8054
+      127.17 -   133.93: 272
+  Bond angle restraints: 30064
+  Sorted by residual:
+  angle pdb=" C   VAL E  34 "
+        pdb=" N   VAL E  35 "
+        pdb=" CA  VAL E  35 "
+      ideal   model   delta    sigma   weight residual
+     120.95  129.88   -8.93 1.43e+00 4.89e-01 3.90e+01
+  angle pdb=" C   VAL F  34 "
+        pdb=" N   VAL F  35 "
+        pdb=" CA  VAL F  35 "
+      ideal   model   delta    sigma   weight residual
+     120.95  129.87   -8.92 1.43e+00 4.89e-01 3.89e+01
+  angle pdb=" C   VAL D  34 "
+        pdb=" N   VAL D  35 "
+        pdb=" CA  VAL D  35 "
+      ideal   model   delta    sigma   weight residual
+     120.95  129.87   -8.92 1.43e+00 4.89e-01 3.89e+01
+  angle pdb=" C   VAL C  34 "
+        pdb=" N   VAL C  35 "
+        pdb=" CA  VAL C  35 "
+      ideal   model   delta    sigma   weight residual
+     120.95  129.85   -8.90 1.43e+00 4.89e-01 3.87e+01
+  angle pdb=" C   VAL H  34 "
+        pdb=" N   VAL H  35 "
+        pdb=" CA  VAL H  35 "
+      ideal   model   delta    sigma   weight residual
+     120.95  129.85   -8.90 1.43e+00 4.89e-01 3.87e+01
+  ... (remaining 30059 not shown)
+
+  Histogram of dihedral angle deviations from ideal:
+        0.00 -    35.78: 13064
+       35.78 -    71.56: 296
+       71.56 -   107.34: 8
+      107.34 -   143.13: 0
+      143.13 -   178.91: 48
+  Dihedral angle restraints: 13416
+    sinusoidal: 5616
+      harmonic: 7800
+  Sorted by residual:
+  dihedral pdb=" CB  GLU H 147 "
+           pdb=" CG  GLU H 147 "
+           pdb=" CD  GLU H 147 "
+           pdb=" OE1 GLU H 147 "
+      ideal   model   delta sinusoidal    sigma   weight residual
+       0.00  178.91 -178.91     1      3.00e+01 1.11e-03 2.13e+01
+  dihedral pdb=" CB  GLU G 147 "
+           pdb=" CG  GLU G 147 "
+           pdb=" CD  GLU G 147 "
+           pdb=" OE1 GLU G 147 "
+      ideal   model   delta sinusoidal    sigma   weight residual
+       0.00  178.90 -178.90     1      3.00e+01 1.11e-03 2.13e+01
+  dihedral pdb=" CB  GLU D 147 "
+           pdb=" CG  GLU D 147 "
+           pdb=" CD  GLU D 147 "
+           pdb=" OE1 GLU D 147 "
+      ideal   model   delta sinusoidal    sigma   weight residual
+       0.00  178.89 -178.89     1      3.00e+01 1.11e-03 2.13e+01
+  ... (remaining 13413 not shown)
+
+  Histogram of chiral volume deviations from ideal:
+       0.000 -    0.082: 2762
+       0.082 -    0.163: 430
+       0.163 -    0.245: 48
+       0.245 -    0.327: 0
+       0.327 -    0.409: 24
+  Chirality restraints: 3264
+  Sorted by residual:
+  chirality pdb=" CA  VAL G  35 "
+            pdb=" N   VAL G  35 "
+            pdb=" C   VAL G  35 "
+            pdb=" CB  VAL G  35 "
+    both_signs  ideal   model   delta    sigma   weight residual
+      False      2.44    2.85   -0.41 2.00e-01 2.50e+01 4.17e+00
+  chirality pdb=" CA  VAL A  35 "
+            pdb=" N   VAL A  35 "
+            pdb=" C   VAL A  35 "
+            pdb=" CB  VAL A  35 "
+    both_signs  ideal   model   delta    sigma   weight residual
+      False      2.44    2.85   -0.41 2.00e-01 2.50e+01 4.16e+00
+  chirality pdb=" CA  VAL B  35 "
+            pdb=" N   VAL B  35 "
+            pdb=" C   VAL B  35 "
+            pdb=" CB  VAL B  35 "
+    both_signs  ideal   model   delta    sigma   weight residual
+      False      2.44    2.85   -0.41 2.00e-01 2.50e+01 4.12e+00
+  ... (remaining 3261 not shown)
+
+  Planarity restraints: 3888
+  Sorted by residual:
+                                 delta    sigma   weight rms_deltas residual
+  plane pdb=" CA  GLY F 368 "   -0.025 2.00e-02 2.50e+03   4.99e-02 2.49e+01
+        pdb=" C   GLY F 368 "    0.086 2.00e-02 2.50e+03
+        pdb=" O   GLY F 368 "   -0.032 2.00e-02 2.50e+03
+        pdb=" N   LYS F 369 "   -0.029 2.00e-02 2.50e+03
+                                 delta    sigma   weight rms_deltas residual
+  plane pdb=" CA  GLY G 368 "   -0.025 2.00e-02 2.50e+03   4.98e-02 2.48e+01
+        pdb=" C   GLY G 368 "    0.086 2.00e-02 2.50e+03
+        pdb=" O   GLY G 368 "   -0.032 2.00e-02 2.50e+03
+        pdb=" N   LYS G 369 "   -0.029 2.00e-02 2.50e+03
+                                 delta    sigma   weight rms_deltas residual
+  plane pdb=" CA  GLY C 368 "   -0.025 2.00e-02 2.50e+03   4.98e-02 2.48e+01
+        pdb=" C   GLY C 368 "    0.086 2.00e-02 2.50e+03
+        pdb=" O   GLY C 368 "   -0.032 2.00e-02 2.50e+03
+        pdb=" N   LYS C 369 "   -0.029 2.00e-02 2.50e+03
+  ... (remaining 3885 not shown)
+
+  Histogram of nonbonded interaction distances:
+        1.52 -     2.20: 22
+        2.20 -     2.87: 7607
+        2.87 -     3.55: 30322
+        3.55 -     4.22: 57150
+        4.22 -     4.90: 91443
+  Nonbonded interactions: 186544
+  Sorted by model distance:
+  nonbonded pdb=" OD2 ASP C 348 "
+            pdb=" OD2 ASP D 348 "
+     model   vdw sym.op.
+     1.525 3.040 -x-1,y+1/2,-z-2
+  nonbonded pdb=" OD2 ASP E 348 "
+            pdb=" OD2 ASP F 348 "
+     model   vdw sym.op.
+     1.534 3.040 -x-1,y+1/2,-z-1
+  nonbonded pdb=" OD2 ASP A 348 "
+            pdb=" OD2 ASP G 348 "
+     model   vdw sym.op.
+     1.545 3.040 -x-1,y+1/2,-z-1
+  nonbonded pdb=" OD2 ASP B 348 "
+            pdb=" OD2 ASP H 348 "
+     model   vdw
+     1.600 3.040
+  nonbonded pdb=" CG  GLU C 239 "
+            pdb=" O   LEU G 366 "
+     model   vdw sym.op.
+     1.804 3.440 x+1,y,z
+  ... (remaining 186539 not shown)
+
+  NOTE: a complete listing of the restraints can be obtained by requesting
+        output of .geo file.
+*** Adding Reference Model Restraints (torsion) ***
+
+reference file: Plate_15_D3_T1_P1211_xia2_dials_starting_model.pdb
+Model:              Reference:
+--------------------------------------------------------
+Reference Model Matching Summary:
+
+reference file: Plate_15_D3_T1_P1211_xia2_dials_starting_model.pdb
+
+Model:              Reference:
+LEU A  23  <=====>  LEU A  23
+ASN A  24  <=====>  ASN A  24
+PHE A  25  <=====>  PHE A  25
+PRO A  26  <=====>  PRO A  26
+THR A  27  <=====>  THR A  27
+TYR A  28  <=====>  TYR A  28
+ASP A  29  <=====>  ASP A  29
+GLY A  30  <=====>  GLY A  30
+LYS A  31  <=====>  LYS A  31
+ASP A  32  <=====>  ASP A  32
+ARG A  33  <=====>  ARG A  33
+VAL A  34  <=====>  VAL A  34
+VAL A  35  <=====>  VAL A  35
+SER A  36  <=====>  SER A  36
+LEU A  37  <=====>  LEU A  37
+SER A  38  <=====>  SER A  38
+GLU A  39  <=====>  GLU A  39
+LYS A  40  <=====>  LYS A  40
+ASN A  41  <=====>  ASN A  41
+PHE A  42  <=====>  PHE A  42
+LYS A  43  <=====>  LYS A  43
+GLN A  44  <=====>  GLN A  44
+VAL A  45  <=====>  VAL A  45
+LEU A  46  <=====>  LEU A  46
+LYS A  47  <=====>  LYS A  47
+LYS A  48  <=====>  LYS A  48
+TYR A  49  <=====>  TYR A  49
+ASP A  50  <=====>  ASP A  50
+LEU A  51  <=====>  LEU A  51
+LEU A  52  <=====>  LEU A  52
+CYS A  53  <=====>  CYS A  53
+LEU A  54  <=====>  LEU A  54
+TYR A  55  <=====>  TYR A  55
+TYR A  56  <=====>  TYR A  56
+HIS A  57  <=====>  HIS A  57
+GLN A  69  <=====>  GLN A  69
+PHE A  70  <=====>  PHE A  70
+GLN A  71  <=====>  GLN A  71
+LEU A  72  <=====>  LEU A  72
+LYS A  73  <=====>  LYS A  73
+GLU A  74  <=====>  GLU A  74
+ILE A  75  <=====>  ILE A  75
+VAL A  76  <=====>  VAL A  76
+LEU A  77  <=====>  LEU A  77
+GLU A  78  <=====>  GLU A  78
+LEU A  79  <=====>  LEU A  79
+VAL A  80  <=====>  VAL A  80
+ALA A  81  <=====>  ALA A  81
+GLN A  82  <=====>  GLN A  82
+VAL A  83  <=====>  VAL A  83
+LEU A  84  <=====>  LEU A  84
+GLU A  85  <=====>  GLU A  85
+HIS A  86  <=====>  HIS A  86
+LYS A  87  <=====>  LYS A  87
+ALA A  88  <=====>  ALA A  88
+ILE A  89  <=====>  ILE A  89
+GLY A  90  <=====>  GLY A  90
+PHE A  91  <=====>  PHE A  91
+VAL A  92  <=====>  VAL A  92
+MET A  93  <=====>  MET A  93
+VAL A  94  <=====>  VAL A  94
+ASP A  95  <=====>  ASP A  95
+ALA A  96  <=====>  ALA A  96
+LYS A  97  <=====>  LYS A  97
+LYS A  98  <=====>  LYS A  98
+GLU A  99  <=====>  GLU A  99
+ALA A 100  <=====>  ALA A 100
+LYS A 101  <=====>  LYS A 101
+LEU A 102  <=====>  LEU A 102
+ALA A 103  <=====>  ALA A 103
+LYS A 104  <=====>  LYS A 104
+LYS A 105  <=====>  LYS A 105
+LEU A 106  <=====>  LEU A 106
+GLY A 107  <=====>  GLY A 107
+PHE A 108  <=====>  PHE A 108
+ASP A 109  <=====>  ASP A 109
+GLU A 110  <=====>  GLU A 110
+GLU A 111  <=====>  GLU A 111
+GLY A 112  <=====>  GLY A 112
+SER A 113  <=====>  SER A 113
+LEU A 114  <=====>  LEU A 114
+TYR A 115  <=====>  TYR A 115
+ILE A 116  <=====>  ILE A 116
+LEU A 117  <=====>  LEU A 117
+LYS A 118  <=====>  LYS A 118
+GLY A 119  <=====>  GLY A 119
+ASP A 120  <=====>  ASP A 120
+ARG A 121  <=====>  ARG A 121
+THR A 122  <=====>  THR A 122
+ILE A 123  <=====>  ILE A 123
+GLU A 124  <=====>  GLU A 124
+PHE A 125  <=====>  PHE A 125
+ASP A 126  <=====>  ASP A 126
+GLY A 127  <=====>  GLY A 127
+GLU A 128  <=====>  GLU A 128
+PHE A 129  <=====>  PHE A 129
+ALA A 130  <=====>  ALA A 130
+ALA A 131  <=====>  ALA A 131
+ASP A 132  <=====>  ASP A 132
+VAL A 133  <=====>  VAL A 133
+LEU A 134  <=====>  LEU A 134
+VAL A 135  <=====>  VAL A 135
+GLU A 136  <=====>  GLU A 136
+PHE A 137  <=====>  PHE A 137
+LEU A 138  <=====>  LEU A 138
+LEU A 139  <=====>  LEU A 139
+ASP A 140  <=====>  ASP A 140
+LEU A 141  <=====>  LEU A 141
+ILE A 142  <=====>  ILE A 142
+GLU A 143  <=====>  GLU A 143
+ASP A 144  <=====>  ASP A 144
+PRO A 145  <=====>  PRO A 145
+VAL A 146  <=====>  VAL A 146
+GLU A 147  <=====>  GLU A 147
+ILE A 148  <=====>  ILE A 148
+ILE A 149  <=====>  ILE A 149
+SER A 150  <=====>  SER A 150
+SER A 151  <=====>  SER A 151
+LYS A 152  <=====>  LYS A 152
+LEU A 153  <=====>  LEU A 153
+GLU A 154  <=====>  GLU A 154
+VAL A 155  <=====>  VAL A 155
+GLN A 156  <=====>  GLN A 156
+ALA A 157  <=====>  ALA A 157
+PHE A 158  <=====>  PHE A 158
+GLU A 159  <=====>  GLU A 159
+ARG A 160  <=====>  ARG A 160
+ILE A 161  <=====>  ILE A 161
+GLU A 162  <=====>  GLU A 162
+ASP A 163  <=====>  ASP A 163
+TYR A 164  <=====>  TYR A 164
+ILE A 165  <=====>  ILE A 165
+LYS A 166  <=====>  LYS A 166
+LEU A 167  <=====>  LEU A 167
+ILE A 168  <=====>  ILE A 168
+GLY A 169  <=====>  GLY A 169
+PHE A 170  <=====>  PHE A 170
+PHE A 171  <=====>  PHE A 171
+LYS A 172  <=====>  LYS A 172
+SER A 173  <=====>  SER A 173
+GLU A 174  <=====>  GLU A 174
+ASP A 175  <=====>  ASP A 175
+SER A 176  <=====>  SER A 176
+GLU A 177  <=====>  GLU A 177
+TYR A 178  <=====>  TYR A 178
+TYR A 179  <=====>  TYR A 179
+LYS A 180  <=====>  LYS A 180
+ALA A 181  <=====>  ALA A 181
+PHE A 182  <=====>  PHE A 182
+GLU A 183  <=====>  GLU A 183
+GLU A 184  <=====>  GLU A 184
+ALA A 185  <=====>  ALA A 185
+ALA A 186  <=====>  ALA A 186
+GLU A 187  <=====>  GLU A 187
+HIS A 188  <=====>  HIS A 188
+PHE A 189  <=====>  PHE A 189
+GLN A 190  <=====>  GLN A 190
+PRO A 191  <=====>  PRO A 191
+TYR A 192  <=====>  TYR A 192
+ILE A 193  <=====>  ILE A 193
+LYS A 194  <=====>  LYS A 194
+PHE A 195  <=====>  PHE A 195
+PHE A 196  <=====>  PHE A 196
+ALA A 197  <=====>  ALA A 197
+THR A 198  <=====>  THR A 198
+PHE A 199  <=====>  PHE A 199
+ASP A 200  <=====>  ASP A 200
+LYS A 201  <=====>  LYS A 201
+GLY A 202  <=====>  GLY A 202
+VAL A 203  <=====>  VAL A 203
+ALA A 204  <=====>  ALA A 204
+LYS A 205  <=====>  LYS A 205
+LYS A 206  <=====>  LYS A 206
+LEU A 207  <=====>  LEU A 207
+SER A 208  <=====>  SER A 208
+LEU A 209  <=====>  LEU A 209
+LYS A 210  <=====>  LYS A 210
+MET A 211  <=====>  MET A 211
+ASN A 212  <=====>  ASN A 212
+GLU A 213  <=====>  GLU A 213
+VAL A 214  <=====>  VAL A 214
+ASP A 215  <=====>  ASP A 215
+PHE A 216  <=====>  PHE A 216
+TYR A 217  <=====>  TYR A 217
+GLU A 218  <=====>  GLU A 218
+PRO A 219  <=====>  PRO A 219
+PHE A 220  <=====>  PHE A 220
+MET A 221  <=====>  MET A 221
+ASP A 222  <=====>  ASP A 222
+GLU A 223  <=====>  GLU A 223
+PRO A 224  <=====>  PRO A 224
+ILE A 225  <=====>  ILE A 225
+ALA A 226  <=====>  ALA A 226
+ILE A 227  <=====>  ILE A 227
+PRO A 228  <=====>  PRO A 228
+ASN A 229  <=====>  ASN A 229
+LYS A 230  <=====>  LYS A 230
+PRO A 231  <=====>  PRO A 231
+TYR A 232  <=====>  TYR A 232
+THR A 233  <=====>  THR A 233
+GLU A 234  <=====>  GLU A 234
+GLU A 235  <=====>  GLU A 235
+GLU A 236  <=====>  GLU A 236
+LEU A 237  <=====>  LEU A 237
+VAL A 238  <=====>  VAL A 238
+GLU A 239  <=====>  GLU A 239
+PHE A 240  <=====>  PHE A 240
+VAL A 241  <=====>  VAL A 241
+LYS A 242  <=====>  LYS A 242
+GLU A 243  <=====>  GLU A 243
+HIS A 244  <=====>  HIS A 244
+GLN A 245  <=====>  GLN A 245
+ARG A 246  <=====>  ARG A 246
+PRO A 247  <=====>  PRO A 247
+THR A 248  <=====>  THR A 248
+LEU A 249  <=====>  LEU A 249
+ARG A 250  <=====>  ARG A 250
+ARG A 251  <=====>  ARG A 251
+LEU A 252  <=====>  LEU A 252
+ARG A 253  <=====>  ARG A 253
+PRO A 254  <=====>  PRO A 254
+GLU A 255  <=====>  GLU A 255
+GLU A 256  <=====>  GLU A 256
+MET A 257  <=====>  MET A 257
+PHE A 258  <=====>  PHE A 258
+ILE A 268  <=====>  ILE A 268
+HIS A 269  <=====>  HIS A 269
+ILE A 270  <=====>  ILE A 270
+VAL A 271  <=====>  VAL A 271
+ALA A 272  <=====>  ALA A 272
+PHE A 273  <=====>  PHE A 273
+ALA A 274  <=====>  ALA A 274
+GLU A 275  <=====>  GLU A 275
+LYS A 276  <=====>  LYS A 276
+SER A 277  <=====>  SER A 277
+ASP A 278  <=====>  ASP A 278
+PRO A 279  <=====>  PRO A 279
+ASP A 280  <=====>  ASP A 280
+GLY A 281  <=====>  GLY A 281
+TYR A 282  <=====>  TYR A 282
+GLU A 283  <=====>  GLU A 283
+PHE A 284  <=====>  PHE A 284
+LEU A 285  <=====>  LEU A 285
+GLU A 286  <=====>  GLU A 286
+ILE A 287  <=====>  ILE A 287
+LEU A 288  <=====>  LEU A 288
+LYS A 289  <=====>  LYS A 289
+GLN A 290  <=====>  GLN A 290
+VAL A 291  <=====>  VAL A 291
+ALA A 292  <=====>  ALA A 292
+ARG A 293  <=====>  ARG A 293
+ASP A 294  <=====>  ASP A 294
+ASN A 295  <=====>  ASN A 295
+THR A 296  <=====>  THR A 296
+ASP A 297  <=====>  ASP A 297
+ASN A 298  <=====>  ASN A 298
+PRO A 299  <=====>  PRO A 299
+ASP A 300  <=====>  ASP A 300
+LEU A 301  <=====>  LEU A 301
+SER A 302  <=====>  SER A 302
+ILE A 303  <=====>  ILE A 303
+LEU A 304  <=====>  LEU A 304
+TRP A 305  <=====>  TRP A 305
+ILE A 306  <=====>  ILE A 306
+ASP A 307  <=====>  ASP A 307
+PRO A 308  <=====>  PRO A 308
+ASP A 309  <=====>  ASP A 309
+ASP A 310  <=====>  ASP A 310
+PHE A 311  <=====>  PHE A 311
+PRO A 312  <=====>  PRO A 312
+LEU A 313  <=====>  LEU A 313
+LEU A 314  <=====>  LEU A 314
+VAL A 315  <=====>  VAL A 315
+ALA A 316  <=====>  ALA A 316
+TYR A 317  <=====>  TYR A 317
+TRP A 318  <=====>  TRP A 318
+GLU A 319  <=====>  GLU A 319
+LYS A 320  <=====>  LYS A 320
+THR A 321  <=====>  THR A 321
+PHE A 322  <=====>  PHE A 322
+LYS A 323  <=====>  LYS A 323
+ILE A 324  <=====>  ILE A 324
+ASP A 325  <=====>  ASP A 325
+LEU A 326  <=====>  LEU A 326
+PHE A 327  <=====>  PHE A 327
+ARG A 328  <=====>  ARG A 328
+PRO A 329  <=====>  PRO A 329
+GLN A 330  <=====>  GLN A 330
+ILE A 331  <=====>  ILE A 331
+GLY A 332  <=====>  GLY A 332
+VAL A 333  <=====>  VAL A 333
+VAL A 334  <=====>  VAL A 334
+ASN A 335  <=====>  ASN A 335
+VAL A 336  <=====>  VAL A 336
+THR A 337  <=====>  THR A 337
+ASP A 338  <=====>  ASP A 338
+ALA A 339  <=====>  ALA A 339
+ASP A 340  <=====>  ASP A 340
+SER A 341  <=====>  SER A 341
+VAL A 342  <=====>  VAL A 342
+TRP A 343  <=====>  TRP A 343
+MET A 344  <=====>  MET A 344
+GLU A 345  <=====>  GLU A 345
+ILE A 346  <=====>  ILE A 346
+PRO A 347  <=====>  PRO A 347
+ASP A 348  <=====>  ASP A 348
+ASP A 349  <=====>  ASP A 349
+ASP A 350  <=====>  ASP A 350
+ASP A 351  <=====>  ASP A 351
+LEU A 352  <=====>  LEU A 352
+PRO A 353  <=====>  PRO A 353
+THR A 354  <=====>  THR A 354
+ALA A 355  <=====>  ALA A 355
+GLU A 356  <=====>  GLU A 356
+GLU A 357  <=====>  GLU A 357
+LEU A 358  <=====>  LEU A 358
+GLU A 359  <=====>  GLU A 359
+ASP A 360  <=====>  ASP A 360
+TRP A 361  <=====>  TRP A 361
+ILE A 362  <=====>  ILE A 362
+GLU A 363  <=====>  GLU A 363
+ASP A 364  <=====>  ASP A 364
+VAL A 365  <=====>  VAL A 365
+LEU A 366  <=====>  LEU A 366
+SER A 367  <=====>  SER A 367
+GLY A 368  <=====>  GLY A 368
+LYS A 369  <=====>  LYS A 369
+ILE A 370  <=====>  ILE A 370
+ASN A 371  <=====>  ASN A 371
+LEU B  23  <=====>  LEU B  23
+ASN B  24  <=====>  ASN B  24
+PHE B  25  <=====>  PHE B  25
+PRO B  26  <=====>  PRO B  26
+THR B  27  <=====>  THR B  27
+TYR B  28  <=====>  TYR B  28
+ASP B  29  <=====>  ASP B  29
+GLY B  30  <=====>  GLY B  30
+LYS B  31  <=====>  LYS B  31
+ASP B  32  <=====>  ASP B  32
+ARG B  33  <=====>  ARG B  33
+VAL B  34  <=====>  VAL B  34
+VAL B  35  <=====>  VAL B  35
+SER B  36  <=====>  SER B  36
+LEU B  37  <=====>  LEU B  37
+SER B  38  <=====>  SER B  38
+GLU B  39  <=====>  GLU B  39
+LYS B  40  <=====>  LYS B  40
+ASN B  41  <=====>  ASN B  41
+PHE B  42  <=====>  PHE B  42
+LYS B  43  <=====>  LYS B  43
+GLN B  44  <=====>  GLN B  44
+VAL B  45  <=====>  VAL B  45
+LEU B  46  <=====>  LEU B  46
+LYS B  47  <=====>  LYS B  47
+LYS B  48  <=====>  LYS B  48
+TYR B  49  <=====>  TYR B  49
+ASP B  50  <=====>  ASP B  50
+LEU B  51  <=====>  LEU B  51
+LEU B  52  <=====>  LEU B  52
+CYS B  53  <=====>  CYS B  53
+LEU B  54  <=====>  LEU B  54
+TYR B  55  <=====>  TYR B  55
+TYR B  56  <=====>  TYR B  56
+HIS B  57  <=====>  HIS B  57
+GLN B  69  <=====>  GLN B  69
+PHE B  70  <=====>  PHE B  70
+GLN B  71  <=====>  GLN B  71
+LEU B  72  <=====>  LEU B  72
+LYS B  73  <=====>  LYS B  73
+GLU B  74  <=====>  GLU B  74
+ILE B  75  <=====>  ILE B  75
+VAL B  76  <=====>  VAL B  76
+LEU B  77  <=====>  LEU B  77
+GLU B  78  <=====>  GLU B  78
+LEU B  79  <=====>  LEU B  79
+VAL B  80  <=====>  VAL B  80
+ALA B  81  <=====>  ALA B  81
+GLN B  82  <=====>  GLN B  82
+VAL B  83  <=====>  VAL B  83
+LEU B  84  <=====>  LEU B  84
+GLU B  85  <=====>  GLU B  85
+HIS B  86  <=====>  HIS B  86
+LYS B  87  <=====>  LYS B  87
+ALA B  88  <=====>  ALA B  88
+ILE B  89  <=====>  ILE B  89
+GLY B  90  <=====>  GLY B  90
+PHE B  91  <=====>  PHE B  91
+VAL B  92  <=====>  VAL B  92
+MET B  93  <=====>  MET B  93
+VAL B  94  <=====>  VAL B  94
+ASP B  95  <=====>  ASP B  95
+ALA B  96  <=====>  ALA B  96
+LYS B  97  <=====>  LYS B  97
+LYS B  98  <=====>  LYS B  98
+GLU B  99  <=====>  GLU B  99
+ALA B 100  <=====>  ALA B 100
+LYS B 101  <=====>  LYS B 101
+LEU B 102  <=====>  LEU B 102
+ALA B 103  <=====>  ALA B 103
+LYS B 104  <=====>  LYS B 104
+LYS B 105  <=====>  LYS B 105
+LEU B 106  <=====>  LEU B 106
+GLY B 107  <=====>  GLY B 107
+PHE B 108  <=====>  PHE B 108
+ASP B 109  <=====>  ASP B 109
+GLU B 110  <=====>  GLU B 110
+GLU B 111  <=====>  GLU B 111
+GLY B 112  <=====>  GLY B 112
+SER B 113  <=====>  SER B 113
+LEU B 114  <=====>  LEU B 114
+TYR B 115  <=====>  TYR B 115
+ILE B 116  <=====>  ILE B 116
+LEU B 117  <=====>  LEU B 117
+LYS B 118  <=====>  LYS B 118
+GLY B 119  <=====>  GLY B 119
+ASP B 120  <=====>  ASP B 120
+ARG B 121  <=====>  ARG B 121
+THR B 122  <=====>  THR B 122
+ILE B 123  <=====>  ILE B 123
+GLU B 124  <=====>  GLU B 124
+PHE B 125  <=====>  PHE B 125
+ASP B 126  <=====>  ASP B 126
+GLY B 127  <=====>  GLY B 127
+GLU B 128  <=====>  GLU B 128
+PHE B 129  <=====>  PHE B 129
+ALA B 130  <=====>  ALA B 130
+ALA B 131  <=====>  ALA B 131
+ASP B 132  <=====>  ASP B 132
+VAL B 133  <=====>  VAL B 133
+LEU B 134  <=====>  LEU B 134
+VAL B 135  <=====>  VAL B 135
+GLU B 136  <=====>  GLU B 136
+PHE B 137  <=====>  PHE B 137
+LEU B 138  <=====>  LEU B 138
+LEU B 139  <=====>  LEU B 139
+ASP B 140  <=====>  ASP B 140
+LEU B 141  <=====>  LEU B 141
+ILE B 142  <=====>  ILE B 142
+GLU B 143  <=====>  GLU B 143
+ASP B 144  <=====>  ASP B 144
+PRO B 145  <=====>  PRO B 145
+VAL B 146  <=====>  VAL B 146
+GLU B 147  <=====>  GLU B 147
+ILE B 148  <=====>  ILE B 148
+ILE B 149  <=====>  ILE B 149
+SER B 150  <=====>  SER B 150
+SER B 151  <=====>  SER B 151
+LYS B 152  <=====>  LYS B 152
+LEU B 153  <=====>  LEU B 153
+GLU B 154  <=====>  GLU B 154
+VAL B 155  <=====>  VAL B 155
+GLN B 156  <=====>  GLN B 156
+ALA B 157  <=====>  ALA B 157
+PHE B 158  <=====>  PHE B 158
+GLU B 159  <=====>  GLU B 159
+ARG B 160  <=====>  ARG B 160
+ILE B 161  <=====>  ILE B 161
+GLU B 162  <=====>  GLU B 162
+ASP B 163  <=====>  ASP B 163
+TYR B 164  <=====>  TYR B 164
+ILE B 165  <=====>  ILE B 165
+LYS B 166  <=====>  LYS B 166
+LEU B 167  <=====>  LEU B 167
+ILE B 168  <=====>  ILE B 168
+GLY B 169  <=====>  GLY B 169
+PHE B 170  <=====>  PHE B 170
+PHE B 171  <=====>  PHE B 171
+LYS B 172  <=====>  LYS B 172
+SER B 173  <=====>  SER B 173
+GLU B 174  <=====>  GLU B 174
+ASP B 175  <=====>  ASP B 175
+SER B 176  <=====>  SER B 176
+GLU B 177  <=====>  GLU B 177
+TYR B 178  <=====>  TYR B 178
+TYR B 179  <=====>  TYR B 179
+LYS B 180  <=====>  LYS B 180
+ALA B 181  <=====>  ALA B 181
+PHE B 182  <=====>  PHE B 182
+GLU B 183  <=====>  GLU B 183
+GLU B 184  <=====>  GLU B 184
+ALA B 185  <=====>  ALA B 185
+ALA B 186  <=====>  ALA B 186
+GLU B 187  <=====>  GLU B 187
+HIS B 188  <=====>  HIS B 188
+PHE B 189  <=====>  PHE B 189
+GLN B 190  <=====>  GLN B 190
+PRO B 191  <=====>  PRO B 191
+TYR B 192  <=====>  TYR B 192
+ILE B 193  <=====>  ILE B 193
+LYS B 194  <=====>  LYS B 194
+PHE B 195  <=====>  PHE B 195
+PHE B 196  <=====>  PHE B 196
+ALA B 197  <=====>  ALA B 197
+THR B 198  <=====>  THR B 198
+PHE B 199  <=====>  PHE B 199
+ASP B 200  <=====>  ASP B 200
+LYS B 201  <=====>  LYS B 201
+GLY B 202  <=====>  GLY B 202
+VAL B 203  <=====>  VAL B 203
+ALA B 204  <=====>  ALA B 204
+LYS B 205  <=====>  LYS B 205
+LYS B 206  <=====>  LYS B 206
+LEU B 207  <=====>  LEU B 207
+SER B 208  <=====>  SER B 208
+LEU B 209  <=====>  LEU B 209
+LYS B 210  <=====>  LYS B 210
+MET B 211  <=====>  MET B 211
+ASN B 212  <=====>  ASN B 212
+GLU B 213  <=====>  GLU B 213
+VAL B 214  <=====>  VAL B 214
+ASP B 215  <=====>  ASP B 215
+PHE B 216  <=====>  PHE B 216
+TYR B 217  <=====>  TYR B 217
+GLU B 218  <=====>  GLU B 218
+PRO B 219  <=====>  PRO B 219
+PHE B 220  <=====>  PHE B 220
+MET B 221  <=====>  MET B 221
+ASP B 222  <=====>  ASP B 222
+GLU B 223  <=====>  GLU B 223
+PRO B 224  <=====>  PRO B 224
+ILE B 225  <=====>  ILE B 225
+ALA B 226  <=====>  ALA B 226
+ILE B 227  <=====>  ILE B 227
+PRO B 228  <=====>  PRO B 228
+ASN B 229  <=====>  ASN B 229
+LYS B 230  <=====>  LYS B 230
+PRO B 231  <=====>  PRO B 231
+TYR B 232  <=====>  TYR B 232
+THR B 233  <=====>  THR B 233
+GLU B 234  <=====>  GLU B 234
+GLU B 235  <=====>  GLU B 235
+GLU B 236  <=====>  GLU B 236
+LEU B 237  <=====>  LEU B 237
+VAL B 238  <=====>  VAL B 238
+GLU B 239  <=====>  GLU B 239
+PHE B 240  <=====>  PHE B 240
+VAL B 241  <=====>  VAL B 241
+LYS B 242  <=====>  LYS B 242
+GLU B 243  <=====>  GLU B 243
+HIS B 244  <=====>  HIS B 244
+GLN B 245  <=====>  GLN B 245
+ARG B 246  <=====>  ARG B 246
+PRO B 247  <=====>  PRO B 247
+THR B 248  <=====>  THR B 248
+LEU B 249  <=====>  LEU B 249
+ARG B 250  <=====>  ARG B 250
+ARG B 251  <=====>  ARG B 251
+LEU B 252  <=====>  LEU B 252
+ARG B 253  <=====>  ARG B 253
+PRO B 254  <=====>  PRO B 254
+GLU B 255  <=====>  GLU B 255
+GLU B 256  <=====>  GLU B 256
+MET B 257  <=====>  MET B 257
+PHE B 258  <=====>  PHE B 258
+ILE B 268  <=====>  ILE B 268
+HIS B 269  <=====>  HIS B 269
+ILE B 270  <=====>  ILE B 270
+VAL B 271  <=====>  VAL B 271
+ALA B 272  <=====>  ALA B 272
+PHE B 273  <=====>  PHE B 273
+ALA B 274  <=====>  ALA B 274
+GLU B 275  <=====>  GLU B 275
+LYS B 276  <=====>  LYS B 276
+SER B 277  <=====>  SER B 277
+ASP B 278  <=====>  ASP B 278
+PRO B 279  <=====>  PRO B 279
+ASP B 280  <=====>  ASP B 280
+GLY B 281  <=====>  GLY B 281
+TYR B 282  <=====>  TYR B 282
+GLU B 283  <=====>  GLU B 283
+PHE B 284  <=====>  PHE B 284
+LEU B 285  <=====>  LEU B 285
+GLU B 286  <=====>  GLU B 286
+ILE B 287  <=====>  ILE B 287
+LEU B 288  <=====>  LEU B 288
+LYS B 289  <=====>  LYS B 289
+GLN B 290  <=====>  GLN B 290
+VAL B 291  <=====>  VAL B 291
+ALA B 292  <=====>  ALA B 292
+ARG B 293  <=====>  ARG B 293
+ASP B 294  <=====>  ASP B 294
+ASN B 295  <=====>  ASN B 295
+THR B 296  <=====>  THR B 296
+ASP B 297  <=====>  ASP B 297
+ASN B 298  <=====>  ASN B 298
+PRO B 299  <=====>  PRO B 299
+ASP B 300  <=====>  ASP B 300
+LEU B 301  <=====>  LEU B 301
+SER B 302  <=====>  SER B 302
+ILE B 303  <=====>  ILE B 303
+LEU B 304  <=====>  LEU B 304
+TRP B 305  <=====>  TRP B 305
+ILE B 306  <=====>  ILE B 306
+ASP B 307  <=====>  ASP B 307
+PRO B 308  <=====>  PRO B 308
+ASP B 309  <=====>  ASP B 309
+ASP B 310  <=====>  ASP B 310
+PHE B 311  <=====>  PHE B 311
+PRO B 312  <=====>  PRO B 312
+LEU B 313  <=====>  LEU B 313
+LEU B 314  <=====>  LEU B 314
+VAL B 315  <=====>  VAL B 315
+ALA B 316  <=====>  ALA B 316
+TYR B 317  <=====>  TYR B 317
+TRP B 318  <=====>  TRP B 318
+GLU B 319  <=====>  GLU B 319
+LYS B 320  <=====>  LYS B 320
+THR B 321  <=====>  THR B 321
+PHE B 322  <=====>  PHE B 322
+LYS B 323  <=====>  LYS B 323
+ILE B 324  <=====>  ILE B 324
+ASP B 325  <=====>  ASP B 325
+LEU B 326  <=====>  LEU B 326
+PHE B 327  <=====>  PHE B 327
+ARG B 328  <=====>  ARG B 328
+PRO B 329  <=====>  PRO B 329
+GLN B 330  <=====>  GLN B 330
+ILE B 331  <=====>  ILE B 331
+GLY B 332  <=====>  GLY B 332
+VAL B 333  <=====>  VAL B 333
+VAL B 334  <=====>  VAL B 334
+ASN B 335  <=====>  ASN B 335
+VAL B 336  <=====>  VAL B 336
+THR B 337  <=====>  THR B 337
+ASP B 338  <=====>  ASP B 338
+ALA B 339  <=====>  ALA B 339
+ASP B 340  <=====>  ASP B 340
+SER B 341  <=====>  SER B 341
+VAL B 342  <=====>  VAL B 342
+TRP B 343  <=====>  TRP B 343
+MET B 344  <=====>  MET B 344
+GLU B 345  <=====>  GLU B 345
+ILE B 346  <=====>  ILE B 346
+PRO B 347  <=====>  PRO B 347
+ASP B 348  <=====>  ASP B 348
+ASP B 349  <=====>  ASP B 349
+ASP B 350  <=====>  ASP B 350
+ASP B 351  <=====>  ASP B 351
+LEU B 352  <=====>  LEU B 352
+PRO B 353  <=====>  PRO B 353
+THR B 354  <=====>  THR B 354
+ALA B 355  <=====>  ALA B 355
+GLU B 356  <=====>  GLU B 356
+GLU B 357  <=====>  GLU B 357
+LEU B 358  <=====>  LEU B 358
+GLU B 359  <=====>  GLU B 359
+ASP B 360  <=====>  ASP B 360
+TRP B 361  <=====>  TRP B 361
+ILE B 362  <=====>  ILE B 362
+GLU B 363  <=====>  GLU B 363
+ASP B 364  <=====>  ASP B 364
+VAL B 365  <=====>  VAL B 365
+LEU B 366  <=====>  LEU B 366
+SER B 367  <=====>  SER B 367
+GLY B 368  <=====>  GLY B 368
+LYS B 369  <=====>  LYS B 369
+ILE B 370  <=====>  ILE B 370
+ASN B 371  <=====>  ASN B 371
+LEU C  23  <=====>  LEU C  23
+ASN C  24  <=====>  ASN C  24
+PHE C  25  <=====>  PHE C  25
+PRO C  26  <=====>  PRO C  26
+THR C  27  <=====>  THR C  27
+TYR C  28  <=====>  TYR C  28
+ASP C  29  <=====>  ASP C  29
+GLY C  30  <=====>  GLY C  30
+LYS C  31  <=====>  LYS C  31
+ASP C  32  <=====>  ASP C  32
+ARG C  33  <=====>  ARG C  33
+VAL C  34  <=====>  VAL C  34
+VAL C  35  <=====>  VAL C  35
+SER C  36  <=====>  SER C  36
+LEU C  37  <=====>  LEU C  37
+SER C  38  <=====>  SER C  38
+GLU C  39  <=====>  GLU C  39
+LYS C  40  <=====>  LYS C  40
+ASN C  41  <=====>  ASN C  41
+PHE C  42  <=====>  PHE C  42
+LYS C  43  <=====>  LYS C  43
+GLN C  44  <=====>  GLN C  44
+VAL C  45  <=====>  VAL C  45
+LEU C  46  <=====>  LEU C  46
+LYS C  47  <=====>  LYS C  47
+LYS C  48  <=====>  LYS C  48
+TYR C  49  <=====>  TYR C  49
+ASP C  50  <=====>  ASP C  50
+LEU C  51  <=====>  LEU C  51
+LEU C  52  <=====>  LEU C  52
+CYS C  53  <=====>  CYS C  53
+LEU C  54  <=====>  LEU C  54
+TYR C  55  <=====>  TYR C  55
+TYR C  56  <=====>  TYR C  56
+HIS C  57  <=====>  HIS C  57
+GLN C  69  <=====>  GLN C  69
+PHE C  70  <=====>  PHE C  70
+GLN C  71  <=====>  GLN C  71
+LEU C  72  <=====>  LEU C  72
+LYS C  73  <=====>  LYS C  73
+GLU C  74  <=====>  GLU C  74
+ILE C  75  <=====>  ILE C  75
+VAL C  76  <=====>  VAL C  76
+LEU C  77  <=====>  LEU C  77
+GLU C  78  <=====>  GLU C  78
+LEU C  79  <=====>  LEU C  79
+VAL C  80  <=====>  VAL C  80
+ALA C  81  <=====>  ALA C  81
+GLN C  82  <=====>  GLN C  82
+VAL C  83  <=====>  VAL C  83
+LEU C  84  <=====>  LEU C  84
+GLU C  85  <=====>  GLU C  85
+HIS C  86  <=====>  HIS C  86
+LYS C  87  <=====>  LYS C  87
+ALA C  88  <=====>  ALA C  88
+ILE C  89  <=====>  ILE C  89
+GLY C  90  <=====>  GLY C  90
+PHE C  91  <=====>  PHE C  91
+VAL C  92  <=====>  VAL C  92
+MET C  93  <=====>  MET C  93
+VAL C  94  <=====>  VAL C  94
+ASP C  95  <=====>  ASP C  95
+ALA C  96  <=====>  ALA C  96
+LYS C  97  <=====>  LYS C  97
+LYS C  98  <=====>  LYS C  98
+GLU C  99  <=====>  GLU C  99
+ALA C 100  <=====>  ALA C 100
+LYS C 101  <=====>  LYS C 101
+LEU C 102  <=====>  LEU C 102
+ALA C 103  <=====>  ALA C 103
+LYS C 104  <=====>  LYS C 104
+LYS C 105  <=====>  LYS C 105
+LEU C 106  <=====>  LEU C 106
+GLY C 107  <=====>  GLY C 107
+PHE C 108  <=====>  PHE C 108
+ASP C 109  <=====>  ASP C 109
+GLU C 110  <=====>  GLU C 110
+GLU C 111  <=====>  GLU C 111
+GLY C 112  <=====>  GLY C 112
+SER C 113  <=====>  SER C 113
+LEU C 114  <=====>  LEU C 114
+TYR C 115  <=====>  TYR C 115
+ILE C 116  <=====>  ILE C 116
+LEU C 117  <=====>  LEU C 117
+LYS C 118  <=====>  LYS C 118
+GLY C 119  <=====>  GLY C 119
+ASP C 120  <=====>  ASP C 120
+ARG C 121  <=====>  ARG C 121
+THR C 122  <=====>  THR C 122
+ILE C 123  <=====>  ILE C 123
+GLU C 124  <=====>  GLU C 124
+PHE C 125  <=====>  PHE C 125
+ASP C 126  <=====>  ASP C 126
+GLY C 127  <=====>  GLY C 127
+GLU C 128  <=====>  GLU C 128
+PHE C 129  <=====>  PHE C 129
+ALA C 130  <=====>  ALA C 130
+ALA C 131  <=====>  ALA C 131
+ASP C 132  <=====>  ASP C 132
+VAL C 133  <=====>  VAL C 133
+LEU C 134  <=====>  LEU C 134
+VAL C 135  <=====>  VAL C 135
+GLU C 136  <=====>  GLU C 136
+PHE C 137  <=====>  PHE C 137
+LEU C 138  <=====>  LEU C 138
+LEU C 139  <=====>  LEU C 139
+ASP C 140  <=====>  ASP C 140
+LEU C 141  <=====>  LEU C 141
+ILE C 142  <=====>  ILE C 142
+GLU C 143  <=====>  GLU C 143
+ASP C 144  <=====>  ASP C 144
+PRO C 145  <=====>  PRO C 145
+VAL C 146  <=====>  VAL C 146
+GLU C 147  <=====>  GLU C 147
+ILE C 148  <=====>  ILE C 148
+ILE C 149  <=====>  ILE C 149
+SER C 150  <=====>  SER C 150
+SER C 151  <=====>  SER C 151
+LYS C 152  <=====>  LYS C 152
+LEU C 153  <=====>  LEU C 153
+GLU C 154  <=====>  GLU C 154
+VAL C 155  <=====>  VAL C 155
+GLN C 156  <=====>  GLN C 156
+ALA C 157  <=====>  ALA C 157
+PHE C 158  <=====>  PHE C 158
+GLU C 159  <=====>  GLU C 159
+ARG C 160  <=====>  ARG C 160
+ILE C 161  <=====>  ILE C 161
+GLU C 162  <=====>  GLU C 162
+ASP C 163  <=====>  ASP C 163
+TYR C 164  <=====>  TYR C 164
+ILE C 165  <=====>  ILE C 165
+LYS C 166  <=====>  LYS C 166
+LEU C 167  <=====>  LEU C 167
+ILE C 168  <=====>  ILE C 168
+GLY C 169  <=====>  GLY C 169
+PHE C 170  <=====>  PHE C 170
+PHE C 171  <=====>  PHE C 171
+LYS C 172  <=====>  LYS C 172
+SER C 173  <=====>  SER C 173
+GLU C 174  <=====>  GLU C 174
+ASP C 175  <=====>  ASP C 175
+SER C 176  <=====>  SER C 176
+GLU C 177  <=====>  GLU C 177
+TYR C 178  <=====>  TYR C 178
+TYR C 179  <=====>  TYR C 179
+LYS C 180  <=====>  LYS C 180
+ALA C 181  <=====>  ALA C 181
+PHE C 182  <=====>  PHE C 182
+GLU C 183  <=====>  GLU C 183
+GLU C 184  <=====>  GLU C 184
+ALA C 185  <=====>  ALA C 185
+ALA C 186  <=====>  ALA C 186
+GLU C 187  <=====>  GLU C 187
+HIS C 188  <=====>  HIS C 188
+PHE C 189  <=====>  PHE C 189
+GLN C 190  <=====>  GLN C 190
+PRO C 191  <=====>  PRO C 191
+TYR C 192  <=====>  TYR C 192
+ILE C 193  <=====>  ILE C 193
+LYS C 194  <=====>  LYS C 194
+PHE C 195  <=====>  PHE C 195
+PHE C 196  <=====>  PHE C 196
+ALA C 197  <=====>  ALA C 197
+THR C 198  <=====>  THR C 198
+PHE C 199  <=====>  PHE C 199
+ASP C 200  <=====>  ASP C 200
+LYS C 201  <=====>  LYS C 201
+GLY C 202  <=====>  GLY C 202
+VAL C 203  <=====>  VAL C 203
+ALA C 204  <=====>  ALA C 204
+LYS C 205  <=====>  LYS C 205
+LYS C 206  <=====>  LYS C 206
+LEU C 207  <=====>  LEU C 207
+SER C 208  <=====>  SER C 208
+LEU C 209  <=====>  LEU C 209
+LYS C 210  <=====>  LYS C 210
+MET C 211  <=====>  MET C 211
+ASN C 212  <=====>  ASN C 212
+GLU C 213  <=====>  GLU C 213
+VAL C 214  <=====>  VAL C 214
+ASP C 215  <=====>  ASP C 215
+PHE C 216  <=====>  PHE C 216
+TYR C 217  <=====>  TYR C 217
+GLU C 218  <=====>  GLU C 218
+PRO C 219  <=====>  PRO C 219
+PHE C 220  <=====>  PHE C 220
+MET C 221  <=====>  MET C 221
+ASP C 222  <=====>  ASP C 222
+GLU C 223  <=====>  GLU C 223
+PRO C 224  <=====>  PRO C 224
+ILE C 225  <=====>  ILE C 225
+ALA C 226  <=====>  ALA C 226
+ILE C 227  <=====>  ILE C 227
+PRO C 228  <=====>  PRO C 228
+ASN C 229  <=====>  ASN C 229
+LYS C 230  <=====>  LYS C 230
+PRO C 231  <=====>  PRO C 231
+TYR C 232  <=====>  TYR C 232
+THR C 233  <=====>  THR C 233
+GLU C 234  <=====>  GLU C 234
+GLU C 235  <=====>  GLU C 235
+GLU C 236  <=====>  GLU C 236
+LEU C 237  <=====>  LEU C 237
+VAL C 238  <=====>  VAL C 238
+GLU C 239  <=====>  GLU C 239
+PHE C 240  <=====>  PHE C 240
+VAL C 241  <=====>  VAL C 241
+LYS C 242  <=====>  LYS C 242
+GLU C 243  <=====>  GLU C 243
+HIS C 244  <=====>  HIS C 244
+GLN C 245  <=====>  GLN C 245
+ARG C 246  <=====>  ARG C 246
+PRO C 247  <=====>  PRO C 247
+THR C 248  <=====>  THR C 248
+LEU C 249  <=====>  LEU C 249
+ARG C 250  <=====>  ARG C 250
+ARG C 251  <=====>  ARG C 251
+LEU C 252  <=====>  LEU C 252
+ARG C 253  <=====>  ARG C 253
+PRO C 254  <=====>  PRO C 254
+GLU C 255  <=====>  GLU C 255
+GLU C 256  <=====>  GLU C 256
+MET C 257  <=====>  MET C 257
+PHE C 258  <=====>  PHE C 258
+ILE C 268  <=====>  ILE C 268
+HIS C 269  <=====>  HIS C 269
+ILE C 270  <=====>  ILE C 270
+VAL C 271  <=====>  VAL C 271
+ALA C 272  <=====>  ALA C 272
+PHE C 273  <=====>  PHE C 273
+ALA C 274  <=====>  ALA C 274
+GLU C 275  <=====>  GLU C 275
+LYS C 276  <=====>  LYS C 276
+SER C 277  <=====>  SER C 277
+ASP C 278  <=====>  ASP C 278
+PRO C 279  <=====>  PRO C 279
+ASP C 280  <=====>  ASP C 280
+GLY C 281  <=====>  GLY C 281
+TYR C 282  <=====>  TYR C 282
+GLU C 283  <=====>  GLU C 283
+PHE C 284  <=====>  PHE C 284
+LEU C 285  <=====>  LEU C 285
+GLU C 286  <=====>  GLU C 286
+ILE C 287  <=====>  ILE C 287
+LEU C 288  <=====>  LEU C 288
+LYS C 289  <=====>  LYS C 289
+GLN C 290  <=====>  GLN C 290
+VAL C 291  <=====>  VAL C 291
+ALA C 292  <=====>  ALA C 292
+ARG C 293  <=====>  ARG C 293
+ASP C 294  <=====>  ASP C 294
+ASN C 295  <=====>  ASN C 295
+THR C 296  <=====>  THR C 296
+ASP C 297  <=====>  ASP C 297
+ASN C 298  <=====>  ASN C 298
+PRO C 299  <=====>  PRO C 299
+ASP C 300  <=====>  ASP C 300
+LEU C 301  <=====>  LEU C 301
+SER C 302  <=====>  SER C 302
+ILE C 303  <=====>  ILE C 303
+LEU C 304  <=====>  LEU C 304
+TRP C 305  <=====>  TRP C 305
+ILE C 306  <=====>  ILE C 306
+ASP C 307  <=====>  ASP C 307
+PRO C 308  <=====>  PRO C 308
+ASP C 309  <=====>  ASP C 309
+ASP C 310  <=====>  ASP C 310
+PHE C 311  <=====>  PHE C 311
+PRO C 312  <=====>  PRO C 312
+LEU C 313  <=====>  LEU C 313
+LEU C 314  <=====>  LEU C 314
+VAL C 315  <=====>  VAL C 315
+ALA C 316  <=====>  ALA C 316
+TYR C 317  <=====>  TYR C 317
+TRP C 318  <=====>  TRP C 318
+GLU C 319  <=====>  GLU C 319
+LYS C 320  <=====>  LYS C 320
+THR C 321  <=====>  THR C 321
+PHE C 322  <=====>  PHE C 322
+LYS C 323  <=====>  LYS C 323
+ILE C 324  <=====>  ILE C 324
+ASP C 325  <=====>  ASP C 325
+LEU C 326  <=====>  LEU C 326
+PHE C 327  <=====>  PHE C 327
+ARG C 328  <=====>  ARG C 328
+PRO C 329  <=====>  PRO C 329
+GLN C 330  <=====>  GLN C 330
+ILE C 331  <=====>  ILE C 331
+GLY C 332  <=====>  GLY C 332
+VAL C 333  <=====>  VAL C 333
+VAL C 334  <=====>  VAL C 334
+ASN C 335  <=====>  ASN C 335
+VAL C 336  <=====>  VAL C 336
+THR C 337  <=====>  THR C 337
+ASP C 338  <=====>  ASP C 338
+ALA C 339  <=====>  ALA C 339
+ASP C 340  <=====>  ASP C 340
+SER C 341  <=====>  SER C 341
+VAL C 342  <=====>  VAL C 342
+TRP C 343  <=====>  TRP C 343
+MET C 344  <=====>  MET C 344
+GLU C 345  <=====>  GLU C 345
+ILE C 346  <=====>  ILE C 346
+PRO C 347  <=====>  PRO C 347
+ASP C 348  <=====>  ASP C 348
+ASP C 349  <=====>  ASP C 349
+ASP C 350  <=====>  ASP C 350
+ASP C 351  <=====>  ASP C 351
+LEU C 352  <=====>  LEU C 352
+PRO C 353  <=====>  PRO C 353
+THR C 354  <=====>  THR C 354
+ALA C 355  <=====>  ALA C 355
+GLU C 356  <=====>  GLU C 356
+GLU C 357  <=====>  GLU C 357
+LEU C 358  <=====>  LEU C 358
+GLU C 359  <=====>  GLU C 359
+ASP C 360  <=====>  ASP C 360
+TRP C 361  <=====>  TRP C 361
+ILE C 362  <=====>  ILE C 362
+GLU C 363  <=====>  GLU C 363
+ASP C 364  <=====>  ASP C 364
+VAL C 365  <=====>  VAL C 365
+LEU C 366  <=====>  LEU C 366
+SER C 367  <=====>  SER C 367
+GLY C 368  <=====>  GLY C 368
+LYS C 369  <=====>  LYS C 369
+ILE C 370  <=====>  ILE C 370
+ASN C 371  <=====>  ASN C 371
+LEU D  23  <=====>  LEU D  23
+ASN D  24  <=====>  ASN D  24
+PHE D  25  <=====>  PHE D  25
+PRO D  26  <=====>  PRO D  26
+THR D  27  <=====>  THR D  27
+TYR D  28  <=====>  TYR D  28
+ASP D  29  <=====>  ASP D  29
+GLY D  30  <=====>  GLY D  30
+LYS D  31  <=====>  LYS D  31
+ASP D  32  <=====>  ASP D  32
+ARG D  33  <=====>  ARG D  33
+VAL D  34  <=====>  VAL D  34
+VAL D  35  <=====>  VAL D  35
+SER D  36  <=====>  SER D  36
+LEU D  37  <=====>  LEU D  37
+SER D  38  <=====>  SER D  38
+GLU D  39  <=====>  GLU D  39
+LYS D  40  <=====>  LYS D  40
+ASN D  41  <=====>  ASN D  41
+PHE D  42  <=====>  PHE D  42
+LYS D  43  <=====>  LYS D  43
+GLN D  44  <=====>  GLN D  44
+VAL D  45  <=====>  VAL D  45
+LEU D  46  <=====>  LEU D  46
+LYS D  47  <=====>  LYS D  47
+LYS D  48  <=====>  LYS D  48
+TYR D  49  <=====>  TYR D  49
+ASP D  50  <=====>  ASP D  50
+LEU D  51  <=====>  LEU D  51
+LEU D  52  <=====>  LEU D  52
+CYS D  53  <=====>  CYS D  53
+LEU D  54  <=====>  LEU D  54
+TYR D  55  <=====>  TYR D  55
+TYR D  56  <=====>  TYR D  56
+HIS D  57  <=====>  HIS D  57
+GLN D  69  <=====>  GLN D  69
+PHE D  70  <=====>  PHE D  70
+GLN D  71  <=====>  GLN D  71
+LEU D  72  <=====>  LEU D  72
+LYS D  73  <=====>  LYS D  73
+GLU D  74  <=====>  GLU D  74
+ILE D  75  <=====>  ILE D  75
+VAL D  76  <=====>  VAL D  76
+LEU D  77  <=====>  LEU D  77
+GLU D  78  <=====>  GLU D  78
+LEU D  79  <=====>  LEU D  79
+VAL D  80  <=====>  VAL D  80
+ALA D  81  <=====>  ALA D  81
+GLN D  82  <=====>  GLN D  82
+VAL D  83  <=====>  VAL D  83
+LEU D  84  <=====>  LEU D  84
+GLU D  85  <=====>  GLU D  85
+HIS D  86  <=====>  HIS D  86
+LYS D  87  <=====>  LYS D  87
+ALA D  88  <=====>  ALA D  88
+ILE D  89  <=====>  ILE D  89
+GLY D  90  <=====>  GLY D  90
+PHE D  91  <=====>  PHE D  91
+VAL D  92  <=====>  VAL D  92
+MET D  93  <=====>  MET D  93
+VAL D  94  <=====>  VAL D  94
+ASP D  95  <=====>  ASP D  95
+ALA D  96  <=====>  ALA D  96
+LYS D  97  <=====>  LYS D  97
+LYS D  98  <=====>  LYS D  98
+GLU D  99  <=====>  GLU D  99
+ALA D 100  <=====>  ALA D 100
+LYS D 101  <=====>  LYS D 101
+LEU D 102  <=====>  LEU D 102
+ALA D 103  <=====>  ALA D 103
+LYS D 104  <=====>  LYS D 104
+LYS D 105  <=====>  LYS D 105
+LEU D 106  <=====>  LEU D 106
+GLY D 107  <=====>  GLY D 107
+PHE D 108  <=====>  PHE D 108
+ASP D 109  <=====>  ASP D 109
+GLU D 110  <=====>  GLU D 110
+GLU D 111  <=====>  GLU D 111
+GLY D 112  <=====>  GLY D 112
+SER D 113  <=====>  SER D 113
+LEU D 114  <=====>  LEU D 114
+TYR D 115  <=====>  TYR D 115
+ILE D 116  <=====>  ILE D 116
+LEU D 117  <=====>  LEU D 117
+LYS D 118  <=====>  LYS D 118
+GLY D 119  <=====>  GLY D 119
+ASP D 120  <=====>  ASP D 120
+ARG D 121  <=====>  ARG D 121
+THR D 122  <=====>  THR D 122
+ILE D 123  <=====>  ILE D 123
+GLU D 124  <=====>  GLU D 124
+PHE D 125  <=====>  PHE D 125
+ASP D 126  <=====>  ASP D 126
+GLY D 127  <=====>  GLY D 127
+GLU D 128  <=====>  GLU D 128
+PHE D 129  <=====>  PHE D 129
+ALA D 130  <=====>  ALA D 130
+ALA D 131  <=====>  ALA D 131
+ASP D 132  <=====>  ASP D 132
+VAL D 133  <=====>  VAL D 133
+LEU D 134  <=====>  LEU D 134
+VAL D 135  <=====>  VAL D 135
+GLU D 136  <=====>  GLU D 136
+PHE D 137  <=====>  PHE D 137
+LEU D 138  <=====>  LEU D 138
+LEU D 139  <=====>  LEU D 139
+ASP D 140  <=====>  ASP D 140
+LEU D 141  <=====>  LEU D 141
+ILE D 142  <=====>  ILE D 142
+GLU D 143  <=====>  GLU D 143
+ASP D 144  <=====>  ASP D 144
+PRO D 145  <=====>  PRO D 145
+VAL D 146  <=====>  VAL D 146
+GLU D 147  <=====>  GLU D 147
+ILE D 148  <=====>  ILE D 148
+ILE D 149  <=====>  ILE D 149
+SER D 150  <=====>  SER D 150
+SER D 151  <=====>  SER D 151
+LYS D 152  <=====>  LYS D 152
+LEU D 153  <=====>  LEU D 153
+GLU D 154  <=====>  GLU D 154
+VAL D 155  <=====>  VAL D 155
+GLN D 156  <=====>  GLN D 156
+ALA D 157  <=====>  ALA D 157
+PHE D 158  <=====>  PHE D 158
+GLU D 159  <=====>  GLU D 159
+ARG D 160  <=====>  ARG D 160
+ILE D 161  <=====>  ILE D 161
+GLU D 162  <=====>  GLU D 162
+ASP D 163  <=====>  ASP D 163
+TYR D 164  <=====>  TYR D 164
+ILE D 165  <=====>  ILE D 165
+LYS D 166  <=====>  LYS D 166
+LEU D 167  <=====>  LEU D 167
+ILE D 168  <=====>  ILE D 168
+GLY D 169  <=====>  GLY D 169
+PHE D 170  <=====>  PHE D 170
+PHE D 171  <=====>  PHE D 171
+LYS D 172  <=====>  LYS D 172
+SER D 173  <=====>  SER D 173
+GLU D 174  <=====>  GLU D 174
+ASP D 175  <=====>  ASP D 175
+SER D 176  <=====>  SER D 176
+GLU D 177  <=====>  GLU D 177
+TYR D 178  <=====>  TYR D 178
+TYR D 179  <=====>  TYR D 179
+LYS D 180  <=====>  LYS D 180
+ALA D 181  <=====>  ALA D 181
+PHE D 182  <=====>  PHE D 182
+GLU D 183  <=====>  GLU D 183
+GLU D 184  <=====>  GLU D 184
+ALA D 185  <=====>  ALA D 185
+ALA D 186  <=====>  ALA D 186
+GLU D 187  <=====>  GLU D 187
+HIS D 188  <=====>  HIS D 188
+PHE D 189  <=====>  PHE D 189
+GLN D 190  <=====>  GLN D 190
+PRO D 191  <=====>  PRO D 191
+TYR D 192  <=====>  TYR D 192
+ILE D 193  <=====>  ILE D 193
+LYS D 194  <=====>  LYS D 194
+PHE D 195  <=====>  PHE D 195
+PHE D 196  <=====>  PHE D 196
+ALA D 197  <=====>  ALA D 197
+THR D 198  <=====>  THR D 198
+PHE D 199  <=====>  PHE D 199
+ASP D 200  <=====>  ASP D 200
+LYS D 201  <=====>  LYS D 201
+GLY D 202  <=====>  GLY D 202
+VAL D 203  <=====>  VAL D 203
+ALA D 204  <=====>  ALA D 204
+LYS D 205  <=====>  LYS D 205
+LYS D 206  <=====>  LYS D 206
+LEU D 207  <=====>  LEU D 207
+SER D 208  <=====>  SER D 208
+LEU D 209  <=====>  LEU D 209
+LYS D 210  <=====>  LYS D 210
+MET D 211  <=====>  MET D 211
+ASN D 212  <=====>  ASN D 212
+GLU D 213  <=====>  GLU D 213
+VAL D 214  <=====>  VAL D 214
+ASP D 215  <=====>  ASP D 215
+PHE D 216  <=====>  PHE D 216
+TYR D 217  <=====>  TYR D 217
+GLU D 218  <=====>  GLU D 218
+PRO D 219  <=====>  PRO D 219
+PHE D 220  <=====>  PHE D 220
+MET D 221  <=====>  MET D 221
+ASP D 222  <=====>  ASP D 222
+GLU D 223  <=====>  GLU D 223
+PRO D 224  <=====>  PRO D 224
+ILE D 225  <=====>  ILE D 225
+ALA D 226  <=====>  ALA D 226
+ILE D 227  <=====>  ILE D 227
+PRO D 228  <=====>  PRO D 228
+ASN D 229  <=====>  ASN D 229
+LYS D 230  <=====>  LYS D 230
+PRO D 231  <=====>  PRO D 231
+TYR D 232  <=====>  TYR D 232
+THR D 233  <=====>  THR D 233
+GLU D 234  <=====>  GLU D 234
+GLU D 235  <=====>  GLU D 235
+GLU D 236  <=====>  GLU D 236
+LEU D 237  <=====>  LEU D 237
+VAL D 238  <=====>  VAL D 238
+GLU D 239  <=====>  GLU D 239
+PHE D 240  <=====>  PHE D 240
+VAL D 241  <=====>  VAL D 241
+LYS D 242  <=====>  LYS D 242
+GLU D 243  <=====>  GLU D 243
+HIS D 244  <=====>  HIS D 244
+GLN D 245  <=====>  GLN D 245
+ARG D 246  <=====>  ARG D 246
+PRO D 247  <=====>  PRO D 247
+THR D 248  <=====>  THR D 248
+LEU D 249  <=====>  LEU D 249
+ARG D 250  <=====>  ARG D 250
+ARG D 251  <=====>  ARG D 251
+LEU D 252  <=====>  LEU D 252
+ARG D 253  <=====>  ARG D 253
+PRO D 254  <=====>  PRO D 254
+GLU D 255  <=====>  GLU D 255
+GLU D 256  <=====>  GLU D 256
+MET D 257  <=====>  MET D 257
+PHE D 258  <=====>  PHE D 258
+ILE D 268  <=====>  ILE D 268
+HIS D 269  <=====>  HIS D 269
+ILE D 270  <=====>  ILE D 270
+VAL D 271  <=====>  VAL D 271
+ALA D 272  <=====>  ALA D 272
+PHE D 273  <=====>  PHE D 273
+ALA D 274  <=====>  ALA D 274
+GLU D 275  <=====>  GLU D 275
+LYS D 276  <=====>  LYS D 276
+SER D 277  <=====>  SER D 277
+ASP D 278  <=====>  ASP D 278
+PRO D 279  <=====>  PRO D 279
+ASP D 280  <=====>  ASP D 280
+GLY D 281  <=====>  GLY D 281
+TYR D 282  <=====>  TYR D 282
+GLU D 283  <=====>  GLU D 283
+PHE D 284  <=====>  PHE D 284
+LEU D 285  <=====>  LEU D 285
+GLU D 286  <=====>  GLU D 286
+ILE D 287  <=====>  ILE D 287
+LEU D 288  <=====>  LEU D 288
+LYS D 289  <=====>  LYS D 289
+GLN D 290  <=====>  GLN D 290
+VAL D 291  <=====>  VAL D 291
+ALA D 292  <=====>  ALA D 292
+ARG D 293  <=====>  ARG D 293
+ASP D 294  <=====>  ASP D 294
+ASN D 295  <=====>  ASN D 295
+THR D 296  <=====>  THR D 296
+ASP D 297  <=====>  ASP D 297
+ASN D 298  <=====>  ASN D 298
+PRO D 299  <=====>  PRO D 299
+ASP D 300  <=====>  ASP D 300
+LEU D 301  <=====>  LEU D 301
+SER D 302  <=====>  SER D 302
+ILE D 303  <=====>  ILE D 303
+LEU D 304  <=====>  LEU D 304
+TRP D 305  <=====>  TRP D 305
+ILE D 306  <=====>  ILE D 306
+ASP D 307  <=====>  ASP D 307
+PRO D 308  <=====>  PRO D 308
+ASP D 309  <=====>  ASP D 309
+ASP D 310  <=====>  ASP D 310
+PHE D 311  <=====>  PHE D 311
+PRO D 312  <=====>  PRO D 312
+LEU D 313  <=====>  LEU D 313
+LEU D 314  <=====>  LEU D 314
+VAL D 315  <=====>  VAL D 315
+ALA D 316  <=====>  ALA D 316
+TYR D 317  <=====>  TYR D 317
+TRP D 318  <=====>  TRP D 318
+GLU D 319  <=====>  GLU D 319
+LYS D 320  <=====>  LYS D 320
+THR D 321  <=====>  THR D 321
+PHE D 322  <=====>  PHE D 322
+LYS D 323  <=====>  LYS D 323
+ILE D 324  <=====>  ILE D 324
+ASP D 325  <=====>  ASP D 325
+LEU D 326  <=====>  LEU D 326
+PHE D 327  <=====>  PHE D 327
+ARG D 328  <=====>  ARG D 328
+PRO D 329  <=====>  PRO D 329
+GLN D 330  <=====>  GLN D 330
+ILE D 331  <=====>  ILE D 331
+GLY D 332  <=====>  GLY D 332
+VAL D 333  <=====>  VAL D 333
+VAL D 334  <=====>  VAL D 334
+ASN D 335  <=====>  ASN D 335
+VAL D 336  <=====>  VAL D 336
+THR D 337  <=====>  THR D 337
+ASP D 338  <=====>  ASP D 338
+ALA D 339  <=====>  ALA D 339
+ASP D 340  <=====>  ASP D 340
+SER D 341  <=====>  SER D 341
+VAL D 342  <=====>  VAL D 342
+TRP D 343  <=====>  TRP D 343
+MET D 344  <=====>  MET D 344
+GLU D 345  <=====>  GLU D 345
+ILE D 346  <=====>  ILE D 346
+PRO D 347  <=====>  PRO D 347
+ASP D 348  <=====>  ASP D 348
+ASP D 349  <=====>  ASP D 349
+ASP D 350  <=====>  ASP D 350
+ASP D 351  <=====>  ASP D 351
+LEU D 352  <=====>  LEU D 352
+PRO D 353  <=====>  PRO D 353
+THR D 354  <=====>  THR D 354
+ALA D 355  <=====>  ALA D 355
+GLU D 356  <=====>  GLU D 356
+GLU D 357  <=====>  GLU D 357
+LEU D 358  <=====>  LEU D 358
+GLU D 359  <=====>  GLU D 359
+ASP D 360  <=====>  ASP D 360
+TRP D 361  <=====>  TRP D 361
+ILE D 362  <=====>  ILE D 362
+GLU D 363  <=====>  GLU D 363
+ASP D 364  <=====>  ASP D 364
+VAL D 365  <=====>  VAL D 365
+LEU D 366  <=====>  LEU D 366
+SER D 367  <=====>  SER D 367
+GLY D 368  <=====>  GLY D 368
+LYS D 369  <=====>  LYS D 369
+ILE D 370  <=====>  ILE D 370
+ASN D 371  <=====>  ASN D 371
+LEU E  23  <=====>  LEU E  23
+ASN E  24  <=====>  ASN E  24
+PHE E  25  <=====>  PHE E  25
+PRO E  26  <=====>  PRO E  26
+THR E  27  <=====>  THR E  27
+TYR E  28  <=====>  TYR E  28
+ASP E  29  <=====>  ASP E  29
+GLY E  30  <=====>  GLY E  30
+LYS E  31  <=====>  LYS E  31
+ASP E  32  <=====>  ASP E  32
+ARG E  33  <=====>  ARG E  33
+VAL E  34  <=====>  VAL E  34
+VAL E  35  <=====>  VAL E  35
+SER E  36  <=====>  SER E  36
+LEU E  37  <=====>  LEU E  37
+SER E  38  <=====>  SER E  38
+GLU E  39  <=====>  GLU E  39
+LYS E  40  <=====>  LYS E  40
+ASN E  41  <=====>  ASN E  41
+PHE E  42  <=====>  PHE E  42
+LYS E  43  <=====>  LYS E  43
+GLN E  44  <=====>  GLN E  44
+VAL E  45  <=====>  VAL E  45
+LEU E  46  <=====>  LEU E  46
+LYS E  47  <=====>  LYS E  47
+LYS E  48  <=====>  LYS E  48
+TYR E  49  <=====>  TYR E  49
+ASP E  50  <=====>  ASP E  50
+LEU E  51  <=====>  LEU E  51
+LEU E  52  <=====>  LEU E  52
+CYS E  53  <=====>  CYS E  53
+LEU E  54  <=====>  LEU E  54
+TYR E  55  <=====>  TYR E  55
+TYR E  56  <=====>  TYR E  56
+HIS E  57  <=====>  HIS E  57
+GLN E  69  <=====>  GLN E  69
+PHE E  70  <=====>  PHE E  70
+GLN E  71  <=====>  GLN E  71
+LEU E  72  <=====>  LEU E  72
+LYS E  73  <=====>  LYS E  73
+GLU E  74  <=====>  GLU E  74
+ILE E  75  <=====>  ILE E  75
+VAL E  76  <=====>  VAL E  76
+LEU E  77  <=====>  LEU E  77
+GLU E  78  <=====>  GLU E  78
+LEU E  79  <=====>  LEU E  79
+VAL E  80  <=====>  VAL E  80
+ALA E  81  <=====>  ALA E  81
+GLN E  82  <=====>  GLN E  82
+VAL E  83  <=====>  VAL E  83
+LEU E  84  <=====>  LEU E  84
+GLU E  85  <=====>  GLU E  85
+HIS E  86  <=====>  HIS E  86
+LYS E  87  <=====>  LYS E  87
+ALA E  88  <=====>  ALA E  88
+ILE E  89  <=====>  ILE E  89
+GLY E  90  <=====>  GLY E  90
+PHE E  91  <=====>  PHE E  91
+VAL E  92  <=====>  VAL E  92
+MET E  93  <=====>  MET E  93
+VAL E  94  <=====>  VAL E  94
+ASP E  95  <=====>  ASP E  95
+ALA E  96  <=====>  ALA E  96
+LYS E  97  <=====>  LYS E  97
+LYS E  98  <=====>  LYS E  98
+GLU E  99  <=====>  GLU E  99
+ALA E 100  <=====>  ALA E 100
+LYS E 101  <=====>  LYS E 101
+LEU E 102  <=====>  LEU E 102
+ALA E 103  <=====>  ALA E 103
+LYS E 104  <=====>  LYS E 104
+LYS E 105  <=====>  LYS E 105
+LEU E 106  <=====>  LEU E 106
+GLY E 107  <=====>  GLY E 107
+PHE E 108  <=====>  PHE E 108
+ASP E 109  <=====>  ASP E 109
+GLU E 110  <=====>  GLU E 110
+GLU E 111  <=====>  GLU E 111
+GLY E 112  <=====>  GLY E 112
+SER E 113  <=====>  SER E 113
+LEU E 114  <=====>  LEU E 114
+TYR E 115  <=====>  TYR E 115
+ILE E 116  <=====>  ILE E 116
+LEU E 117  <=====>  LEU E 117
+LYS E 118  <=====>  LYS E 118
+GLY E 119  <=====>  GLY E 119
+ASP E 120  <=====>  ASP E 120
+ARG E 121  <=====>  ARG E 121
+THR E 122  <=====>  THR E 122
+ILE E 123  <=====>  ILE E 123
+GLU E 124  <=====>  GLU E 124
+PHE E 125  <=====>  PHE E 125
+ASP E 126  <=====>  ASP E 126
+GLY E 127  <=====>  GLY E 127
+GLU E 128  <=====>  GLU E 128
+PHE E 129  <=====>  PHE E 129
+ALA E 130  <=====>  ALA E 130
+ALA E 131  <=====>  ALA E 131
+ASP E 132  <=====>  ASP E 132
+VAL E 133  <=====>  VAL E 133
+LEU E 134  <=====>  LEU E 134
+VAL E 135  <=====>  VAL E 135
+GLU E 136  <=====>  GLU E 136
+PHE E 137  <=====>  PHE E 137
+LEU E 138  <=====>  LEU E 138
+LEU E 139  <=====>  LEU E 139
+ASP E 140  <=====>  ASP E 140
+LEU E 141  <=====>  LEU E 141
+ILE E 142  <=====>  ILE E 142
+GLU E 143  <=====>  GLU E 143
+ASP E 144  <=====>  ASP E 144
+PRO E 145  <=====>  PRO E 145
+VAL E 146  <=====>  VAL E 146
+GLU E 147  <=====>  GLU E 147
+ILE E 148  <=====>  ILE E 148
+ILE E 149  <=====>  ILE E 149
+SER E 150  <=====>  SER E 150
+SER E 151  <=====>  SER E 151
+LYS E 152  <=====>  LYS E 152
+LEU E 153  <=====>  LEU E 153
+GLU E 154  <=====>  GLU E 154
+VAL E 155  <=====>  VAL E 155
+GLN E 156  <=====>  GLN E 156
+ALA E 157  <=====>  ALA E 157
+PHE E 158  <=====>  PHE E 158
+GLU E 159  <=====>  GLU E 159
+ARG E 160  <=====>  ARG E 160
+ILE E 161  <=====>  ILE E 161
+GLU E 162  <=====>  GLU E 162
+ASP E 163  <=====>  ASP E 163
+TYR E 164  <=====>  TYR E 164
+ILE E 165  <=====>  ILE E 165
+LYS E 166  <=====>  LYS E 166
+LEU E 167  <=====>  LEU E 167
+ILE E 168  <=====>  ILE E 168
+GLY E 169  <=====>  GLY E 169
+PHE E 170  <=====>  PHE E 170
+PHE E 171  <=====>  PHE E 171
+LYS E 172  <=====>  LYS E 172
+SER E 173  <=====>  SER E 173
+GLU E 174  <=====>  GLU E 174
+ASP E 175  <=====>  ASP E 175
+SER E 176  <=====>  SER E 176
+GLU E 177  <=====>  GLU E 177
+TYR E 178  <=====>  TYR E 178
+TYR E 179  <=====>  TYR E 179
+LYS E 180  <=====>  LYS E 180
+ALA E 181  <=====>  ALA E 181
+PHE E 182  <=====>  PHE E 182
+GLU E 183  <=====>  GLU E 183
+GLU E 184  <=====>  GLU E 184
+ALA E 185  <=====>  ALA E 185
+ALA E 186  <=====>  ALA E 186
+GLU E 187  <=====>  GLU E 187
+HIS E 188  <=====>  HIS E 188
+PHE E 189  <=====>  PHE E 189
+GLN E 190  <=====>  GLN E 190
+PRO E 191  <=====>  PRO E 191
+TYR E 192  <=====>  TYR E 192
+ILE E 193  <=====>  ILE E 193
+LYS E 194  <=====>  LYS E 194
+PHE E 195  <=====>  PHE E 195
+PHE E 196  <=====>  PHE E 196
+ALA E 197  <=====>  ALA E 197
+THR E 198  <=====>  THR E 198
+PHE E 199  <=====>  PHE E 199
+ASP E 200  <=====>  ASP E 200
+LYS E 201  <=====>  LYS E 201
+GLY E 202  <=====>  GLY E 202
+VAL E 203  <=====>  VAL E 203
+ALA E 204  <=====>  ALA E 204
+LYS E 205  <=====>  LYS E 205
+LYS E 206  <=====>  LYS E 206
+LEU E 207  <=====>  LEU E 207
+SER E 208  <=====>  SER E 208
+LEU E 209  <=====>  LEU E 209
+LYS E 210  <=====>  LYS E 210
+MET E 211  <=====>  MET E 211
+ASN E 212  <=====>  ASN E 212
+GLU E 213  <=====>  GLU E 213
+VAL E 214  <=====>  VAL E 214
+ASP E 215  <=====>  ASP E 215
+PHE E 216  <=====>  PHE E 216
+TYR E 217  <=====>  TYR E 217
+GLU E 218  <=====>  GLU E 218
+PRO E 219  <=====>  PRO E 219
+PHE E 220  <=====>  PHE E 220
+MET E 221  <=====>  MET E 221
+ASP E 222  <=====>  ASP E 222
+GLU E 223  <=====>  GLU E 223
+PRO E 224  <=====>  PRO E 224
+ILE E 225  <=====>  ILE E 225
+ALA E 226  <=====>  ALA E 226
+ILE E 227  <=====>  ILE E 227
+PRO E 228  <=====>  PRO E 228
+ASN E 229  <=====>  ASN E 229
+LYS E 230  <=====>  LYS E 230
+PRO E 231  <=====>  PRO E 231
+TYR E 232  <=====>  TYR E 232
+THR E 233  <=====>  THR E 233
+GLU E 234  <=====>  GLU E 234
+GLU E 235  <=====>  GLU E 235
+GLU E 236  <=====>  GLU E 236
+LEU E 237  <=====>  LEU E 237
+VAL E 238  <=====>  VAL E 238
+GLU E 239  <=====>  GLU E 239
+PHE E 240  <=====>  PHE E 240
+VAL E 241  <=====>  VAL E 241
+LYS E 242  <=====>  LYS E 242
+GLU E 243  <=====>  GLU E 243
+HIS E 244  <=====>  HIS E 244
+GLN E 245  <=====>  GLN E 245
+ARG E 246  <=====>  ARG E 246
+PRO E 247  <=====>  PRO E 247
+THR E 248  <=====>  THR E 248
+LEU E 249  <=====>  LEU E 249
+ARG E 250  <=====>  ARG E 250
+ARG E 251  <=====>  ARG E 251
+LEU E 252  <=====>  LEU E 252
+ARG E 253  <=====>  ARG E 253
+PRO E 254  <=====>  PRO E 254
+GLU E 255  <=====>  GLU E 255
+GLU E 256  <=====>  GLU E 256
+MET E 257  <=====>  MET E 257
+PHE E 258  <=====>  PHE E 258
+ILE E 268  <=====>  ILE E 268
+HIS E 269  <=====>  HIS E 269
+ILE E 270  <=====>  ILE E 270
+VAL E 271  <=====>  VAL E 271
+ALA E 272  <=====>  ALA E 272
+PHE E 273  <=====>  PHE E 273
+ALA E 274  <=====>  ALA E 274
+GLU E 275  <=====>  GLU E 275
+LYS E 276  <=====>  LYS E 276
+SER E 277  <=====>  SER E 277
+ASP E 278  <=====>  ASP E 278
+PRO E 279  <=====>  PRO E 279
+ASP E 280  <=====>  ASP E 280
+GLY E 281  <=====>  GLY E 281
+TYR E 282  <=====>  TYR E 282
+GLU E 283  <=====>  GLU E 283
+PHE E 284  <=====>  PHE E 284
+LEU E 285  <=====>  LEU E 285
+GLU E 286  <=====>  GLU E 286
+ILE E 287  <=====>  ILE E 287
+LEU E 288  <=====>  LEU E 288
+LYS E 289  <=====>  LYS E 289
+GLN E 290  <=====>  GLN E 290
+VAL E 291  <=====>  VAL E 291
+ALA E 292  <=====>  ALA E 292
+ARG E 293  <=====>  ARG E 293
+ASP E 294  <=====>  ASP E 294
+ASN E 295  <=====>  ASN E 295
+THR E 296  <=====>  THR E 296
+ASP E 297  <=====>  ASP E 297
+ASN E 298  <=====>  ASN E 298
+PRO E 299  <=====>  PRO E 299
+ASP E 300  <=====>  ASP E 300
+LEU E 301  <=====>  LEU E 301
+SER E 302  <=====>  SER E 302
+ILE E 303  <=====>  ILE E 303
+LEU E 304  <=====>  LEU E 304
+TRP E 305  <=====>  TRP E 305
+ILE E 306  <=====>  ILE E 306
+ASP E 307  <=====>  ASP E 307
+PRO E 308  <=====>  PRO E 308
+ASP E 309  <=====>  ASP E 309
+ASP E 310  <=====>  ASP E 310
+PHE E 311  <=====>  PHE E 311
+PRO E 312  <=====>  PRO E 312
+LEU E 313  <=====>  LEU E 313
+LEU E 314  <=====>  LEU E 314
+VAL E 315  <=====>  VAL E 315
+ALA E 316  <=====>  ALA E 316
+TYR E 317  <=====>  TYR E 317
+TRP E 318  <=====>  TRP E 318
+GLU E 319  <=====>  GLU E 319
+LYS E 320  <=====>  LYS E 320
+THR E 321  <=====>  THR E 321
+PHE E 322  <=====>  PHE E 322
+LYS E 323  <=====>  LYS E 323
+ILE E 324  <=====>  ILE E 324
+ASP E 325  <=====>  ASP E 325
+LEU E 326  <=====>  LEU E 326
+PHE E 327  <=====>  PHE E 327
+ARG E 328  <=====>  ARG E 328
+PRO E 329  <=====>  PRO E 329
+GLN E 330  <=====>  GLN E 330
+ILE E 331  <=====>  ILE E 331
+GLY E 332  <=====>  GLY E 332
+VAL E 333  <=====>  VAL E 333
+VAL E 334  <=====>  VAL E 334
+ASN E 335  <=====>  ASN E 335
+VAL E 336  <=====>  VAL E 336
+THR E 337  <=====>  THR E 337
+ASP E 338  <=====>  ASP E 338
+ALA E 339  <=====>  ALA E 339
+ASP E 340  <=====>  ASP E 340
+SER E 341  <=====>  SER E 341
+VAL E 342  <=====>  VAL E 342
+TRP E 343  <=====>  TRP E 343
+MET E 344  <=====>  MET E 344
+GLU E 345  <=====>  GLU E 345
+ILE E 346  <=====>  ILE E 346
+PRO E 347  <=====>  PRO E 347
+ASP E 348  <=====>  ASP E 348
+ASP E 349  <=====>  ASP E 349
+ASP E 350  <=====>  ASP E 350
+ASP E 351  <=====>  ASP E 351
+LEU E 352  <=====>  LEU E 352
+PRO E 353  <=====>  PRO E 353
+THR E 354  <=====>  THR E 354
+ALA E 355  <=====>  ALA E 355
+GLU E 356  <=====>  GLU E 356
+GLU E 357  <=====>  GLU E 357
+LEU E 358  <=====>  LEU E 358
+GLU E 359  <=====>  GLU E 359
+ASP E 360  <=====>  ASP E 360
+TRP E 361  <=====>  TRP E 361
+ILE E 362  <=====>  ILE E 362
+GLU E 363  <=====>  GLU E 363
+ASP E 364  <=====>  ASP E 364
+VAL E 365  <=====>  VAL E 365
+LEU E 366  <=====>  LEU E 366
+SER E 367  <=====>  SER E 367
+GLY E 368  <=====>  GLY E 368
+LYS E 369  <=====>  LYS E 369
+ILE E 370  <=====>  ILE E 370
+ASN E 371  <=====>  ASN E 371
+LEU F  23  <=====>  LEU F  23
+ASN F  24  <=====>  ASN F  24
+PHE F  25  <=====>  PHE F  25
+PRO F  26  <=====>  PRO F  26
+THR F  27  <=====>  THR F  27
+TYR F  28  <=====>  TYR F  28
+ASP F  29  <=====>  ASP F  29
+GLY F  30  <=====>  GLY F  30
+LYS F  31  <=====>  LYS F  31
+ASP F  32  <=====>  ASP F  32
+ARG F  33  <=====>  ARG F  33
+VAL F  34  <=====>  VAL F  34
+VAL F  35  <=====>  VAL F  35
+SER F  36  <=====>  SER F  36
+LEU F  37  <=====>  LEU F  37
+SER F  38  <=====>  SER F  38
+GLU F  39  <=====>  GLU F  39
+LYS F  40  <=====>  LYS F  40
+ASN F  41  <=====>  ASN F  41
+PHE F  42  <=====>  PHE F  42
+LYS F  43  <=====>  LYS F  43
+GLN F  44  <=====>  GLN F  44
+VAL F  45  <=====>  VAL F  45
+LEU F  46  <=====>  LEU F  46
+LYS F  47  <=====>  LYS F  47
+LYS F  48  <=====>  LYS F  48
+TYR F  49  <=====>  TYR F  49
+ASP F  50  <=====>  ASP F  50
+LEU F  51  <=====>  LEU F  51
+LEU F  52  <=====>  LEU F  52
+CYS F  53  <=====>  CYS F  53
+LEU F  54  <=====>  LEU F  54
+TYR F  55  <=====>  TYR F  55
+TYR F  56  <=====>  TYR F  56
+HIS F  57  <=====>  HIS F  57
+GLN F  69  <=====>  GLN F  69
+PHE F  70  <=====>  PHE F  70
+GLN F  71  <=====>  GLN F  71
+LEU F  72  <=====>  LEU F  72
+LYS F  73  <=====>  LYS F  73
+GLU F  74  <=====>  GLU F  74
+ILE F  75  <=====>  ILE F  75
+VAL F  76  <=====>  VAL F  76
+LEU F  77  <=====>  LEU F  77
+GLU F  78  <=====>  GLU F  78
+LEU F  79  <=====>  LEU F  79
+VAL F  80  <=====>  VAL F  80
+ALA F  81  <=====>  ALA F  81
+GLN F  82  <=====>  GLN F  82
+VAL F  83  <=====>  VAL F  83
+LEU F  84  <=====>  LEU F  84
+GLU F  85  <=====>  GLU F  85
+HIS F  86  <=====>  HIS F  86
+LYS F  87  <=====>  LYS F  87
+ALA F  88  <=====>  ALA F  88
+ILE F  89  <=====>  ILE F  89
+GLY F  90  <=====>  GLY F  90
+PHE F  91  <=====>  PHE F  91
+VAL F  92  <=====>  VAL F  92
+MET F  93  <=====>  MET F  93
+VAL F  94  <=====>  VAL F  94
+ASP F  95  <=====>  ASP F  95
+ALA F  96  <=====>  ALA F  96
+LYS F  97  <=====>  LYS F  97
+LYS F  98  <=====>  LYS F  98
+GLU F  99  <=====>  GLU F  99
+ALA F 100  <=====>  ALA F 100
+LYS F 101  <=====>  LYS F 101
+LEU F 102  <=====>  LEU F 102
+ALA F 103  <=====>  ALA F 103
+LYS F 104  <=====>  LYS F 104
+LYS F 105  <=====>  LYS F 105
+LEU F 106  <=====>  LEU F 106
+GLY F 107  <=====>  GLY F 107
+PHE F 108  <=====>  PHE F 108
+ASP F 109  <=====>  ASP F 109
+GLU F 110  <=====>  GLU F 110
+GLU F 111  <=====>  GLU F 111
+GLY F 112  <=====>  GLY F 112
+SER F 113  <=====>  SER F 113
+LEU F 114  <=====>  LEU F 114
+TYR F 115  <=====>  TYR F 115
+ILE F 116  <=====>  ILE F 116
+LEU F 117  <=====>  LEU F 117
+LYS F 118  <=====>  LYS F 118
+GLY F 119  <=====>  GLY F 119
+ASP F 120  <=====>  ASP F 120
+ARG F 121  <=====>  ARG F 121
+THR F 122  <=====>  THR F 122
+ILE F 123  <=====>  ILE F 123
+GLU F 124  <=====>  GLU F 124
+PHE F 125  <=====>  PHE F 125
+ASP F 126  <=====>  ASP F 126
+GLY F 127  <=====>  GLY F 127
+GLU F 128  <=====>  GLU F 128
+PHE F 129  <=====>  PHE F 129
+ALA F 130  <=====>  ALA F 130
+ALA F 131  <=====>  ALA F 131
+ASP F 132  <=====>  ASP F 132
+VAL F 133  <=====>  VAL F 133
+LEU F 134  <=====>  LEU F 134
+VAL F 135  <=====>  VAL F 135
+GLU F 136  <=====>  GLU F 136
+PHE F 137  <=====>  PHE F 137
+LEU F 138  <=====>  LEU F 138
+LEU F 139  <=====>  LEU F 139
+ASP F 140  <=====>  ASP F 140
+LEU F 141  <=====>  LEU F 141
+ILE F 142  <=====>  ILE F 142
+GLU F 143  <=====>  GLU F 143
+ASP F 144  <=====>  ASP F 144
+PRO F 145  <=====>  PRO F 145
+VAL F 146  <=====>  VAL F 146
+GLU F 147  <=====>  GLU F 147
+ILE F 148  <=====>  ILE F 148
+ILE F 149  <=====>  ILE F 149
+SER F 150  <=====>  SER F 150
+SER F 151  <=====>  SER F 151
+LYS F 152  <=====>  LYS F 152
+LEU F 153  <=====>  LEU F 153
+GLU F 154  <=====>  GLU F 154
+VAL F 155  <=====>  VAL F 155
+GLN F 156  <=====>  GLN F 156
+ALA F 157  <=====>  ALA F 157
+PHE F 158  <=====>  PHE F 158
+GLU F 159  <=====>  GLU F 159
+ARG F 160  <=====>  ARG F 160
+ILE F 161  <=====>  ILE F 161
+GLU F 162  <=====>  GLU F 162
+ASP F 163  <=====>  ASP F 163
+TYR F 164  <=====>  TYR F 164
+ILE F 165  <=====>  ILE F 165
+LYS F 166  <=====>  LYS F 166
+LEU F 167  <=====>  LEU F 167
+ILE F 168  <=====>  ILE F 168
+GLY F 169  <=====>  GLY F 169
+PHE F 170  <=====>  PHE F 170
+PHE F 171  <=====>  PHE F 171
+LYS F 172  <=====>  LYS F 172
+SER F 173  <=====>  SER F 173
+GLU F 174  <=====>  GLU F 174
+ASP F 175  <=====>  ASP F 175
+SER F 176  <=====>  SER F 176
+GLU F 177  <=====>  GLU F 177
+TYR F 178  <=====>  TYR F 178
+TYR F 179  <=====>  TYR F 179
+LYS F 180  <=====>  LYS F 180
+ALA F 181  <=====>  ALA F 181
+PHE F 182  <=====>  PHE F 182
+GLU F 183  <=====>  GLU F 183
+GLU F 184  <=====>  GLU F 184
+ALA F 185  <=====>  ALA F 185
+ALA F 186  <=====>  ALA F 186
+GLU F 187  <=====>  GLU F 187
+HIS F 188  <=====>  HIS F 188
+PHE F 189  <=====>  PHE F 189
+GLN F 190  <=====>  GLN F 190
+PRO F 191  <=====>  PRO F 191
+TYR F 192  <=====>  TYR F 192
+ILE F 193  <=====>  ILE F 193
+LYS F 194  <=====>  LYS F 194
+PHE F 195  <=====>  PHE F 195
+PHE F 196  <=====>  PHE F 196
+ALA F 197  <=====>  ALA F 197
+THR F 198  <=====>  THR F 198
+PHE F 199  <=====>  PHE F 199
+ASP F 200  <=====>  ASP F 200
+LYS F 201  <=====>  LYS F 201
+GLY F 202  <=====>  GLY F 202
+VAL F 203  <=====>  VAL F 203
+ALA F 204  <=====>  ALA F 204
+LYS F 205  <=====>  LYS F 205
+LYS F 206  <=====>  LYS F 206
+LEU F 207  <=====>  LEU F 207
+SER F 208  <=====>  SER F 208
+LEU F 209  <=====>  LEU F 209
+LYS F 210  <=====>  LYS F 210
+MET F 211  <=====>  MET F 211
+ASN F 212  <=====>  ASN F 212
+GLU F 213  <=====>  GLU F 213
+VAL F 214  <=====>  VAL F 214
+ASP F 215  <=====>  ASP F 215
+PHE F 216  <=====>  PHE F 216
+TYR F 217  <=====>  TYR F 217
+GLU F 218  <=====>  GLU F 218
+PRO F 219  <=====>  PRO F 219
+PHE F 220  <=====>  PHE F 220
+MET F 221  <=====>  MET F 221
+ASP F 222  <=====>  ASP F 222
+GLU F 223  <=====>  GLU F 223
+PRO F 224  <=====>  PRO F 224
+ILE F 225  <=====>  ILE F 225
+ALA F 226  <=====>  ALA F 226
+ILE F 227  <=====>  ILE F 227
+PRO F 228  <=====>  PRO F 228
+ASN F 229  <=====>  ASN F 229
+LYS F 230  <=====>  LYS F 230
+PRO F 231  <=====>  PRO F 231
+TYR F 232  <=====>  TYR F 232
+THR F 233  <=====>  THR F 233
+GLU F 234  <=====>  GLU F 234
+GLU F 235  <=====>  GLU F 235
+GLU F 236  <=====>  GLU F 236
+LEU F 237  <=====>  LEU F 237
+VAL F 238  <=====>  VAL F 238
+GLU F 239  <=====>  GLU F 239
+PHE F 240  <=====>  PHE F 240
+VAL F 241  <=====>  VAL F 241
+LYS F 242  <=====>  LYS F 242
+GLU F 243  <=====>  GLU F 243
+HIS F 244  <=====>  HIS F 244
+GLN F 245  <=====>  GLN F 245
+ARG F 246  <=====>  ARG F 246
+PRO F 247  <=====>  PRO F 247
+THR F 248  <=====>  THR F 248
+LEU F 249  <=====>  LEU F 249
+ARG F 250  <=====>  ARG F 250
+ARG F 251  <=====>  ARG F 251
+LEU F 252  <=====>  LEU F 252
+ARG F 253  <=====>  ARG F 253
+PRO F 254  <=====>  PRO F 254
+GLU F 255  <=====>  GLU F 255
+GLU F 256  <=====>  GLU F 256
+MET F 257  <=====>  MET F 257
+PHE F 258  <=====>  PHE F 258
+ILE F 268  <=====>  ILE F 268
+HIS F 269  <=====>  HIS F 269
+ILE F 270  <=====>  ILE F 270
+VAL F 271  <=====>  VAL F 271
+ALA F 272  <=====>  ALA F 272
+PHE F 273  <=====>  PHE F 273
+ALA F 274  <=====>  ALA F 274
+GLU F 275  <=====>  GLU F 275
+LYS F 276  <=====>  LYS F 276
+SER F 277  <=====>  SER F 277
+ASP F 278  <=====>  ASP F 278
+PRO F 279  <=====>  PRO F 279
+ASP F 280  <=====>  ASP F 280
+GLY F 281  <=====>  GLY F 281
+TYR F 282  <=====>  TYR F 282
+GLU F 283  <=====>  GLU F 283
+PHE F 284  <=====>  PHE F 284
+LEU F 285  <=====>  LEU F 285
+GLU F 286  <=====>  GLU F 286
+ILE F 287  <=====>  ILE F 287
+LEU F 288  <=====>  LEU F 288
+LYS F 289  <=====>  LYS F 289
+GLN F 290  <=====>  GLN F 290
+VAL F 291  <=====>  VAL F 291
+ALA F 292  <=====>  ALA F 292
+ARG F 293  <=====>  ARG F 293
+ASP F 294  <=====>  ASP F 294
+ASN F 295  <=====>  ASN F 295
+THR F 296  <=====>  THR F 296
+ASP F 297  <=====>  ASP F 297
+ASN F 298  <=====>  ASN F 298
+PRO F 299  <=====>  PRO F 299
+ASP F 300  <=====>  ASP F 300
+LEU F 301  <=====>  LEU F 301
+SER F 302  <=====>  SER F 302
+ILE F 303  <=====>  ILE F 303
+LEU F 304  <=====>  LEU F 304
+TRP F 305  <=====>  TRP F 305
+ILE F 306  <=====>  ILE F 306
+ASP F 307  <=====>  ASP F 307
+PRO F 308  <=====>  PRO F 308
+ASP F 309  <=====>  ASP F 309
+ASP F 310  <=====>  ASP F 310
+PHE F 311  <=====>  PHE F 311
+PRO F 312  <=====>  PRO F 312
+LEU F 313  <=====>  LEU F 313
+LEU F 314  <=====>  LEU F 314
+VAL F 315  <=====>  VAL F 315
+ALA F 316  <=====>  ALA F 316
+TYR F 317  <=====>  TYR F 317
+TRP F 318  <=====>  TRP F 318
+GLU F 319  <=====>  GLU F 319
+LYS F 320  <=====>  LYS F 320
+THR F 321  <=====>  THR F 321
+PHE F 322  <=====>  PHE F 322
+LYS F 323  <=====>  LYS F 323
+ILE F 324  <=====>  ILE F 324
+ASP F 325  <=====>  ASP F 325
+LEU F 326  <=====>  LEU F 326
+PHE F 327  <=====>  PHE F 327
+ARG F 328  <=====>  ARG F 328
+PRO F 329  <=====>  PRO F 329
+GLN F 330  <=====>  GLN F 330
+ILE F 331  <=====>  ILE F 331
+GLY F 332  <=====>  GLY F 332
+VAL F 333  <=====>  VAL F 333
+VAL F 334  <=====>  VAL F 334
+ASN F 335  <=====>  ASN F 335
+VAL F 336  <=====>  VAL F 336
+THR F 337  <=====>  THR F 337
+ASP F 338  <=====>  ASP F 338
+ALA F 339  <=====>  ALA F 339
+ASP F 340  <=====>  ASP F 340
+SER F 341  <=====>  SER F 341
+VAL F 342  <=====>  VAL F 342
+TRP F 343  <=====>  TRP F 343
+MET F 344  <=====>  MET F 344
+GLU F 345  <=====>  GLU F 345
+ILE F 346  <=====>  ILE F 346
+PRO F 347  <=====>  PRO F 347
+ASP F 348  <=====>  ASP F 348
+ASP F 349  <=====>  ASP F 349
+ASP F 350  <=====>  ASP F 350
+ASP F 351  <=====>  ASP F 351
+LEU F 352  <=====>  LEU F 352
+PRO F 353  <=====>  PRO F 353
+THR F 354  <=====>  THR F 354
+ALA F 355  <=====>  ALA F 355
+GLU F 356  <=====>  GLU F 356
+GLU F 357  <=====>  GLU F 357
+LEU F 358  <=====>  LEU F 358
+GLU F 359  <=====>  GLU F 359
+ASP F 360  <=====>  ASP F 360
+TRP F 361  <=====>  TRP F 361
+ILE F 362  <=====>  ILE F 362
+GLU F 363  <=====>  GLU F 363
+ASP F 364  <=====>  ASP F 364
+VAL F 365  <=====>  VAL F 365
+LEU F 366  <=====>  LEU F 366
+SER F 367  <=====>  SER F 367
+GLY F 368  <=====>  GLY F 368
+LYS F 369  <=====>  LYS F 369
+ILE F 370  <=====>  ILE F 370
+ASN F 371  <=====>  ASN F 371
+LEU G  23  <=====>  LEU G  23
+ASN G  24  <=====>  ASN G  24
+PHE G  25  <=====>  PHE G  25
+PRO G  26  <=====>  PRO G  26
+THR G  27  <=====>  THR G  27
+TYR G  28  <=====>  TYR G  28
+ASP G  29  <=====>  ASP G  29
+GLY G  30  <=====>  GLY G  30
+LYS G  31  <=====>  LYS G  31
+ASP G  32  <=====>  ASP G  32
+ARG G  33  <=====>  ARG G  33
+VAL G  34  <=====>  VAL G  34
+VAL G  35  <=====>  VAL G  35
+SER G  36  <=====>  SER G  36
+LEU G  37  <=====>  LEU G  37
+SER G  38  <=====>  SER G  38
+GLU G  39  <=====>  GLU G  39
+LYS G  40  <=====>  LYS G  40
+ASN G  41  <=====>  ASN G  41
+PHE G  42  <=====>  PHE G  42
+LYS G  43  <=====>  LYS G  43
+GLN G  44  <=====>  GLN G  44
+VAL G  45  <=====>  VAL G  45
+LEU G  46  <=====>  LEU G  46
+LYS G  47  <=====>  LYS G  47
+LYS G  48  <=====>  LYS G  48
+TYR G  49  <=====>  TYR G  49
+ASP G  50  <=====>  ASP G  50
+LEU G  51  <=====>  LEU G  51
+LEU G  52  <=====>  LEU G  52
+CYS G  53  <=====>  CYS G  53
+LEU G  54  <=====>  LEU G  54
+TYR G  55  <=====>  TYR G  55
+TYR G  56  <=====>  TYR G  56
+HIS G  57  <=====>  HIS G  57
+GLN G  69  <=====>  GLN G  69
+PHE G  70  <=====>  PHE G  70
+GLN G  71  <=====>  GLN G  71
+LEU G  72  <=====>  LEU G  72
+LYS G  73  <=====>  LYS G  73
+GLU G  74  <=====>  GLU G  74
+ILE G  75  <=====>  ILE G  75
+VAL G  76  <=====>  VAL G  76
+LEU G  77  <=====>  LEU G  77
+GLU G  78  <=====>  GLU G  78
+LEU G  79  <=====>  LEU G  79
+VAL G  80  <=====>  VAL G  80
+ALA G  81  <=====>  ALA G  81
+GLN G  82  <=====>  GLN G  82
+VAL G  83  <=====>  VAL G  83
+LEU G  84  <=====>  LEU G  84
+GLU G  85  <=====>  GLU G  85
+HIS G  86  <=====>  HIS G  86
+LYS G  87  <=====>  LYS G  87
+ALA G  88  <=====>  ALA G  88
+ILE G  89  <=====>  ILE G  89
+GLY G  90  <=====>  GLY G  90
+PHE G  91  <=====>  PHE G  91
+VAL G  92  <=====>  VAL G  92
+MET G  93  <=====>  MET G  93
+VAL G  94  <=====>  VAL G  94
+ASP G  95  <=====>  ASP G  95
+ALA G  96  <=====>  ALA G  96
+LYS G  97  <=====>  LYS G  97
+LYS G  98  <=====>  LYS G  98
+GLU G  99  <=====>  GLU G  99
+ALA G 100  <=====>  ALA G 100
+LYS G 101  <=====>  LYS G 101
+LEU G 102  <=====>  LEU G 102
+ALA G 103  <=====>  ALA G 103
+LYS G 104  <=====>  LYS G 104
+LYS G 105  <=====>  LYS G 105
+LEU G 106  <=====>  LEU G 106
+GLY G 107  <=====>  GLY G 107
+PHE G 108  <=====>  PHE G 108
+ASP G 109  <=====>  ASP G 109
+GLU G 110  <=====>  GLU G 110
+GLU G 111  <=====>  GLU G 111
+GLY G 112  <=====>  GLY G 112
+SER G 113  <=====>  SER G 113
+LEU G 114  <=====>  LEU G 114
+TYR G 115  <=====>  TYR G 115
+ILE G 116  <=====>  ILE G 116
+LEU G 117  <=====>  LEU G 117
+LYS G 118  <=====>  LYS G 118
+GLY G 119  <=====>  GLY G 119
+ASP G 120  <=====>  ASP G 120
+ARG G 121  <=====>  ARG G 121
+THR G 122  <=====>  THR G 122
+ILE G 123  <=====>  ILE G 123
+GLU G 124  <=====>  GLU G 124
+PHE G 125  <=====>  PHE G 125
+ASP G 126  <=====>  ASP G 126
+GLY G 127  <=====>  GLY G 127
+GLU G 128  <=====>  GLU G 128
+PHE G 129  <=====>  PHE G 129
+ALA G 130  <=====>  ALA G 130
+ALA G 131  <=====>  ALA G 131
+ASP G 132  <=====>  ASP G 132
+VAL G 133  <=====>  VAL G 133
+LEU G 134  <=====>  LEU G 134
+VAL G 135  <=====>  VAL G 135
+GLU G 136  <=====>  GLU G 136
+PHE G 137  <=====>  PHE G 137
+LEU G 138  <=====>  LEU G 138
+LEU G 139  <=====>  LEU G 139
+ASP G 140  <=====>  ASP G 140
+LEU G 141  <=====>  LEU G 141
+ILE G 142  <=====>  ILE G 142
+GLU G 143  <=====>  GLU G 143
+ASP G 144  <=====>  ASP G 144
+PRO G 145  <=====>  PRO G 145
+VAL G 146  <=====>  VAL G 146
+GLU G 147  <=====>  GLU G 147
+ILE G 148  <=====>  ILE G 148
+ILE G 149  <=====>  ILE G 149
+SER G 150  <=====>  SER G 150
+SER G 151  <=====>  SER G 151
+LYS G 152  <=====>  LYS G 152
+LEU G 153  <=====>  LEU G 153
+GLU G 154  <=====>  GLU G 154
+VAL G 155  <=====>  VAL G 155
+GLN G 156  <=====>  GLN G 156
+ALA G 157  <=====>  ALA G 157
+PHE G 158  <=====>  PHE G 158
+GLU G 159  <=====>  GLU G 159
+ARG G 160  <=====>  ARG G 160
+ILE G 161  <=====>  ILE G 161
+GLU G 162  <=====>  GLU G 162
+ASP G 163  <=====>  ASP G 163
+TYR G 164  <=====>  TYR G 164
+ILE G 165  <=====>  ILE G 165
+LYS G 166  <=====>  LYS G 166
+LEU G 167  <=====>  LEU G 167
+ILE G 168  <=====>  ILE G 168
+GLY G 169  <=====>  GLY G 169
+PHE G 170  <=====>  PHE G 170
+PHE G 171  <=====>  PHE G 171
+LYS G 172  <=====>  LYS G 172
+SER G 173  <=====>  SER G 173
+GLU G 174  <=====>  GLU G 174
+ASP G 175  <=====>  ASP G 175
+SER G 176  <=====>  SER G 176
+GLU G 177  <=====>  GLU G 177
+TYR G 178  <=====>  TYR G 178
+TYR G 179  <=====>  TYR G 179
+LYS G 180  <=====>  LYS G 180
+ALA G 181  <=====>  ALA G 181
+PHE G 182  <=====>  PHE G 182
+GLU G 183  <=====>  GLU G 183
+GLU G 184  <=====>  GLU G 184
+ALA G 185  <=====>  ALA G 185
+ALA G 186  <=====>  ALA G 186
+GLU G 187  <=====>  GLU G 187
+HIS G 188  <=====>  HIS G 188
+PHE G 189  <=====>  PHE G 189
+GLN G 190  <=====>  GLN G 190
+PRO G 191  <=====>  PRO G 191
+TYR G 192  <=====>  TYR G 192
+ILE G 193  <=====>  ILE G 193
+LYS G 194  <=====>  LYS G 194
+PHE G 195  <=====>  PHE G 195
+PHE G 196  <=====>  PHE G 196
+ALA G 197  <=====>  ALA G 197
+THR G 198  <=====>  THR G 198
+PHE G 199  <=====>  PHE G 199
+ASP G 200  <=====>  ASP G 200
+LYS G 201  <=====>  LYS G 201
+GLY G 202  <=====>  GLY G 202
+VAL G 203  <=====>  VAL G 203
+ALA G 204  <=====>  ALA G 204
+LYS G 205  <=====>  LYS G 205
+LYS G 206  <=====>  LYS G 206
+LEU G 207  <=====>  LEU G 207
+SER G 208  <=====>  SER G 208
+LEU G 209  <=====>  LEU G 209
+LYS G 210  <=====>  LYS G 210
+MET G 211  <=====>  MET G 211
+ASN G 212  <=====>  ASN G 212
+GLU G 213  <=====>  GLU G 213
+VAL G 214  <=====>  VAL G 214
+ASP G 215  <=====>  ASP G 215
+PHE G 216  <=====>  PHE G 216
+TYR G 217  <=====>  TYR G 217
+GLU G 218  <=====>  GLU G 218
+PRO G 219  <=====>  PRO G 219
+PHE G 220  <=====>  PHE G 220
+MET G 221  <=====>  MET G 221
+ASP G 222  <=====>  ASP G 222
+GLU G 223  <=====>  GLU G 223
+PRO G 224  <=====>  PRO G 224
+ILE G 225  <=====>  ILE G 225
+ALA G 226  <=====>  ALA G 226
+ILE G 227  <=====>  ILE G 227
+PRO G 228  <=====>  PRO G 228
+ASN G 229  <=====>  ASN G 229
+LYS G 230  <=====>  LYS G 230
+PRO G 231  <=====>  PRO G 231
+TYR G 232  <=====>  TYR G 232
+THR G 233  <=====>  THR G 233
+GLU G 234  <=====>  GLU G 234
+GLU G 235  <=====>  GLU G 235
+GLU G 236  <=====>  GLU G 236
+LEU G 237  <=====>  LEU G 237
+VAL G 238  <=====>  VAL G 238
+GLU G 239  <=====>  GLU G 239
+PHE G 240  <=====>  PHE G 240
+VAL G 241  <=====>  VAL G 241
+LYS G 242  <=====>  LYS G 242
+GLU G 243  <=====>  GLU G 243
+HIS G 244  <=====>  HIS G 244
+GLN G 245  <=====>  GLN G 245
+ARG G 246  <=====>  ARG G 246
+PRO G 247  <=====>  PRO G 247
+THR G 248  <=====>  THR G 248
+LEU G 249  <=====>  LEU G 249
+ARG G 250  <=====>  ARG G 250
+ARG G 251  <=====>  ARG G 251
+LEU G 252  <=====>  LEU G 252
+ARG G 253  <=====>  ARG G 253
+PRO G 254  <=====>  PRO G 254
+GLU G 255  <=====>  GLU G 255
+GLU G 256  <=====>  GLU G 256
+MET G 257  <=====>  MET G 257
+PHE G 258  <=====>  PHE G 258
+ILE G 268  <=====>  ILE G 268
+HIS G 269  <=====>  HIS G 269
+ILE G 270  <=====>  ILE G 270
+VAL G 271  <=====>  VAL G 271
+ALA G 272  <=====>  ALA G 272
+PHE G 273  <=====>  PHE G 273
+ALA G 274  <=====>  ALA G 274
+GLU G 275  <=====>  GLU G 275
+LYS G 276  <=====>  LYS G 276
+SER G 277  <=====>  SER G 277
+ASP G 278  <=====>  ASP G 278
+PRO G 279  <=====>  PRO G 279
+ASP G 280  <=====>  ASP G 280
+GLY G 281  <=====>  GLY G 281
+TYR G 282  <=====>  TYR G 282
+GLU G 283  <=====>  GLU G 283
+PHE G 284  <=====>  PHE G 284
+LEU G 285  <=====>  LEU G 285
+GLU G 286  <=====>  GLU G 286
+ILE G 287  <=====>  ILE G 287
+LEU G 288  <=====>  LEU G 288
+LYS G 289  <=====>  LYS G 289
+GLN G 290  <=====>  GLN G 290
+VAL G 291  <=====>  VAL G 291
+ALA G 292  <=====>  ALA G 292
+ARG G 293  <=====>  ARG G 293
+ASP G 294  <=====>  ASP G 294
+ASN G 295  <=====>  ASN G 295
+THR G 296  <=====>  THR G 296
+ASP G 297  <=====>  ASP G 297
+ASN G 298  <=====>  ASN G 298
+PRO G 299  <=====>  PRO G 299
+ASP G 300  <=====>  ASP G 300
+LEU G 301  <=====>  LEU G 301
+SER G 302  <=====>  SER G 302
+ILE G 303  <=====>  ILE G 303
+LEU G 304  <=====>  LEU G 304
+TRP G 305  <=====>  TRP G 305
+ILE G 306  <=====>  ILE G 306
+ASP G 307  <=====>  ASP G 307
+PRO G 308  <=====>  PRO G 308
+ASP G 309  <=====>  ASP G 309
+ASP G 310  <=====>  ASP G 310
+PHE G 311  <=====>  PHE G 311
+PRO G 312  <=====>  PRO G 312
+LEU G 313  <=====>  LEU G 313
+LEU G 314  <=====>  LEU G 314
+VAL G 315  <=====>  VAL G 315
+ALA G 316  <=====>  ALA G 316
+TYR G 317  <=====>  TYR G 317
+TRP G 318  <=====>  TRP G 318
+GLU G 319  <=====>  GLU G 319
+LYS G 320  <=====>  LYS G 320
+THR G 321  <=====>  THR G 321
+PHE G 322  <=====>  PHE G 322
+LYS G 323  <=====>  LYS G 323
+ILE G 324  <=====>  ILE G 324
+ASP G 325  <=====>  ASP G 325
+LEU G 326  <=====>  LEU G 326
+PHE G 327  <=====>  PHE G 327
+ARG G 328  <=====>  ARG G 328
+PRO G 329  <=====>  PRO G 329
+GLN G 330  <=====>  GLN G 330
+ILE G 331  <=====>  ILE G 331
+GLY G 332  <=====>  GLY G 332
+VAL G 333  <=====>  VAL G 333
+VAL G 334  <=====>  VAL G 334
+ASN G 335  <=====>  ASN G 335
+VAL G 336  <=====>  VAL G 336
+THR G 337  <=====>  THR G 337
+ASP G 338  <=====>  ASP G 338
+ALA G 339  <=====>  ALA G 339
+ASP G 340  <=====>  ASP G 340
+SER G 341  <=====>  SER G 341
+VAL G 342  <=====>  VAL G 342
+TRP G 343  <=====>  TRP G 343
+MET G 344  <=====>  MET G 344
+GLU G 345  <=====>  GLU G 345
+ILE G 346  <=====>  ILE G 346
+PRO G 347  <=====>  PRO G 347
+ASP G 348  <=====>  ASP G 348
+ASP G 349  <=====>  ASP G 349
+ASP G 350  <=====>  ASP G 350
+ASP G 351  <=====>  ASP G 351
+LEU G 352  <=====>  LEU G 352
+PRO G 353  <=====>  PRO G 353
+THR G 354  <=====>  THR G 354
+ALA G 355  <=====>  ALA G 355
+GLU G 356  <=====>  GLU G 356
+GLU G 357  <=====>  GLU G 357
+LEU G 358  <=====>  LEU G 358
+GLU G 359  <=====>  GLU G 359
+ASP G 360  <=====>  ASP G 360
+TRP G 361  <=====>  TRP G 361
+ILE G 362  <=====>  ILE G 362
+GLU G 363  <=====>  GLU G 363
+ASP G 364  <=====>  ASP G 364
+VAL G 365  <=====>  VAL G 365
+LEU G 366  <=====>  LEU G 366
+SER G 367  <=====>  SER G 367
+GLY G 368  <=====>  GLY G 368
+LYS G 369  <=====>  LYS G 369
+ILE G 370  <=====>  ILE G 370
+ASN G 371  <=====>  ASN G 371
+LEU H  23  <=====>  LEU H  23
+ASN H  24  <=====>  ASN H  24
+PHE H  25  <=====>  PHE H  25
+PRO H  26  <=====>  PRO H  26
+THR H  27  <=====>  THR H  27
+TYR H  28  <=====>  TYR H  28
+ASP H  29  <=====>  ASP H  29
+GLY H  30  <=====>  GLY H  30
+LYS H  31  <=====>  LYS H  31
+ASP H  32  <=====>  ASP H  32
+ARG H  33  <=====>  ARG H  33
+VAL H  34  <=====>  VAL H  34
+VAL H  35  <=====>  VAL H  35
+SER H  36  <=====>  SER H  36
+LEU H  37  <=====>  LEU H  37
+SER H  38  <=====>  SER H  38
+GLU H  39  <=====>  GLU H  39
+LYS H  40  <=====>  LYS H  40
+ASN H  41  <=====>  ASN H  41
+PHE H  42  <=====>  PHE H  42
+LYS H  43  <=====>  LYS H  43
+GLN H  44  <=====>  GLN H  44
+VAL H  45  <=====>  VAL H  45
+LEU H  46  <=====>  LEU H  46
+LYS H  47  <=====>  LYS H  47
+LYS H  48  <=====>  LYS H  48
+TYR H  49  <=====>  TYR H  49
+ASP H  50  <=====>  ASP H  50
+LEU H  51  <=====>  LEU H  51
+LEU H  52  <=====>  LEU H  52
+CYS H  53  <=====>  CYS H  53
+LEU H  54  <=====>  LEU H  54
+TYR H  55  <=====>  TYR H  55
+TYR H  56  <=====>  TYR H  56
+HIS H  57  <=====>  HIS H  57
+GLN H  69  <=====>  GLN H  69
+PHE H  70  <=====>  PHE H  70
+GLN H  71  <=====>  GLN H  71
+LEU H  72  <=====>  LEU H  72
+LYS H  73  <=====>  LYS H  73
+GLU H  74  <=====>  GLU H  74
+ILE H  75  <=====>  ILE H  75
+VAL H  76  <=====>  VAL H  76
+LEU H  77  <=====>  LEU H  77
+GLU H  78  <=====>  GLU H  78
+LEU H  79  <=====>  LEU H  79
+VAL H  80  <=====>  VAL H  80
+ALA H  81  <=====>  ALA H  81
+GLN H  82  <=====>  GLN H  82
+VAL H  83  <=====>  VAL H  83
+LEU H  84  <=====>  LEU H  84
+GLU H  85  <=====>  GLU H  85
+HIS H  86  <=====>  HIS H  86
+LYS H  87  <=====>  LYS H  87
+ALA H  88  <=====>  ALA H  88
+ILE H  89  <=====>  ILE H  89
+GLY H  90  <=====>  GLY H  90
+PHE H  91  <=====>  PHE H  91
+VAL H  92  <=====>  VAL H  92
+MET H  93  <=====>  MET H  93
+VAL H  94  <=====>  VAL H  94
+ASP H  95  <=====>  ASP H  95
+ALA H  96  <=====>  ALA H  96
+LYS H  97  <=====>  LYS H  97
+LYS H  98  <=====>  LYS H  98
+GLU H  99  <=====>  GLU H  99
+ALA H 100  <=====>  ALA H 100
+LYS H 101  <=====>  LYS H 101
+LEU H 102  <=====>  LEU H 102
+ALA H 103  <=====>  ALA H 103
+LYS H 104  <=====>  LYS H 104
+LYS H 105  <=====>  LYS H 105
+LEU H 106  <=====>  LEU H 106
+GLY H 107  <=====>  GLY H 107
+PHE H 108  <=====>  PHE H 108
+ASP H 109  <=====>  ASP H 109
+GLU H 110  <=====>  GLU H 110
+GLU H 111  <=====>  GLU H 111
+GLY H 112  <=====>  GLY H 112
+SER H 113  <=====>  SER H 113
+LEU H 114  <=====>  LEU H 114
+TYR H 115  <=====>  TYR H 115
+ILE H 116  <=====>  ILE H 116
+LEU H 117  <=====>  LEU H 117
+LYS H 118  <=====>  LYS H 118
+GLY H 119  <=====>  GLY H 119
+ASP H 120  <=====>  ASP H 120
+ARG H 121  <=====>  ARG H 121
+THR H 122  <=====>  THR H 122
+ILE H 123  <=====>  ILE H 123
+GLU H 124  <=====>  GLU H 124
+PHE H 125  <=====>  PHE H 125
+ASP H 126  <=====>  ASP H 126
+GLY H 127  <=====>  GLY H 127
+GLU H 128  <=====>  GLU H 128
+PHE H 129  <=====>  PHE H 129
+ALA H 130  <=====>  ALA H 130
+ALA H 131  <=====>  ALA H 131
+ASP H 132  <=====>  ASP H 132
+VAL H 133  <=====>  VAL H 133
+LEU H 134  <=====>  LEU H 134
+VAL H 135  <=====>  VAL H 135
+GLU H 136  <=====>  GLU H 136
+PHE H 137  <=====>  PHE H 137
+LEU H 138  <=====>  LEU H 138
+LEU H 139  <=====>  LEU H 139
+ASP H 140  <=====>  ASP H 140
+LEU H 141  <=====>  LEU H 141
+ILE H 142  <=====>  ILE H 142
+GLU H 143  <=====>  GLU H 143
+ASP H 144  <=====>  ASP H 144
+PRO H 145  <=====>  PRO H 145
+VAL H 146  <=====>  VAL H 146
+GLU H 147  <=====>  GLU H 147
+ILE H 148  <=====>  ILE H 148
+ILE H 149  <=====>  ILE H 149
+SER H 150  <=====>  SER H 150
+SER H 151  <=====>  SER H 151
+LYS H 152  <=====>  LYS H 152
+LEU H 153  <=====>  LEU H 153
+GLU H 154  <=====>  GLU H 154
+VAL H 155  <=====>  VAL H 155
+GLN H 156  <=====>  GLN H 156
+ALA H 157  <=====>  ALA H 157
+PHE H 158  <=====>  PHE H 158
+GLU H 159  <=====>  GLU H 159
+ARG H 160  <=====>  ARG H 160
+ILE H 161  <=====>  ILE H 161
+GLU H 162  <=====>  GLU H 162
+ASP H 163  <=====>  ASP H 163
+TYR H 164  <=====>  TYR H 164
+ILE H 165  <=====>  ILE H 165
+LYS H 166  <=====>  LYS H 166
+LEU H 167  <=====>  LEU H 167
+ILE H 168  <=====>  ILE H 168
+GLY H 169  <=====>  GLY H 169
+PHE H 170  <=====>  PHE H 170
+PHE H 171  <=====>  PHE H 171
+LYS H 172  <=====>  LYS H 172
+SER H 173  <=====>  SER H 173
+GLU H 174  <=====>  GLU H 174
+ASP H 175  <=====>  ASP H 175
+SER H 176  <=====>  SER H 176
+GLU H 177  <=====>  GLU H 177
+TYR H 178  <=====>  TYR H 178
+TYR H 179  <=====>  TYR H 179
+LYS H 180  <=====>  LYS H 180
+ALA H 181  <=====>  ALA H 181
+PHE H 182  <=====>  PHE H 182
+GLU H 183  <=====>  GLU H 183
+GLU H 184  <=====>  GLU H 184
+ALA H 185  <=====>  ALA H 185
+ALA H 186  <=====>  ALA H 186
+GLU H 187  <=====>  GLU H 187
+HIS H 188  <=====>  HIS H 188
+PHE H 189  <=====>  PHE H 189
+GLN H 190  <=====>  GLN H 190
+PRO H 191  <=====>  PRO H 191
+TYR H 192  <=====>  TYR H 192
+ILE H 193  <=====>  ILE H 193
+LYS H 194  <=====>  LYS H 194
+PHE H 195  <=====>  PHE H 195
+PHE H 196  <=====>  PHE H 196
+ALA H 197  <=====>  ALA H 197
+THR H 198  <=====>  THR H 198
+PHE H 199  <=====>  PHE H 199
+ASP H 200  <=====>  ASP H 200
+LYS H 201  <=====>  LYS H 201
+GLY H 202  <=====>  GLY H 202
+VAL H 203  <=====>  VAL H 203
+ALA H 204  <=====>  ALA H 204
+LYS H 205  <=====>  LYS H 205
+LYS H 206  <=====>  LYS H 206
+LEU H 207  <=====>  LEU H 207
+SER H 208  <=====>  SER H 208
+LEU H 209  <=====>  LEU H 209
+LYS H 210  <=====>  LYS H 210
+MET H 211  <=====>  MET H 211
+ASN H 212  <=====>  ASN H 212
+GLU H 213  <=====>  GLU H 213
+VAL H 214  <=====>  VAL H 214
+ASP H 215  <=====>  ASP H 215
+PHE H 216  <=====>  PHE H 216
+TYR H 217  <=====>  TYR H 217
+GLU H 218  <=====>  GLU H 218
+PRO H 219  <=====>  PRO H 219
+PHE H 220  <=====>  PHE H 220
+MET H 221  <=====>  MET H 221
+ASP H 222  <=====>  ASP H 222
+GLU H 223  <=====>  GLU H 223
+PRO H 224  <=====>  PRO H 224
+ILE H 225  <=====>  ILE H 225
+ALA H 226  <=====>  ALA H 226
+ILE H 227  <=====>  ILE H 227
+PRO H 228  <=====>  PRO H 228
+ASN H 229  <=====>  ASN H 229
+LYS H 230  <=====>  LYS H 230
+PRO H 231  <=====>  PRO H 231
+TYR H 232  <=====>  TYR H 232
+THR H 233  <=====>  THR H 233
+GLU H 234  <=====>  GLU H 234
+GLU H 235  <=====>  GLU H 235
+GLU H 236  <=====>  GLU H 236
+LEU H 237  <=====>  LEU H 237
+VAL H 238  <=====>  VAL H 238
+GLU H 239  <=====>  GLU H 239
+PHE H 240  <=====>  PHE H 240
+VAL H 241  <=====>  VAL H 241
+LYS H 242  <=====>  LYS H 242
+GLU H 243  <=====>  GLU H 243
+HIS H 244  <=====>  HIS H 244
+GLN H 245  <=====>  GLN H 245
+ARG H 246  <=====>  ARG H 246
+PRO H 247  <=====>  PRO H 247
+THR H 248  <=====>  THR H 248
+LEU H 249  <=====>  LEU H 249
+ARG H 250  <=====>  ARG H 250
+ARG H 251  <=====>  ARG H 251
+LEU H 252  <=====>  LEU H 252
+ARG H 253  <=====>  ARG H 253
+PRO H 254  <=====>  PRO H 254
+GLU H 255  <=====>  GLU H 255
+GLU H 256  <=====>  GLU H 256
+MET H 257  <=====>  MET H 257
+PHE H 258  <=====>  PHE H 258
+ILE H 268  <=====>  ILE H 268
+HIS H 269  <=====>  HIS H 269
+ILE H 270  <=====>  ILE H 270
+VAL H 271  <=====>  VAL H 271
+ALA H 272  <=====>  ALA H 272
+PHE H 273  <=====>  PHE H 273
+ALA H 274  <=====>  ALA H 274
+GLU H 275  <=====>  GLU H 275
+LYS H 276  <=====>  LYS H 276
+SER H 277  <=====>  SER H 277
+ASP H 278  <=====>  ASP H 278
+PRO H 279  <=====>  PRO H 279
+ASP H 280  <=====>  ASP H 280
+GLY H 281  <=====>  GLY H 281
+TYR H 282  <=====>  TYR H 282
+GLU H 283  <=====>  GLU H 283
+PHE H 284  <=====>  PHE H 284
+LEU H 285  <=====>  LEU H 285
+GLU H 286  <=====>  GLU H 286
+ILE H 287  <=====>  ILE H 287
+LEU H 288  <=====>  LEU H 288
+LYS H 289  <=====>  LYS H 289
+GLN H 290  <=====>  GLN H 290
+VAL H 291  <=====>  VAL H 291
+ALA H 292  <=====>  ALA H 292
+ARG H 293  <=====>  ARG H 293
+ASP H 294  <=====>  ASP H 294
+ASN H 295  <=====>  ASN H 295
+THR H 296  <=====>  THR H 296
+ASP H 297  <=====>  ASP H 297
+ASN H 298  <=====>  ASN H 298
+PRO H 299  <=====>  PRO H 299
+ASP H 300  <=====>  ASP H 300
+LEU H 301  <=====>  LEU H 301
+SER H 302  <=====>  SER H 302
+ILE H 303  <=====>  ILE H 303
+LEU H 304  <=====>  LEU H 304
+TRP H 305  <=====>  TRP H 305
+ILE H 306  <=====>  ILE H 306
+ASP H 307  <=====>  ASP H 307
+PRO H 308  <=====>  PRO H 308
+ASP H 309  <=====>  ASP H 309
+ASP H 310  <=====>  ASP H 310
+PHE H 311  <=====>  PHE H 311
+PRO H 312  <=====>  PRO H 312
+LEU H 313  <=====>  LEU H 313
+LEU H 314  <=====>  LEU H 314
+VAL H 315  <=====>  VAL H 315
+ALA H 316  <=====>  ALA H 316
+TYR H 317  <=====>  TYR H 317
+TRP H 318  <=====>  TRP H 318
+GLU H 319  <=====>  GLU H 319
+LYS H 320  <=====>  LYS H 320
+THR H 321  <=====>  THR H 321
+PHE H 322  <=====>  PHE H 322
+LYS H 323  <=====>  LYS H 323
+ILE H 324  <=====>  ILE H 324
+ASP H 325  <=====>  ASP H 325
+LEU H 326  <=====>  LEU H 326
+PHE H 327  <=====>  PHE H 327
+ARG H 328  <=====>  ARG H 328
+PRO H 329  <=====>  PRO H 329
+GLN H 330  <=====>  GLN H 330
+ILE H 331  <=====>  ILE H 331
+GLY H 332  <=====>  GLY H 332
+VAL H 333  <=====>  VAL H 333
+VAL H 334  <=====>  VAL H 334
+ASN H 335  <=====>  ASN H 335
+VAL H 336  <=====>  VAL H 336
+THR H 337  <=====>  THR H 337
+ASP H 338  <=====>  ASP H 338
+ALA H 339  <=====>  ALA H 339
+ASP H 340  <=====>  ASP H 340
+SER H 341  <=====>  SER H 341
+VAL H 342  <=====>  VAL H 342
+TRP H 343  <=====>  TRP H 343
+MET H 344  <=====>  MET H 344
+GLU H 345  <=====>  GLU H 345
+ILE H 346  <=====>  ILE H 346
+PRO H 347  <=====>  PRO H 347
+ASP H 348  <=====>  ASP H 348
+ASP H 349  <=====>  ASP H 349
+ASP H 350  <=====>  ASP H 350
+ASP H 351  <=====>  ASP H 351
+LEU H 352  <=====>  LEU H 352
+PRO H 353  <=====>  PRO H 353
+THR H 354  <=====>  THR H 354
+ALA H 355  <=====>  ALA H 355
+GLU H 356  <=====>  GLU H 356
+GLU H 357  <=====>  GLU H 357
+LEU H 358  <=====>  LEU H 358
+GLU H 359  <=====>  GLU H 359
+ASP H 360  <=====>  ASP H 360
+TRP H 361  <=====>  TRP H 361
+ILE H 362  <=====>  ILE H 362
+GLU H 363  <=====>  GLU H 363
+ASP H 364  <=====>  ASP H 364
+VAL H 365  <=====>  VAL H 365
+LEU H 366  <=====>  LEU H 366
+SER H 367  <=====>  SER H 367
+GLY H 368  <=====>  GLY H 368
+LYS H 369  <=====>  LYS H 369
+ILE H 370  <=====>  ILE H 370
+ASN H 371  <=====>  ASN H 371
+
+Total # of matched residue pairs: 2632
+Total # of reference model restraints: 13544
+--------------------------------------------------------
+
+======================== Summary of geometry restraints =======================
+
+
+====================== Modifying start model if requested =====================
+
+
+================= Separating polymer chains into rigid bodies =================
+
+  (chain 'A' and resid 23 through 371)
+  (chain 'B' and resid 23 through 371)
+  (chain 'C' and resid 23 through 371)
+  (chain 'D' and resid 23 through 371)
+  (chain 'E' and resid 23 through 371)
+  (chain 'F' and resid 23 through 371)
+  (chain 'G' and resid 23 through 371)
+  (chain 'H' and resid 23 through 371)
+n_use            =  21720
+n_use_u_iso      =  21720
+n_use_u_aniso    =  0
+n_grad_site      =  0
+n_grad_u_iso     =  0
+n_grad_u_aniso   =  0
+n_grad_occupancy =  0
+n_grad_fp        =  0
+n_grad_fdp       =  0
+total number of scatterers =  21720
+
+================== Extract refinement strategy and selections =================
+
+Refinement flags and selection counts:
+  individual_sites       =  True (21720 atoms)
+  torsion_angles         = False (0 atoms)
+  rigid_body             =  True (21720 atoms in 8 groups)
+  individual_adp         =  True (iso = 21720 aniso = 0)
+  group_adp              = False (0 atoms in 0 groups)
+  tls                    = False (0 atoms in 0 groups)
+  occupancies            =  True (0 atoms)
+  group_anomalous        = False
+
+*******************************************************************************
+Automatic adjustment:
+  hydrogens.refine=riding
+*******************************************************************************
+
+
+==================== Process input NCS or/and find new NCS ====================
+
+Using existing and finding new NCS is disabled.
+Use ncs_search.enabled=true to activate it.
+Look at refinement.ncs for more NCS related parameters.
+
+=================== Write initial parameters into .eff file ===================
+
+Writing effective parameters to file:
+  /Users/errontitus/lab-private/casq2-structure-function-DRAFT/results/shared_pdb/solved_structures/yb/xtal/Plate_15_D3_T1/P1211/xia2-dials/refinement/001_refined_001.eff
+
+Writing geometry restraints to file:
+  /Users/errontitus/lab-private/casq2-structure-function-DRAFT/results/shared_pdb/solved_structures/yb/xtal/Plate_15_D3_T1/P1211/xia2-dials/refinement/001_refined_001.geo
+CPU time processing inputs: 115.98
+
+
+============================ Non-default parameters ===========================
+
+A complete record of all parameters was written to the .eff file above.
+Below are only the non-defaults.
+
+#phil __ON__
+refinement {
+  crystal_symmetry {
+    unit_cell = 85.83180237 86.01519775 214.3404999 90 89.90720367 90
+    space_group = "P 1 21 1"
+  }
+  input {
+    pdb {
+      file_name = "001_starting_model.pdb"
+    }
+    xray_data {
+      file_name = "Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz"
+      labels = "F(+),SIGF(+),F(-),SIGF(-),merged"
+      r_free_flags {
+        file_name = "Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz"
+        label = "FreeR_flag"
+        test_flag_value = 0
+      }
+    }
+  }
+  output {
+    prefix = "001_refined"
+    serial = 1
+  }
+  electron_density_maps {
+    map_coefficients {
+      map_type = "2mFo-DFc"
+      mtz_label_amplitudes = "2FOFCWT"
+      mtz_label_phases = "PH2FOFCWT"
+      fill_missing_f_obs = True
+    }
+    map_coefficients {
+      map_type = "2mFo-DFc"
+      mtz_label_amplitudes = "2FOFCWT_no_fill"
+      mtz_label_phases = "PH2FOFCWT_no_fill"
+    }
+    map_coefficients {
+      map_type = "mFo-DFc"
+      mtz_label_amplitudes = "FOFCWT"
+      mtz_label_phases = "PHFOFCWT"
+    }
+    map_coefficients {
+      map_type = "anomalous"
+      mtz_label_amplitudes = "ANOM"
+      mtz_label_phases = "PANOM"
+    }
+    map {
+      map_type = "2mFo-DFc"
+      fill_missing_f_obs = True
+    }
+    map {
+      map_type = "2mFo-DFc"
+    }
+    map {
+      map_type = "mFo-DFc"
+    }
+  }
+  refine {
+    strategy = *individual_sites individual_sites_real_space *rigid_body \
+               *individual_adp group_adp tls *occupancies group_anomalous
+    sites {
+      rigid_body = (chain 'A' and resid 23 through 371)
+      rigid_body = (chain 'B' and resid 23 through 371)
+      rigid_body = (chain 'C' and resid 23 through 371)
+      rigid_body = (chain 'D' and resid 23 through 371)
+      rigid_body = (chain 'E' and resid 23 through 371)
+      rigid_body = (chain 'F' and resid 23 through 371)
+      rigid_body = (chain 'G' and resid 23 through 371)
+      rigid_body = (chain 'H' and resid 23 through 371)
+    }
+  }
+  hydrogens {
+    refine = individual *riding Auto
+  }
+  pdb_interpretation {
+    nonbonded_weight = 100
+  }
+  mask {
+    solvent_radius = 1
+    shrink_truncation_radius = 0.8
+  }
+  target_weights {
+    wxc_scale = 0.1
+  }
+  reference_model {
+    enabled = True
+    file = "Plate_15_D3_T1_P1211_xia2_dials_starting_model.pdb"
+  }
+}
+#phil __OFF__
+
+
+=============================== refinement start ==============================
+
+
+|-Information about rigid groups----------------------------------------------|
+| Total number of atoms = 21720   Number of rigid groups = 8                  |
+| group: start point:                        end point:                       |
+|               x      B  atom  residue  <>        x      B  atom  residue    |
+|     1:  -47.508 114.28   N   LEU   23  <>  -11.906 145.20   ND2 ASN  371    |
+|     2:    3.849 114.28   N   LEU   23  <>  -36.023 145.20   ND2 ASN  371    |
+|     3:  -14.738 112.45   N   LEU   23  <>    3.655 143.37   ND2 ASN  371    |
+|     4:  -62.201 112.45   N   LEU   23  <>  -36.435 143.37   ND2 ASN  371    |
+|     5:  -19.174 113.72   N   LEU   23  <>    6.608 144.64   ND2 ASN  371    |
+|     6:  -57.606 113.72   N   LEU   23  <>  -39.041 144.64   ND2 ASN  371    |
+|     7:  -39.192 114.67   N   LEU   23  <>  -78.997 145.59   ND2 ASN  371    |
+|     8:    4.134 114.67   N   LEU   23  <>  -31.340 145.59   ND2 ASN  371    |
+|-----------------------------------------------------------------------------|
+
+
+   ----------structure factors based statistics (before refinement)----------  
+
+
+                         ----------X-ray data----------                        
+
+|--(resolution: 3.84 - 214.34 A, n_refl.=57834 (all), 4.86  % free)-----------|
+|                                                                             |
+| r_work= 0.4872 r_free= 0.6616 coordinate error (max.-lik. estimate): 0.24 A |
+|                                                                             |
+| normalized target function (ml) (work): 7.249062                            |
+| target function (ml) not normalized (work): 398872.383360                   |
+| target function (ml) not normalized (free): 20053.388098                    |
+|-----------------------------------------------------------------------------|
+
+|-----------------------------------------------------------------------------|
+| Bin     Resolution   Compl.  No. Refl.    R-factors          Targets        |
+|number     range              work test   work   test        work        test|
+|  1: 214.6749 -  10.4220 0.99   2728  155 0.5364 0.7240      8.3071      8.3946|
+|  2:  10.4220 -   8.2721 0.99   2733  165 0.4133 0.6307      7.7866      7.7029|
+|  3:   8.2721 -   7.2264 0.99   2758  137 0.4562 0.6209      7.5099      7.4129|
+|  4:   7.2264 -   6.5656 1.00   2719  215 0.4340 0.6360      7.3441      7.1216|
+|  5:   6.5656 -   6.0950 0.99   2761  112 0.4530 0.6256       7.192      7.1437|
+|  6:   6.0950 -   5.7356 0.99   2724  156 0.4559 0.5968      7.0518      6.8929|
+|  7:   5.7356 -   5.4483 0.99   2792  160 0.4285 0.6173      7.0756      7.3347|
+|  8:   5.4483 -   5.2112 0.99   2774  158 0.4804 0.6032      7.3429      7.2415|
+|  9:   5.2112 -   5.0105 0.99   2744  128 0.4678 0.6429      7.3217      7.3177|
+| 10:   5.0105 -   4.8376 0.99   2775  126 0.4849 0.6439      7.3292      7.5426|
+| 11:   4.8376 -   4.6863 0.99   2716  183 0.4940 0.6167      7.2803      7.1576|
+| 12:   4.6863 -   4.5524 0.99   2728  125 0.4907 0.7386      7.1868      7.2939|
+| 13:   4.5524 -   4.4325 0.99   2853   82 0.4893 0.6796       7.246       6.844|
+| 14:   4.4325 -   4.3244 0.99   2767   84 0.5021 0.6879      7.1842      6.8076|
+| 15:   4.3244 -   4.2261 0.99   2788  150 0.5115 0.7228      7.2236      6.8581|
+| 16:   4.2261 -   4.1361 0.99   2797  120 0.5160 0.6394      7.0719      6.6902|
+| 17:   4.1361 -   4.0534 0.98   2672  114 0.5376 0.6558      6.9769      6.5638|
+| 18:   4.0534 -   3.9769 0.98   2807  150 0.5344 0.6943      6.9814      6.6491|
+| 19:   3.9769 -   3.9058 0.97   2599  170 0.5273 0.7502      6.8028      6.6736|
+| 20:   3.9058 -   3.8396 0.97   2789  120 0.5707 0.7040       6.762      6.5673|
+|-----------------------------------------------------------------------------|
+
+|-----------------------------------------------------------------------------|
+|R-free likelihood based estimates for figures of merit, absolute phase error,|
+|and distribution parameters alpha and beta (Acta Cryst. (1995). A51, 880-887)|
+|                                                                             |
+| Bin     Resolution      No. Refl.   FOM  Phase Scale    Alpha        Beta   |
+|  #        range        work  test        error factor                       |
+|  1: 214.6749 -  10.4220  2728   155  0.15  78.90   0.69     0.17    3910225.11|
+|  2:  10.4220 -   8.2721  2733   165  0.47  54.78   1.26     0.70    1699562.38|
+|  3:   8.2721 -   7.2264  2758   137  0.63  42.03   1.27     0.95     497556.15|
+|  4:   7.2264 -   6.5656  2719   215  0.62  43.25   1.07     0.99     358911.97|
+|  5:   6.5656 -   6.0950  2761   112  0.64  41.83   1.11     0.90     267663.25|
+|  6:   6.0950 -   5.7356  2724   156  0.60  45.19   1.07     0.83     257562.07|
+|  7:   5.7356 -   5.4483  2792   160  0.55  48.90   1.13     0.68     273419.41|
+|  8:   5.4483 -   5.2112  2774   158  0.50  52.83   1.35     0.68     343243.07|
+|  9:   5.2112 -   5.0105  2744   128  0.49  53.46   1.37     0.82     425757.92|
+| 10:   5.0105 -   4.8376  2775   126  0.49  53.22   1.48     0.86     420355.24|
+| 11:   4.8376 -   4.6863  2716   183  0.54  49.64   1.31     0.90     384049.11|
+| 12:   4.6863 -   4.5524  2728   125  0.57  47.06   1.48     0.93     323910.46|
+| 13:   4.5524 -   4.4325  2853    82  0.62  42.76   1.53     0.97     283991.74|
+| 14:   4.4325 -   4.3244  2767    84  0.63  42.50   1.59     1.02     253617.09|
+| 15:   4.3244 -   4.2261  2788   150  0.64  41.80   1.64     0.91     193582.81|
+| 16:   4.2261 -   4.1361  2797   120  0.62  43.33   1.65     0.84     177824.67|
+| 17:   4.1361 -   4.0534  2672   114  0.55  48.93   1.66     0.71     170816.76|
+| 18:   4.0534 -   3.9769  2807   150  0.51  51.79   1.65     0.66     186921.80|
+| 19:   3.9769 -   3.9058  2599   170  0.49  53.62   1.68     0.70     196227.13|
+| 20:   3.9058 -   3.8396  2789   120  0.48  54.20   1.80     0.79     189016.66|
+|alpha:            min =        0.17 max =            1.02 mean =         0.80|
+|beta:             min =   170816.76 max =      3910225.11 mean =    538767.01|
+|figures of merit: min =        0.00 max =            1.00 mean =         0.54|
+|phase err.(work): min =        0.00 max =           90.00 mean =        49.46|
+|phase err.(test): min =        0.00 max =           89.99 mean =        51.36|
+|-----------------------------------------------------------------------------|
+
+        ----------Initial model statistics (before refinement)----------       
+
+
+                min    max   mean <Bi,j>   iso aniso
+   Overall:   37.61 175.97  82.63   8.67 21720     0
+   Protein:   37.61 175.97  82.63   8.67 21720     0
+   Chain  A:  39.44 175.58  83.13    N/A  2715     0
+   Chain  C:  37.61 173.75  81.30    N/A  2715     0
+   Chain  B:  39.44 175.58  83.13    N/A  2715     0
+   Chain  E:  38.88 175.02  82.57    N/A  2715     0
+   Chain  D:  37.61 173.75  81.30    N/A  2715     0
+   Chain  G:  39.83 175.97  83.52    N/A  2715     0
+   Chain  F:  38.88 175.02  82.57    N/A  2715     0
+   Chain  H:  39.83 175.97  83.52    N/A  2715     0
+   Histogram:
+       Values      Number of atoms
+    37.61 - 51.45      2980
+    51.45 - 65.28      5270
+    65.28 - 79.12      3908
+    79.12 - 92.95      2588
+    92.95 - 106.79     2008
+   106.79 - 120.63     1680
+   120.63 - 134.46     1438
+   134.46 - 148.30     1006
+   148.30 - 162.13      692
+   162.13 - 175.97      150
+
+|-Occupancies statistics------------------------------------------------------|
+| occupancies: max = 1.00   min = 1.00   number of occupancies < 0.1 = 0      |
+|-----------------------------------------------------------------------------|
+
+*********************** REFINEMENT MACRO_CYCLE 1 OF 3 *************************
+
+|--(resolution: 3.84 - 214.34 A, n_refl.=57834 (all), 4.86  % free)-----------|
+|                                                                             |
+| r_work= 0.4872 r_free= 0.6616 coordinate error (max.-lik. estimate): 0.24 A |
+|                                                                             |
+| normalized target function (ml) (work): 7.249062                            |
+| target function (ml) not normalized (work): 398872.383360                   |
+| target function (ml) not normalized (free): 20053.388098                    |
+|-----------------------------------------------------------------------------|
+
+=========================== Bulk-solvent and scaling ==========================
+
+
+============================= updating all scales =============================
+
+                   start: r(all,work,free)=0.4968 0.4872 0.6616 n_refl.: 57834
+       re-set all scales: r(all,work,free)=0.4968 0.4872 0.6616 n_refl.: 57834
+         remove outliers: r(all,work,free)=0.4944 0.4842 0.6634 n_refl.: 57601
+overall B=31.10 to atoms: r(all,work,free)=0.5641 0.5484 0.7416 n_refl.: 57601
+bulk-solvent and scaling: r(all,work,free)=0.3615 0.3623 0.3520 n_refl.: 57601
+         remove outliers: r(all,work,free)=0.3611 0.3619 0.3516 n_refl.: 57579
+
+======================== Statistics in resolution bins ======================== 
+
+Total model structure factor:
+  F_model = k_total * (F_calc + k_mask * F_mask)
+
+    k_total = k_isotropic * k_anisotropic
+   Resolution    Compl Nwork Nfree R_work    <Fobs>  <Fmodel> kiso   kani kmask
+214.340-31.229   93.40    79    20 0.3706  2547.480  2140.807 1.692 1.023 0.398
+ 31.192-25.280   97.14    99     3 0.3773  2284.543  2085.789 1.631 1.019 0.395
+ 25.255-20.542   99.40   166     0 0.4835  1777.150  1439.761 1.863 1.020 0.388
+ 20.476-16.626   97.73   329    16 0.3879  1579.705  1361.375 1.753 1.015 0.361
+ 16.500-13.464   98.72   597    19 0.4143  1340.664  1184.180 1.228 1.016 0.328
+ 13.429-10.909   98.49  1097    74 0.2996  1762.169  1659.019 1.248 1.013 0.292
+ 10.907-8.844    98.35  2062   150 0.2832  1496.729  1411.820 1.153 1.012 0.276
+  8.837-7.165    99.16  3957   179 0.3330   915.922   850.888 1.034 1.011 0.256
+  7.164-5.807    99.04  7433   447 0.3701   602.143   535.124 0.952 1.006 0.206
+  5.806-4.706    98.21 13841   759 0.3695   627.345   566.056 1.023 0.995 0.142
+  4.706-3.840    98.14 25123  1129 0.3796   594.397   494.651 1.286 0.987 0.105
+
+  Approximation of k_total with k_overall*exp(-b_overall*s**2/4)
+    k_overall=0.9547   b_overall=-13.2871
+
+============================ Set refinement target ============================
+
+  using refinement target ls_wunit_k1 
+
+
+================================== NQH flips ==================================
+
+r_work=0.3619 r_free=0.3516
+Analyzing N/Q/H residues for possible flip corrections...
+
+Flipped N/Q/H residues before XYZ refinement:
+A 156 GLN
+B 156 GLN
+C 156 GLN
+D 156 GLN
+E 156 GLN
+F 156 GLN
+G 156 GLN
+H 156 GLN
+
+Total number of N/Q/H flips: 8
+
+r_work=0.3619 r_free=0.3515
+
+=================== Rigid-body refinement (reciprocal space) ==================
+
+
+GEOMETRY RESTRAINTS LIBRARY: GEOSTD + MONOMER LIBRARY + CDL V1.2
+DEVIATIONS FROM IDEAL VALUES.
+  BOND      :  0.008   0.082  22232
+  ANGLE     :  1.063   9.123  30064
+  CHIRALITY :  0.067   0.409   3264
+  PLANARITY :  0.007   0.050   3888
+  DIHEDRAL  : 15.032 178.908  13416
+  MIN NONBONDED DISTANCE : 1.525
+
+MOLPROBITY STATISTICS.
+  ALL-ATOM CLASHSCORE : 5.77
+  RAMACHANDRAN PLOT:
+    OUTLIERS :  0.00 %
+    ALLOWED  :  4.33 %
+    FAVORED  : 95.67 %
+  ROTAMER OUTLIERS :  0.00 %
+  CBETA DEVIATIONS :  0.00 %
+  PEPTIDE PLANE:
+    CIS-PROLINE     : 12.50 %
+    CIS-GENERAL     : 0.00 %
+    TWISTED PROLINE : 0.00 %
+    TWISTED GENERAL : 0.00 %
+
+|-Information about rigid groups----------------------------------------------|
+| Total number of atoms = 21720   Number of rigid groups = 8                  |
+| group: start point:                        end point:                       |
+|               x      B  atom  residue  <>        x      B  atom  residue    |
+|     1:  -47.508 145.38   N   LEU   23  <>  -11.906 176.30   ND2 ASN  371    |
+|     2:    3.849 145.38   N   LEU   23  <>  -36.023 176.30   ND2 ASN  371    |
+|     3:  -14.738 143.55   N   LEU   23  <>    3.655 174.47   ND2 ASN  371    |
+|     4:  -62.201 143.55   N   LEU   23  <>  -36.435 174.47   ND2 ASN  371    |
+|     5:  -19.174 144.82   N   LEU   23  <>    6.608 175.74   ND2 ASN  371    |
+|     6:  -57.606 144.82   N   LEU   23  <>  -39.041 175.74   ND2 ASN  371    |
+|     7:  -39.192 145.77   N   LEU   23  <>  -78.997 176.69   ND2 ASN  371    |
+|     8:    4.134 145.77   N   LEU   23  <>  -31.340 176.69   ND2 ASN  371    |
+|-----------------------------------------------------------------------------|
+
+Rigid body refinement:
+  Requested number of resolution zones: 5
+  Calculation for first resolution zone:
+    Requested number of reflections per body: 200
+    Requested factor per body: 1.0
+    Number of bodies: 8
+    Resulting number of reflections: 1600
+    Requested low-resolution limit: None
+    Final number of reflections: 1600
+  Data resolution:                      214.34 -   3.84 (54783 reflections)
+  Resolution for rigid body refinement: 214.34 -   3.84 (54783 reflections)
+  Resolution cutoffs for multiple zones: 
+                          number of
+    zone     resolution  reflections  target
+      1  214.34 - 12.48        1600    ls_wunit_k1
+      2  214.34 - 10.81        2431    ls_wunit_k1
+      3  214.34 -  7.20        8249    ls_wunit_k1
+      4  214.34 -  5.05       24037    ml
+      5  214.34 -  3.84       54783    ml
+    zone number of reflections = 1600 + 830.984 * (zone-1)**3
+
+|-Start-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)------|
+|                                                                             |
+| r_work= 0.3619 r_free= 0.3515 coordinate error (max.-lik. estimate): 0.68 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    2:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    3:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    4:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    5:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    6:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    7:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+| group    8:    0.000    0.000    0.000    0.00    0.00   0.00   0.00   0.00 |
+|-----------------------------------------------------------------------------|
+
+ ----------Refinement at resolution: 214.34 - 12.48 target=ls_wunit_k1---------- 
+
+                   start: r(all,work,free)=0.3973 0.3967 0.3398 n_refl.: 1670
+       re-set all scales: r(all,work,free)=0.6190 0.5946 0.6402 n_refl.: 1670
+bulk-solvent and scaling: r(all,work,free)=0.3860 0.3881 0.3127 n_refl.: 1670
+                   start: r(all,work,free)=0.3839 0.3850 0.3330 n_refl.: 1670
+       re-set all scales: r(all,work,free)=0.6194 0.5967 0.6385 n_refl.: 1670
+bulk-solvent and scaling: r(all,work,free)=0.3847 0.3858 0.3320 n_refl.: 1670
+                   start: r(all,work,free)=0.3911 0.3909 0.3440 n_refl.: 1670
+       re-set all scales: r(all,work,free)=0.6190 0.5980 0.6368 n_refl.: 1670
+bulk-solvent and scaling: r(all,work,free)=0.3889 0.3889 0.3439 n_refl.: 1670
+                   start: r(all,work,free)=0.3986 0.3966 0.3672 n_refl.: 1670
+       re-set all scales: r(all,work,free)=0.6193 0.5995 0.6325 n_refl.: 1670
+bulk-solvent and scaling: r(all,work,free)=0.3995 0.3974 0.3633 n_refl.: 1670
+                   start: r(all,work,free)=0.4046 0.4022 0.3691 n_refl.: 1670
+       re-set all scales: r(all,work,free)=0.6206 0.6026 0.6253 n_refl.: 1670
+bulk-solvent and scaling: r(all,work,free)=0.4051 0.4032 0.3602 n_refl.: 1670
+|-Rigid body refinement-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)|
+|                                                                             |
+| r_work= 0.4246 r_free= 0.4225 coordinate error (max.-lik. estimate): 1.05 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    1.062    0.879    2.426    2.80    0.49   0.60  -0.39   0.86 |
+| group    2:   -1.570   -0.190   -2.469    2.93   -0.18  -0.20  -0.12   0.30 |
+| group    3:    0.113   -1.914   -3.102    3.65   -0.12   0.01   0.15   0.19 |
+| group    4:   -1.070   -1.519   -2.729    3.29   -0.52  -0.40   0.40   0.76 |
+| group    5:   -0.480    1.232    3.238    3.49   -0.72   0.17  -0.24   0.78 |
+| group    6:    0.046   -0.154    1.803    1.81   -0.36   0.10   0.16   0.41 |
+| group    7:   -1.661    0.541    4.524    4.84   -0.35  -0.38   0.17   0.54 |
+| group    8:   -1.938   -0.526    3.558    4.09   -0.57  -0.73  -0.10   0.93 |
+|-----------------------------------------------------------------------------|
+
+ ----------Refinement at resolution: 214.34 - 10.81 target=ls_wunit_k1---------- 
+
+                   start: r(all,work,free)=0.3837 0.3845 0.3168 n_refl.: 2563
+       re-set all scales: r(all,work,free)=0.6087 0.5897 0.6924 n_refl.: 2563
+bulk-solvent and scaling: r(all,work,free)=0.3797 0.3801 0.2902 n_refl.: 2563
+                   start: r(all,work,free)=0.3834 0.3838 0.2858 n_refl.: 2563
+       re-set all scales: r(all,work,free)=0.6093 0.5912 0.6881 n_refl.: 2563
+bulk-solvent and scaling: r(all,work,free)=0.3820 0.3823 0.2948 n_refl.: 2563
+                   start: r(all,work,free)=0.3825 0.3830 0.2876 n_refl.: 2563
+       re-set all scales: r(all,work,free)=0.6097 0.5924 0.6852 n_refl.: 2563
+bulk-solvent and scaling: r(all,work,free)=0.3850 0.3903 0.2342 n_refl.: 2563
+                   start: r(all,work,free)=0.3861 0.3911 0.2372 n_refl.: 2563
+       re-set all scales: r(all,work,free)=0.6084 0.5911 0.6858 n_refl.: 2563
+bulk-solvent and scaling: r(all,work,free)=0.3856 0.3910 0.2305 n_refl.: 2563
+                   start: r(all,work,free)=0.3895 0.3949 0.2391 n_refl.: 2563
+       re-set all scales: r(all,work,free)=0.6078 0.5904 0.6874 n_refl.: 2563
+bulk-solvent and scaling: r(all,work,free)=0.3861 0.3917 0.2289 n_refl.: 2563
+|-Rigid body refinement-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)|
+|                                                                             |
+| r_work= 0.4382 r_free= 0.4321 coordinate error (max.-lik. estimate): 1.26 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    2.532   -0.582    3.626    4.45    0.29   0.60  -0.16   0.69 |
+| group    2:   -0.585   -1.831   -1.697    2.56   -0.17   0.02  -0.11   0.20 |
+| group    3:   -0.518   -1.191   -4.426    4.61   -0.33  -0.18  -0.08   0.38 |
+| group    4:   -0.074   -2.384   -4.359    4.97   -0.59  -0.63   0.24   0.89 |
+| group    5:   -0.293    2.045    4.012    4.51   -1.05  -0.12  -0.11   1.06 |
+| group    6:   -0.679    0.882    3.694    3.85   -0.49  -0.10   0.17   0.53 |
+| group    7:   -1.228    1.194    4.013    4.35   -0.23  -0.88   0.03   0.91 |
+| group    8:   -1.852    1.804    1.778    3.12   -0.24  -1.20  -0.04   1.22 |
+|-----------------------------------------------------------------------------|
+
+ ----------Refinement at resolution: 214.34 - 7.20 target=ls_wunit_k1---------- 
+
+                   start: r(all,work,free)=0.4167 0.4180 0.3867 n_refl.: 8706
+       re-set all scales: r(all,work,free)=0.5734 0.5570 0.7155 n_refl.: 8706
+bulk-solvent and scaling: r(all,work,free)=0.4203 0.4234 0.3596 n_refl.: 8706
+                   start: r(all,work,free)=0.4049 0.4083 0.3364 n_refl.: 8706
+       re-set all scales: r(all,work,free)=0.5686 0.5514 0.7183 n_refl.: 8706
+bulk-solvent and scaling: r(all,work,free)=0.4049 0.4086 0.3320 n_refl.: 8706
+                   start: r(all,work,free)=0.3985 0.4022 0.3250 n_refl.: 8706
+       re-set all scales: r(all,work,free)=0.5676 0.5502 0.7192 n_refl.: 8706
+bulk-solvent and scaling: r(all,work,free)=0.3980 0.4017 0.3252 n_refl.: 8706
+                   start: r(all,work,free)=0.3969 0.4007 0.3232 n_refl.: 8706
+       re-set all scales: r(all,work,free)=0.5675 0.5503 0.7190 n_refl.: 8706
+bulk-solvent and scaling: r(all,work,free)=0.3961 0.4000 0.3225 n_refl.: 8706
+                   start: r(all,work,free)=0.3939 0.3977 0.3219 n_refl.: 8706
+       re-set all scales: r(all,work,free)=0.5678 0.5506 0.7194 n_refl.: 8706
+bulk-solvent and scaling: r(all,work,free)=0.3867 0.3906 0.3087 n_refl.: 8706
+|-Rigid body refinement-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)|
+|                                                                             |
+| r_work= 0.4241 r_free= 0.4050 coordinate error (max.-lik. estimate): 1.00 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    0.823   -2.153    0.099    2.31    0.18   0.51  -0.05   0.55 |
+| group    2:    0.470   -2.259   -0.226    2.32   -0.12   0.18   0.02   0.22 |
+| group    3:    0.131   -1.088   -5.018    5.14   -0.17  -0.16  -0.20   0.31 |
+| group    4:   -0.087   -1.698   -3.153    3.58   -0.66  -0.26   0.06   0.72 |
+| group    5:    0.591    1.329    3.900    4.17   -0.81  -0.36   0.17   0.90 |
+| group    6:   -0.463    0.082    3.561    3.59   -0.27  -0.20   0.08   0.35 |
+| group    7:    0.256    1.739    0.964    2.01   -0.10  -0.67  -0.02   0.68 |
+| group    8:   -0.289    2.739    0.371    2.78    0.06  -0.73   0.14   0.75 |
+|-----------------------------------------------------------------------------|
+
+     ----------Refinement at resolution: 214.34 - 5.05 target=ml----------     
+
+                   start: r(all,work,free)=0.4098 0.4112 0.3864 n_refl.: 25391
+       re-set all scales: r(all,work,free)=0.5493 0.5348 0.7093 n_refl.: 25391
+bulk-solvent and scaling: r(all,work,free)=0.4303 0.4325 0.3915 n_refl.: 25391
+                   start: r(all,work,free)=0.4014 0.4031 0.3695 n_refl.: 25391
+       re-set all scales: r(all,work,free)=0.5375 0.5206 0.7187 n_refl.: 25391
+bulk-solvent and scaling: r(all,work,free)=0.4003 0.4013 0.3851 n_refl.: 25391
+                   start: r(all,work,free)=0.3797 0.3809 0.3644 n_refl.: 25391
+       re-set all scales: r(all,work,free)=0.5281 0.5097 0.7231 n_refl.: 25391
+bulk-solvent and scaling: r(all,work,free)=0.3793 0.3805 0.3642 n_refl.: 25391
+                   start: r(all,work,free)=0.3750 0.3763 0.3563 n_refl.: 25391
+       re-set all scales: r(all,work,free)=0.5256 0.5070 0.7237 n_refl.: 25391
+bulk-solvent and scaling: r(all,work,free)=0.3748 0.3762 0.3570 n_refl.: 25391
+                   start: r(all,work,free)=0.3733 0.3748 0.3569 n_refl.: 25391
+       re-set all scales: r(all,work,free)=0.5246 0.5058 0.7239 n_refl.: 25391
+bulk-solvent and scaling: r(all,work,free)=0.3410 0.3428 0.3229 n_refl.: 25391
+|-Rigid body refinement-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)|
+|                                                                             |
+| r_work= 0.3644 r_free= 0.3508 coordinate error (max.-lik. estimate): 0.67 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    0.092   -0.159   -0.204    0.27   -0.05  -0.08   0.15   0.18 |
+| group    2:    0.061   -0.137   -0.107    0.18   -0.07  -0.23   0.09   0.25 |
+| group    3:    0.221    0.103   -0.361    0.44    0.08  -0.25   0.06   0.27 |
+| group    4:    0.305   -0.023   -0.260    0.40   -0.08  -0.25  -0.16   0.30 |
+| group    5:    0.280   -0.103    0.240    0.38   -0.12  -0.16   0.13   0.24 |
+| group    6:    0.031   -0.216    0.221    0.31    0.03  -0.14  -0.10   0.17 |
+| group    7:    0.043    0.087    0.069    0.12   -0.08  -0.20  -0.09   0.23 |
+| group    8:    0.021    0.335   -0.041    0.34    0.07  -0.31   0.18   0.36 |
+|-----------------------------------------------------------------------------|
+
+     ----------Refinement at resolution: 214.34 - 3.84 target=ml----------     
+
+                   start: r(all,work,free)=0.3635 0.3644 0.3508 n_refl.: 57579
+       re-set all scales: r(all,work,free)=0.5638 0.5484 0.7380 n_refl.: 57579
+bulk-solvent and scaling: r(all,work,free)=0.4036 0.4052 0.3778 n_refl.: 57579
+                   start: r(all,work,free)=0.4027 0.4045 0.3746 n_refl.: 57579
+       re-set all scales: r(all,work,free)=0.5638 0.5482 0.7404 n_refl.: 57579
+bulk-solvent and scaling: r(all,work,free)=0.4027 0.4044 0.3756 n_refl.: 57579
+                   start: r(all,work,free)=0.4024 0.4042 0.3751 n_refl.: 57579
+       re-set all scales: r(all,work,free)=0.5637 0.5480 0.7409 n_refl.: 57579
+bulk-solvent and scaling: r(all,work,free)=0.4025 0.4042 0.3752 n_refl.: 57579
+                   start: r(all,work,free)=0.4024 0.4041 0.3751 n_refl.: 57579
+       re-set all scales: r(all,work,free)=0.5637 0.5480 0.7417 n_refl.: 57579
+bulk-solvent and scaling: r(all,work,free)=0.3603 0.3613 0.3471 n_refl.: 57579
+|-Rigid body refinement-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)|
+|                                                                             |
+| r_work= 0.3613 r_free= 0.3496 coordinate error (max.-lik. estimate): 0.66 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    0.224    0.035   -0.176    0.29   -0.04  -0.14   0.03   0.15 |
+| group    2:   -0.062   -0.096   -0.057    0.13   -0.01  -0.19   0.04   0.20 |
+| group    3:    0.134   -0.083    0.055    0.17    0.04  -0.18   0.05   0.19 |
+| group    4:    0.128   -0.140   -0.067    0.20   -0.02  -0.23  -0.05   0.24 |
+| group    5:    0.175    0.112    0.015    0.21   -0.05  -0.19   0.04   0.20 |
+| group    6:    0.050    0.018    0.112    0.12   -0.01  -0.19  -0.06   0.20 |
+| group    7:   -0.077    0.071    0.037    0.11   -0.01  -0.21  -0.03   0.21 |
+| group    8:   -0.166    0.054   -0.000    0.17    0.02  -0.24   0.07   0.26 |
+|-----------------------------------------------------------------------------|
+                   start: r(all,work,free)=0.3603 0.3613 0.3471 n_refl.: 57579
+       re-set all scales: r(all,work,free)=0.5637 0.5480 0.7417 n_refl.: 57579
+bulk-solvent and scaling: r(all,work,free)=0.3603 0.3613 0.3471 n_refl.: 57579
+
+|-Rigid body end-(resolution: 3.84 - 214.34 A, n_refl.=57579 (all), 4.86  % free)|
+|                                                                             |
+| r_work= 0.3613 r_free= 0.3496 coordinate error (max.-lik. estimate): 0.66 A |
+|                                                                             |
+|                                                                             |
+| Rigid body shift (Euler angles xyz):                                        |
+|                            rotation (deg)                 translation (A)   |
+|                         xyz              total           xyz          total |
+| group    1:    0.224    0.035   -0.176    0.29   -0.04  -0.14   0.03   0.15 |
+| group    2:   -0.062   -0.096   -0.057    0.13   -0.01  -0.19   0.04   0.20 |
+| group    3:    0.134   -0.083    0.055    0.17    0.04  -0.18   0.05   0.19 |
+| group    4:    0.128   -0.140   -0.067    0.20   -0.02  -0.23  -0.05   0.24 |
+| group    5:    0.175    0.112    0.015    0.21   -0.05  -0.19   0.04   0.20 |
+| group    6:    0.050    0.018    0.112    0.12   -0.01  -0.19  -0.06   0.20 |
+| group    7:   -0.077    0.071    0.037    0.11   -0.01  -0.21  -0.03   0.21 |
+| group    8:   -0.166    0.054   -0.000    0.17    0.02  -0.24   0.07   0.26 |
+|-----------------------------------------------------------------------------|
+
+
+============================= updating all scales =============================
+
+                   start: r(all,work,free)=0.3604 0.3613 0.3496 n_refl.: 57579
+       re-set all scales: r(all,work,free)=0.5637 0.5480 0.7417 n_refl.: 57579
+         remove outliers: r(all,work,free)=0.5637 0.5480 0.7417 n_refl.: 57579
+overall B=-9.99 to atoms: r(all,work,free)=0.5395 0.5251 0.7188 n_refl.: 57579
+bulk-solvent and scaling: r(all,work,free)=0.3603 0.3613 0.3471 n_refl.: 57579
+         remove outliers: r(all,work,free)=0.3601 0.3611 0.3471 n_refl.: 57570
+
+======================== Statistics in resolution bins ======================== 
+
+Total model structure factor:
+  F_model = k_total * (F_calc + k_mask * F_mask)
+
+    k_total = k_isotropic * k_anisotropic
+   Resolution    Compl Nwork Nfree R_work    <Fobs>  <Fmodel> kiso   kani kmask
+214.340-31.229   93.40    79    20 0.3704  2547.480  2209.843 2.237 1.024 0.391
+ 31.192-25.280   97.14    99     3 0.3790  2284.543  2120.166 1.866 1.018 0.393
+ 25.255-20.542   99.40   166     0 0.4888  1777.150  1417.908 1.993 1.020 0.390
+ 20.476-16.626   97.73   329    16 0.3884  1579.705  1356.633 1.933 1.014 0.371
+ 16.500-13.464   98.56   596    19 0.4098  1334.042  1188.739 1.359 1.016 0.334
+ 13.429-10.909   98.49  1097    74 0.2983  1762.169  1662.721 1.316 1.013 0.285
+ 10.907-8.844    98.35  2062   150 0.2830  1496.729  1411.855 1.247 1.011 0.288
+  8.837-7.165    99.16  3957   179 0.3289   915.922   852.087 1.102 1.011 0.271
+  7.164-5.807    99.04  7433   447 0.3682   602.143   535.433 0.997 1.005 0.223
+  5.806-4.706    98.18 13837   759 0.3656   626.890   565.961 1.023 0.995 0.154
+  4.706-3.840    98.12 25119  1129 0.3817   594.168   493.926 1.224 0.988 0.115
+
+  Approximation of k_total with k_overall*exp(-b_overall*s**2/4)
+    k_overall=1.0610   b_overall=-2.5487 
+|--(resolution: 3.84 - 214.34 A, n_refl.=57570 (all), 4.86  % free)-----------|
+|                                                                             |
+| r_work= 0.3611 r_free= 0.3471 coordinate error (max.-lik. estimate): 0.66 A |
+|                                                                             |
+| normalized target function (ls_wunit_k1) (work): 0.160012                   |
+| target function (ls_wunit_k1) not normalized (work): 8764.494840            |
+| target function (ls_wunit_k1) not normalized (free): 418.197277             |
+|-----------------------------------------------------------------------------|
+
+GEOMETRY RESTRAINTS LIBRARY: GEOSTD + MONOMER LIBRARY + CDL V1.2
+DEVIATIONS FROM IDEAL VALUES.
+  BOND      :  0.008   0.082  22232
+  ANGLE     :  1.063   9.123  30064
+  CHIRALITY :  0.067   0.409   3264
+  PLANARITY :  0.007   0.050   3888
+  DIHEDRAL  : 15.032 178.908  13416
+  MIN NONBONDED DISTANCE : 1.498
+
+MOLPROBITY STATISTICS.
+  ALL-ATOM CLASHSCORE : 5.71
+  RAMACHANDRAN PLOT:
+    OUTLIERS :  0.00 %
+    ALLOWED  :  4.33 %
+    FAVORED  : 95.67 %
+  ROTAMER OUTLIERS :  0.00 %
+  CBETA DEVIATIONS :  0.00 %
+  PEPTIDE PLANE:
+    CIS-PROLINE     : 12.50 %
+    CIS-GENERAL     : 0.00 %
+    TWISTED PROLINE : 0.00 %
+    TWISTED GENERAL : 0.00 %
+
+          ----------Set rotamer outliers to match reference----------          
+
+
+    ----------Correcting rotamer outliers to match reference model----------   
+
+** evaluating rotamers for working model **
+No rotamer outliers detected in working model
+Before rotamer outlier correction:
+r_work= 0.3611   r_free= 0.3471
+After rotamer outlier correction:
+r_work= 0.3611   r_free= 0.3471
+
+==================== Compute data/restraints target weights ===================
+
+|-----------------------------------------------------------------------------|
+| XYZ refinement: T = Eexperimental * wxc * wxc_scale + Echem * wc            |
+| wxc = 20.060317             wxc_scale = 0.100            wc = 1.000         |
+|                                                                             |
+| ADP refinement: T = Eexperimental * wxu * wxu_scale + Eadp  * wu            |
+| wxu = 0.103841              wxu_scale = 1.000            wu = 1.000         |
+|-----------------------------------------------------------------------------|
+
+
+====================== XYZ individual (reciprocal space) ======================
+
+    R-FACTORS           RMSD     CLASH  RAMA  ROTA CBET WEIGHT    TARGETS
+ work  free  delta  bonds  angl                                  data   restr
+36.11 34.71  -1.40  0.008   1.1    5.7   0.0   0.0    0   none  0.160  0.1677
+35.22 34.69  -0.53  0.005   0.8    4.3   0.0   0.0    0  2.006  0.150  0.0976
+
+Legend:
+  - first line corresponds to starting state (before refinement)
+  - R-factors reported in percent
+  - delta is Rfree-Rwork in percent
+  - CLASH is all-atom Molprobity clashscore
+  - ROTA is percent of side-chain rotamer outliers
+  - RAMA is percent of Ramachandran plot outliers
+  - CBET is number of Cbeta deviations
+  - WEIGHT is relative weight between X-ray (or neutron) target and restraints
+  - TARGETS: the values of X-ray (or neutron) and restraints target functions
+
+====================== ADP refinement (reciprocal space) ======================
+
+
+                 ----------Individual ADP refinement----------                 
+
+    R-FACTORS      <Bi-Bj>  <B>   WEIGHT       TARGETS
+ work  free  delta                           data restr
+35.22 34.69  -0.53  8.667  103.740  0.104    0.150
+33.32 36.27   2.95  7.284  112.460  0.104    0.134
+
+                min    max   mean <Bi,j>   iso aniso
+   Overall:   56.15 197.80 112.46   7.28 21720     0
+   Protein:   56.15 197.80 112.46   7.28 21720     0
+   Chain  A:  63.10 191.69 113.77    N/A  2715     0
+   Chain  C:  56.15 189.86 110.24    N/A  2715     0
+   Chain  B:  59.16 191.69 111.99    N/A  2715     0
+   Chain  E:  61.62 197.80 113.09    N/A  2715     0
+   Chain  D:  63.48 194.26 112.62    N/A  2715     0
+   Chain  G:  59.55 192.08 112.30    N/A  2715     0
+   Chain  F:  56.46 191.13 111.46    N/A  2715     0
+   Chain  H:  61.52 192.29 114.20    N/A  2715     0
+   Histogram:
+       Values      Number of atoms
+    56.15 - 70.31       270
+    70.31 - 84.48      2466
+    84.48 - 98.64      5476
+    98.64 - 112.81     4687
+   112.81 - 126.97     2768
+   126.97 - 141.14     2305
+   141.14 - 155.30     1688
+   155.30 - 169.47     1249
+   169.47 - 183.63      740
+   183.63 - 197.80       71
+
+
+*********************** REFINEMENT MACRO_CYCLE 2 OF 3 *************************
+
+|--(resolution: 3.84 - 214.34 A, n_refl.=57570 (all), 4.86  % free)-----------|
+|                                                                             |
+| r_work= 0.3332 r_free= 0.3627 coordinate error (max.-lik. estimate): 0.59 A |
+|                                                                             |
+| normalized target function (ls_wunit_k1) (work): 0.134023                   |
+| target function (ls_wunit_k1) not normalized (work): 7340.948591            |
+| target function (ls_wunit_k1) not normalized (free): 492.457812             |
+|-----------------------------------------------------------------------------|
+
+=========================== Bulk-solvent and scaling ==========================
+
+
+============================= updating all scales =============================
+
+                   start: r(all,work,free)=0.3344 0.3332 0.3627 n_refl.: 57570
+       re-set all scales: r(all,work,free)=0.5579 0.5414 0.7425 n_refl.: 57570
+         remove outliers: r(all,work,free)=0.5579 0.5414 0.7425 n_refl.: 57570
+overall B=-9.02 to atoms: r(all,work,free)=0.5355 0.5203 0.7219 n_refl.: 57570
+bulk-solvent and scaling: r(all,work,free)=0.3314 0.3307 0.3526 n_refl.: 57570
+         remove outliers: r(all,work,free)=0.3314 0.3307 0.3526 n_refl.: 57570
+
+======================== Statistics in resolution bins ======================== 
+
+Total model structure factor:
+  F_model = k_total * (F_calc + k_mask * F_mask)
+
+    k_total = k_isotropic * k_anisotropic
+   Resolution    Compl Nwork Nfree R_work    <Fobs>  <Fmodel> kiso   kani kmask
+214.340-31.229   93.40    79    20 0.3602  2547.480  2212.689 2.213 1.021 0.391
+ 31.192-25.280   97.14    99     3 0.3655  2284.543  2108.998 1.627 1.016 0.401
+ 25.255-20.542   99.40   166     0 0.4414  1777.150  1507.236 1.905 1.018 0.402
+ 20.476-16.626   97.73   329    16 0.3596  1579.705  1387.113 1.900 1.011 0.373
+ 16.500-13.464   98.56   596    19 0.3920  1334.042  1207.325 1.294 1.013 0.323
+ 13.429-10.909   98.49  1097    74 0.2740  1762.169  1683.054 1.328 1.011 0.295
+ 10.907-8.844    98.35  2062   150 0.2574  1496.729  1432.761 1.261 1.009 0.297
+  8.837-7.165    99.16  3957   179 0.3006   915.922   870.046 1.113 1.009 0.270
+  7.164-5.807    99.04  7433   447 0.3455   602.143   546.160 1.007 1.004 0.243
+  5.806-4.706    98.18 13837   759 0.3375   626.890   575.230 1.015 0.994 0.185
+  4.706-3.840    98.12 25119  1129 0.3443   594.168   509.772 1.220 0.987 0.109
+
+  Approximation of k_total with k_overall*exp(-b_overall*s**2/4)
+    k_overall=1.0610   b_overall=-2.3125 
+
+============================ Set refinement target ============================
+
+  using refinement target ml 
+
+
+============================ Update CDL restraints ============================
+
+
+================================== NQH flips ==================================
+
+r_work=0.3307 r_free=0.3526
+Analyzing N/Q/H residues for possible flip corrections...
+
+No N/Q/H corrections needed this macrocycle
+r_work=0.3307 r_free=0.3526
+
+==================== Compute data/restraints target weights ===================
+
+|-----------------------------------------------------------------------------|
+| XYZ refinement: T = Eexperimental * wxc * wxc_scale + Echem * wc            |
+| wxc = 7.970027              wxc_scale = 0.054            wc = 1.000         |
+|                                                                             |
+| ADP refinement: T = Eexperimental * wxu * wxu_scale + Eadp  * wu            |
+| wxu = 0.039952              wxu_scale = 1.000            wu = 1.000         |
+|-----------------------------------------------------------------------------|
+
+
+====================== XYZ individual (reciprocal space) ======================
+
+    R-FACTORS           RMSD     CLASH  RAMA  ROTA CBET WEIGHT    TARGETS
+ work  free  delta  bonds  angl                                  data   restr
+33.07 35.26   2.19  0.005   0.8    4.3   0.0   0.0    0   none  6.934  0.0976
+33.16 35.23   2.07  0.003   0.7    4.2   0.0   0.0    0  0.427  6.930  0.0832
+
+Legend:
+  - first line corresponds to starting state (before refinement)
+  - R-factors reported in percent
+  - delta is Rfree-Rwork in percent
+  - CLASH is all-atom Molprobity clashscore
+  - ROTA is percent of side-chain rotamer outliers
+  - RAMA is percent of Ramachandran plot outliers
+  - CBET is number of Cbeta deviations
+  - WEIGHT is relative weight between X-ray (or neutron) target and restraints
+  - TARGETS: the values of X-ray (or neutron) and restraints target functions
+
+====================== ADP refinement (reciprocal space) ======================
+
+
+                 ----------Individual ADP refinement----------                 
+
+    R-FACTORS      <Bi-Bj>  <B>   WEIGHT       TARGETS
+ work  free  delta                           data restr
+33.16 35.23   2.07  7.284  103.440  0.040    6.930
+33.71 35.10   1.39  6.070  107.854  0.040    6.912
+
+                min    max   mean <Bi,j>   iso aniso
+   Overall:   49.59 187.23 107.85   6.07 21720     0
+   Protein:   49.59 187.23 107.85   6.07 21720     0
+   Chain  A:  59.83 183.50 109.56    N/A  2715     0
+   Chain  C:  49.59 176.50 105.44    N/A  2715     0
+   Chain  B:  57.16 177.67 106.93    N/A  2715     0
+   Chain  E:  59.43 187.23 108.58    N/A  2715     0
+   Chain  D:  56.79 183.38 108.77    N/A  2715     0
+   Chain  G:  56.03 178.06 107.29    N/A  2715     0
+   Chain  F:  54.07 178.31 106.60    N/A  2715     0
+   Chain  H:  51.11 182.46 109.66    N/A  2715     0
+   Histogram:
+       Values      Number of atoms
+    49.59 - 63.35       129
+    63.35 - 77.12       966
+    77.12 - 90.88      4966
+    90.88 - 104.64     6039
+   104.64 - 118.41     3105
+   118.41 - 132.17     2573
+   132.17 - 145.94     1676
+   145.94 - 159.70     1446
+   159.70 - 173.46      763
+   173.46 - 187.23       57
+
+
+*********************** REFINEMENT MACRO_CYCLE 3 OF 3 *************************
+
+|--(resolution: 3.84 - 214.34 A, n_refl.=57570 (all), 4.86  % free)-----------|
+|                                                                             |
+| r_work= 0.3371 r_free= 0.3510 coordinate error (max.-lik. estimate): 0.61 A |
+|                                                                             |
+| normalized target function (ml) (work): 6.911883                            |
+| target function (ml) not normalized (work): 378591.483722                   |
+| target function (ml) not normalized (free): 19330.420718                    |
+|-----------------------------------------------------------------------------|
+
+=========================== Bulk-solvent and scaling ==========================
+
+
+============================= updating all scales =============================
+
+                   start: r(all,work,free)=0.3375 0.3371 0.3510 n_refl.: 57570
+       re-set all scales: r(all,work,free)=0.5505 0.5345 0.7339 n_refl.: 57570
+         remove outliers: r(all,work,free)=0.5505 0.5345 0.7339 n_refl.: 57570
+overall B=-6.64 to atoms: r(all,work,free)=0.5340 0.5189 0.7184 n_refl.: 57570
+bulk-solvent and scaling: r(all,work,free)=0.3365 0.3363 0.3461 n_refl.: 57570
+         remove outliers: r(all,work,free)=0.3365 0.3363 0.3461 n_refl.: 57570
+
+======================== Statistics in resolution bins ======================== 
+
+Total model structure factor:
+  F_model = k_total * (F_calc + k_mask * F_mask)
+
+    k_total = k_isotropic * k_anisotropic
+   Resolution    Compl Nwork Nfree R_work    <Fobs>  <Fmodel> kiso   kani kmask
+214.340-31.229   93.40    79    20 0.3731  2547.480  2213.551 2.140 1.030 0.390
+ 31.192-25.280   97.14    99     3 0.3660  2284.543  2148.108 1.785 1.023 0.391
+ 25.255-20.542   99.40   166     0 0.4509  1777.150  1476.558 1.849 1.026 0.391
+ 20.476-16.626   97.73   329    16 0.3755  1579.705  1366.905 1.793 1.018 0.372
+ 16.500-13.464   98.56   596    19 0.4067  1334.042  1188.759 1.218 1.020 0.322
+ 13.429-10.909   98.49  1097    74 0.2905  1762.169  1666.195 1.287 1.015 0.303
+ 10.907-8.844    98.35  2062   150 0.2675  1496.729  1423.850 1.206 1.012 0.290
+  8.837-7.165    99.16  3957   179 0.3078   915.922   862.003 1.090 1.009 0.277
+  7.164-5.807    99.04  7433   447 0.3497   602.143   541.897 1.001 0.999 0.260
+  5.806-4.706    98.18 13837   759 0.3364   626.890   573.553 1.008 0.982 0.202
+  4.706-3.840    98.12 25119  1129 0.3506   594.168   504.530 1.171 0.965 0.120
+
+  Approximation of k_total with k_overall*exp(-b_overall*s**2/4)
+    k_overall=1.0577   b_overall=0.7110  
+
+============================ Set refinement target ============================
+
+  using refinement target ml 
+
+
+============================ Update CDL restraints ============================
+
+
+============================= Setup riding H model ============================
+
+  Before: r_work=0.3363 r_free=0.3461
+  After: r_work=0.3363 r_free=0.3461
+
+================================== NQH flips ==================================
+
+r_work=0.3363 r_free=0.3461
+Analyzing N/Q/H residues for possible flip corrections...
+
+No N/Q/H corrections needed this macrocycle
+r_work=0.3363 r_free=0.3461
+
+==================== Compute data/restraints target weights ===================
+
+|-----------------------------------------------------------------------------|
+| XYZ refinement: T = Eexperimental * wxc * wxc_scale + Echem * wc            |
+| wxc = 8.151970              wxc_scale = 0.080            wc = 1.000         |
+|                                                                             |
+| ADP refinement: T = Eexperimental * wxu * wxu_scale + Eadp  * wu            |
+| wxu = 0.040267              wxu_scale = 1.000            wu = 1.000         |
+|-----------------------------------------------------------------------------|
+
+
+====================== XYZ individual (reciprocal space) ======================
+
+    R-FACTORS           RMSD     CLASH  RAMA  ROTA CBET WEIGHT    TARGETS
+ work  free  delta  bonds  angl                                  data   restr
+33.63 34.61   0.99  0.003   0.7    4.2   0.0   0.0    0   none  6.921  0.0832
+32.77 34.44   1.67  0.004   0.7    4.3   0.0   0.0    0  0.652  6.898  0.0914
+
+Legend:
+  - first line corresponds to starting state (before refinement)
+  - R-factors reported in percent
+  - delta is Rfree-Rwork in percent
+  - CLASH is all-atom Molprobity clashscore
+  - ROTA is percent of side-chain rotamer outliers
+  - RAMA is percent of Ramachandran plot outliers
+  - CBET is number of Cbeta deviations
+  - WEIGHT is relative weight between X-ray (or neutron) target and restraints
+  - TARGETS: the values of X-ray (or neutron) and restraints target functions
+
+====================== ADP refinement (reciprocal space) ======================
+
+
+                 ----------Individual ADP refinement----------                 
+
+    R-FACTORS      <Bi-Bj>  <B>   WEIGHT       TARGETS
+ work  free  delta                           data restr
+32.77 34.44   1.67  6.070  101.217  0.040    6.898
+32.64 34.87   2.23  5.433  105.173  0.040    6.898
+
+                min    max   mean <Bi,j>   iso aniso
+   Overall:   47.15 181.91 105.17   5.43 21720     0
+   Protein:   47.15 181.91 105.17   5.43 21720     0
+   Chain  A:  57.13 176.19 107.24    N/A  2715     0
+   Chain  C:  49.98 169.42 102.47    N/A  2715     0
+   Chain  B:  52.95 168.10 103.79    N/A  2715     0
+   Chain  E:  54.41 181.91 106.10    N/A  2715     0
+   Chain  D:  56.97 173.59 106.88    N/A  2715     0
+   Chain  G:  52.11 166.75 104.26    N/A  2715     0
+   Chain  F:  47.15 169.30 103.61    N/A  2715     0
+   Chain  H:  54.73 180.21 107.03    N/A  2715     0
+   Histogram:
+       Values      Number of atoms
+    47.15 - 60.62        86
+    60.62 - 74.10       632
+    74.10 - 87.58      4179
+    87.58 - 101.05     6748
+   101.05 - 114.53     3539
+   114.53 - 128.00     2676
+   128.00 - 141.48     1728
+   141.48 - 154.96     1535
+   154.96 - 168.43      573
+   168.43 - 181.91       24
+
+
+                         ----------X-ray data----------                        
+
+|--(resolution: 3.84 - 214.34 A, n_refl.=57570 (all), 4.86  % free)-----------|
+|                                                                             |
+| r_work= 0.3264 r_free= 0.3487 coordinate error (max.-lik. estimate): 0.57 A |
+|                                                                             |
+| normalized target function (ml) (work): 6.897760                            |
+| target function (ml) not normalized (work): 377817.889850                   |
+| target function (ml) not normalized (free): 19356.634543                    |
+|-----------------------------------------------------------------------------|
+
+|-----------------------------------------------------------------------------|
+| Bin     Resolution   Compl.  No. Refl.    R-factors          Targets        |
+|number     range              work test   work   test        work        test|
+|  1: 214.6749 -  10.4220 0.98   2705  155 0.3417 0.2915       8.068      7.8255|
+|  2:  10.4220 -   8.2721 0.99   2733  165 0.2540 0.2642      7.4352      7.4193|
+|  3:   8.2721 -   7.2264 0.99   2754  137 0.3125 0.3506      7.2756      7.0658|
+|  4:   7.2264 -   6.5656 0.99   2712  215 0.3224 0.3865      6.9779      7.0774|
+|  5:   6.5656 -   6.0950 0.99   2749  112 0.3410 0.3398      6.8128      7.0604|
+|  6:   6.0950 -   5.7356 0.99   2724  156 0.3466 0.4079       6.774       6.739|
+|  7:   5.7356 -   5.4483 0.98   2776  160 0.3315 0.3917      6.7565      7.1214|
+|  8:   5.4483 -   5.2112 0.98   2732  158 0.3438 0.3368      6.8936      6.9641|
+|  9:   5.2112 -   5.0105 0.98   2713  124 0.3142 0.3060       6.889       6.965|
+| 10:   5.0105 -   4.8376 0.98   2752  122 0.2984 0.3164       6.807      7.0727|
+| 11:   4.8376 -   4.6863 0.98   2701  181 0.3304 0.2708      6.8485      6.8533|
+| 12:   4.6863 -   4.5524 0.98   2716  121 0.3216 0.3843      6.7987      6.8466|
+| 13:   4.5524 -   4.4325 0.98   2834   82 0.3041 0.3668       6.786      6.6157|
+| 14:   4.4325 -   4.3244 0.98   2751   84 0.3111 0.4184      6.7516      6.7122|
+| 15:   4.3244 -   4.2261 0.99   2777  150 0.3206 0.4343      6.7227      6.7001|
+| 16:   4.2261 -   4.1361 0.98   2790  120 0.3279 0.3839      6.6859      6.6318|
+| 17:   4.1361 -   4.0534 0.98   2669  114 0.3711 0.4101      6.6945      6.5719|
+| 18:   4.0534 -   3.9769 0.98   2803  150 0.3679 0.4773      6.7374      6.6386|
+| 19:   3.9769 -   3.9058 0.97   2594  170 0.3640 0.3824      6.6197      6.5726|
+| 20:   3.9058 -   3.8396 0.97   2789  120 0.4010 0.4353      6.6348      6.5264|
+|-----------------------------------------------------------------------------|
+
+|-----------------------------------------------------------------------------|
+|R-free likelihood based estimates for figures of merit, absolute phase error,|
+|and distribution parameters alpha and beta (Acta Cryst. (1995). A51, 880-887)|
+|                                                                             |
+| Bin     Resolution      No. Refl.   FOM  Phase Scale    Alpha        Beta   |
+|  #        range        work  test        error factor                       |
+|  1: 214.6749 -  10.4220  2705   155  0.66  38.54   0.99     1.08     962339.02|
+|  2:  10.4220 -   8.2721  2733   165  0.79  28.42   0.97     1.48     555801.67|
+|  3:   8.2721 -   7.2264  2754   137  0.75  31.64   0.98     1.63     315648.81|
+|  4:   7.2264 -   6.5656  2712   215  0.67  38.88   1.02     1.67     260812.59|
+|  5:   6.5656 -   6.0950  2749   112  0.68  38.27   1.02     1.42     190382.49|
+|  6:   6.0950 -   5.7356  2724   156  0.69  37.37   0.95     1.37     169568.13|
+|  7:   5.7356 -   5.4483  2776   160  0.68  37.97   0.99     1.38     174776.97|
+|  8:   5.4483 -   5.2112  2732   158  0.68  37.88   1.07     1.53     201255.84|
+|  9:   5.2112 -   5.0105  2713   124  0.71  35.44   1.02     1.60     203023.52|
+| 10:   5.0105 -   4.8376  2752   122  0.71  35.47   1.01     1.49     183698.82|
+| 11:   4.8376 -   4.6863  2701   181  0.74  32.89   0.99     1.40     160321.36|
+| 12:   4.6863 -   4.5524  2716   121  0.72  34.54   1.07     1.37     155609.03|
+| 13:   4.5524 -   4.4325  2834    82  0.75  32.45   1.05     1.44     156100.92|
+| 14:   4.4325 -   4.3244  2751    84  0.72  34.83   1.07     1.50     165340.27|
+| 15:   4.3244 -   4.2261  2777   150  0.70  36.78   1.06     1.42     158793.91|
+| 16:   4.2261 -   4.1361  2790   120  0.66  39.54   1.02     1.27     159444.43|
+| 17:   4.1361 -   4.0534  2669   114  0.61  44.05   0.99     1.08     155572.33|
+| 18:   4.0534 -   3.9769  2803   150  0.60  44.52   0.97     1.01     153335.19|
+| 19:   3.9769 -   3.9058  2594   170  0.64  41.87   0.95     1.14     142053.74|
+| 20:   3.9058 -   3.8396  2789   120  0.67  38.88   1.05     1.39     124355.64|
+|alpha:            min =        1.01 max =            1.67 mean =         1.38|
+|beta:             min =   124355.64 max =       962339.02 mean =    236872.11|
+|figures of merit: min =        0.00 max =            1.00 mean =         0.69|
+|phase err.(work): min =        0.00 max =           89.96 mean =        37.00|
+|phase err.(test): min =        0.00 max =           89.58 mean =        38.90|
+|-----------------------------------------------------------------------------|
+
+==================================== Final ====================================
+
+
+============================= updating all scales =============================
+
+                   start: r(all,work,free)=0.3274 0.3264 0.3487 n_refl.: 57570
+       re-set all scales: r(all,work,free)=0.5435 0.5272 0.7311 n_refl.: 57570
+         remove outliers: r(all,work,free)=0.5435 0.5272 0.7311 n_refl.: 57570
+overall B=-5.10 to atoms: r(all,work,free)=0.5307 0.5151 0.7193 n_refl.: 57570
+bulk-solvent and scaling: r(all,work,free)=0.3266 0.3259 0.3452 n_refl.: 57570
+         remove outliers: r(all,work,free)=0.3266 0.3259 0.3452 n_refl.: 57570
+
+======================== Statistics in resolution bins ======================== 
+
+Total model structure factor:
+  F_model = k_total * (F_calc + k_mask * F_mask)
+
+    k_total = k_isotropic * k_anisotropic
+   Resolution    Compl Nwork Nfree R_work    <Fobs>  <Fmodel> kiso   kani kmask
+214.340-31.229   93.40    79    20 0.3756  2547.480  2220.518 2.455 0.904 0.390
+ 31.192-25.280   97.14    99     3 0.3606  2284.543  2171.616 2.047 0.897 0.391
+ 25.255-20.542   99.40   166     0 0.4520  1777.150  1491.391 2.091 0.899 0.391
+ 20.476-16.626   97.73   329    16 0.3731  1579.705  1351.486 2.015 0.891 0.371
+ 16.500-13.464   98.56   596    19 0.4104  1334.042  1183.593 1.367 0.891 0.322
+ 13.429-10.909   98.49  1097    74 0.2850  1762.169  1668.317 1.455 0.885 0.303
+ 10.907-8.844    98.35  2062   150 0.2583  1496.729  1427.995 1.384 0.879 0.288
+  8.837-7.165    99.16  3957   179 0.2967   915.922   865.914 1.265 0.871 0.276
+  7.164-5.807    99.04  7433   447 0.3385   602.143   544.953 1.166 0.854 0.258
+  5.806-4.706    98.18 13837   759 0.3262   626.890   576.139 1.207 0.828 0.220
+  4.706-3.840    98.12 25119  1129 0.3381   594.168   509.915 1.419 0.795 0.128
+
+  Approximation of k_total with k_overall*exp(-b_overall*s**2/4)
+    k_overall=1.0577   b_overall=0.5467  
+
+================= overall refinement statistics: step by step =================
+
+****************** REFINEMENT STATISTICS STEP BY STEP ******************
+leading digit, like 1_, means number of macro-cycle                     
+0    : statistics at the very beginning when nothing is done yet        
+1_bss: bulk solvent correction and/or (anisotropic) scaling             
+1_xyz: refinement of coordinates                                        
+1_adp: refinement of ADPs (Atomic Displacement Parameters)              
+1_rbr: rigid body refinement                                            
+1_occ: refinement of occupancies                                        
+------------------------------------------------------------------------
+ stage r-work r-free bonds angles b_min b_max b_ave n_water shift
+      0    : 0.4872 0.6616 0.008  1.063  37.6 176.0  82.6   0      0.000
+      1_bss: 0.3619 0.3516 0.008  1.063  68.7 207.1 113.7   0      0.000
+1_settarget: 0.3619 0.3516 0.008  1.063  68.7 207.1 113.7   0      0.000
+      1_nqh: 0.3619 0.3515 0.008  1.063  68.7 207.1 113.7   0      0.002
+      1_rbr: 0.3611 0.3471 0.008  1.063  58.7 197.1 103.7   0      0.211
+     1_sotr: 0.3611 0.3471 0.008  1.063  58.7 197.1 103.7   0      0.211
+   1_weight: 0.3611 0.3471 0.008  1.063  58.7 197.1 103.7   0      0.211
+   1_xyzrec: 0.3522 0.3469 0.005  0.823  58.7 197.1 103.7   0      0.219
+      1_adp: 0.3332 0.3627 0.005  0.823  56.1 197.8 112.5   0      0.219
+      2_bss: 0.3307 0.3526 0.005  0.823  47.1 188.8 103.4   0      0.219
+2_settarget: 0.3307 0.3526 0.005  0.823  47.1 188.8 103.4   0      0.219
+2_updatecdl: 0.3307 0.3526 0.005  0.824  47.1 188.8 103.4   0      0.219
+      2_nqh: 0.3307 0.3526 0.005  0.824  47.1 188.8 103.4   0      0.219
+   2_weight: 0.3307 0.3526 0.005  0.824  47.1 188.8 103.4   0      0.219
+   2_xyzrec: 0.3316 0.3523 0.003  0.709  47.1 188.8 103.4   0      0.221
+      2_adp: 0.3371 0.3510 0.003  0.709  49.6 187.2 107.9   0      0.221
+      3_bss: 0.3363 0.3461 0.003  0.709  43.0 180.6 101.2   0      0.221
+3_settarget: 0.3363 0.3461 0.003  0.709  43.0 180.6 101.2   0      0.221
+3_updatecdl: 0.3363 0.3461 0.003  0.710  43.0 180.6 101.2   0      0.221
+    3_setrh: 0.3363 0.3461 0.003  0.710  43.0 180.6 101.2   0      0.221
+      3_nqh: 0.3363 0.3461 0.003  0.710  43.0 180.6 101.2   0      0.221
+   3_weight: 0.3363 0.3461 0.003  0.710  43.0 180.6 101.2   0      0.221
+   3_xyzrec: 0.3277 0.3444 0.004  0.744  43.0 180.6 101.2   0      0.238
+      3_adp: 0.3264 0.3487 0.004  0.744  47.1 181.9 105.2   0      0.238
+        end: 0.3259 0.3452 0.004  0.744  42.0 176.8 100.1   0      0.238
+------------------------------------------------------------------------
+
+CPU time actual refinement: 552.60
+
+
+============================== Exporting results ==============================
+
+Writing refined structure to PDB file:
+  /Users/errontitus/lab-private/casq2-structure-function-DRAFT/results/shared_pdb/solved_structures/yb/xtal/Plate_15_D3_T1/P1211/xia2-dials/refinement/001_refined_001.pdb
+n_use            =  21720
+n_use_u_iso      =  21720
+n_use_u_aniso    =  0
+n_grad_site      =  0
+n_grad_u_iso     =  0
+n_grad_u_aniso   =  0
+n_grad_occupancy =  0
+n_grad_fp        =  0
+n_grad_fdp       =  0
+total number of scatterers =  21720
+
+Writing refined structure to CIF file:
+  /Users/errontitus/lab-private/casq2-structure-function-DRAFT/results/shared_pdb/solved_structures/yb/xtal/Plate_15_D3_T1/P1211/xia2-dials/refinement/001_refined_001.cif
+Writing default parameters for subsequent refinement:
+  /Users/errontitus/lab-private/casq2-structure-function-DRAFT/results/shared_pdb/solved_structures/yb/xtal/Plate_15_D3_T1/P1211/xia2-dials/refinement/001_refined_002.def
+
+
+=============================== Detailed timings ==============================
+
+  Micro-tasks:
+    mask                            = 0.00   
+    f_calc                          = 0.00   
+    alpha_beta                      = 0.41   
+    target                          = 0.15   
+    gradients_wrt_atomic_parameters = 0.00   
+    fmodel                         = 0.00   
+    r_factors                      = 0.13   
+    phase_errors                   = 5.18   
+    foms                           = 0.02   
+    TOTAL for micro-tasks          = 5.89   
+NUMBER OF MASK CALCS=  0
+Total CPU time: 12.34 minutes
+from_scatterers_fft:    679 calls, 37.41 s
+gradients_fft:          575 calls, 51.84 s
+
+=========================== phenix.refine: finished ===========================
+
+# Date 2020-03-19 Time 19:05:15 PDT -0700 (1584669915.33 s)
+wall clock time: 2065.44 s
+
+Start R-work = 0.3619, R-free = 0.3516
+Final R-work = 0.3259, R-free = 0.3452

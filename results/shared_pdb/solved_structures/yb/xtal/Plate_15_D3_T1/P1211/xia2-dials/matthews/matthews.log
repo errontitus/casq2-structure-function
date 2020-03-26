@@ -1,0 +1,86 @@
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+<html> <!-- CCP4 HTML LOGFILE -->
+<hr>
+<!--SUMMARY_END--></FONT></B>
+
+<a name="matthews_coefmatthews_coef"><h1>Matthews_coef</h1></a>
+<pre>
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+<pre>
+ 
+ ###############################################################
+ ###############################################################
+ ###############################################################
+ ### CCP4 7.0.072: MATTHEWS_COEF    version 7.0.072 :         ##
+ ###############################################################
+ User: errontitus  Run date: 27/ 5/2019 Run time: 00:40:58 
+
+
+ Please reference: Collaborative Computational Project, Number 4. 2011.
+ "Overview of the CCP4 suite and current developments". Acta Cryst. D67, 235-242.
+ as well as any specific reference in the program write-up.
+
+<!--SUMMARY_END--></FONT></B>
+</pre>
+
+<a name="tocMATTHEWS_COEF"><h2>Contents</h2></a>
+<ul>
+<li><a href="#refsMATTHEWS_COEF">Reference</a>
+<li><a href="#poss_keyMATTHEWS_COEF">Possible Keywords</a>
+<li><a href="#resultsMATTHEWS_COEF">Results</a>
+</ul>
+
+<a name="refsMATTHEWS_COEF"><h1>Reference</h1></a>
+<pre>
+
+ $TEXT:Reference1: $$ comment $$ 
+
+  Matthews_coef: a Very useful program written by Misha Isupov
+
+ $$
+ $SUMMARY :Reference1:  $$ Matthews_coef: $$
+ :TEXT:Reference1: $$
+</pre>
+
+<a name="poss_keyMATTHEWS_COEF"><h1>Possible Keywords</h1></a>
+<pre>
+  Keywords:  CELL SYMM MOLW NRES NMOL AUTO RESO MODE END
+</pre>
+<pre>
+ Data line--- CELL 85.8318 86.0152 214.3405 90.0000 89.9072 90.0000
+ Data line--- SYMM 4
+ Data line--- MOLW 44904.9
+ Data line--- AUTO
+</pre>
+
+<a name="resultsMATTHEWS_COEF"><h1>Results</h1></a>
+ Cell volume:       1582439.375
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+<pre>
+
+For estimated molecular weight   44905.
+Nmol/asym  Matthews Coeff  %solvent       P(tot)
+________________________________________________
+  1        17.62            93.02         0.00
+  2         8.81            86.05         0.00
+  3         5.87            79.07         0.00
+  4         4.40            72.09         0.01
+  5         3.52            65.12         0.04
+  6         2.94            58.14         0.15
+  7         2.52            51.17         0.32
+  8         2.20            44.19         0.34
+  9         1.96            37.21         0.12
+ 10         1.76            30.24         0.01
+ 11         1.60            23.26         0.00
+ 12         1.47            16.28         0.00
+ 13         1.36             9.31         0.00
+ 14         1.26             2.33         0.00
+________________________________________________
+</pre>
+<!--SUMMARY_END--></FONT></B>
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+ MATTHEWS_COEF:  Normal Termination
+Times: User:       0.0s System:    0.0s Elapsed:     0:00  
+</pre>
+</html>
+<!--SUMMARY_END--></FONT></B>

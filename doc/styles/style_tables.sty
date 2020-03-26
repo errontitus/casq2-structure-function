@@ -1,0 +1,30 @@
+\ProvidesPackage{style_tables}
+
+\usepackage{multirow}
+
+% % Standard tables with custom column types.
+% \usepackage{multirow, tabularx, array}
+% % A column with centered content
+% \newcolumntype{Y}{>{\centering\arraybackslash}X}
+% % A column with centered content (derived from Y) and small in-figure text size. This is my default.
+% \newcolumntype{Z}{>{\tiny\baselineskip=0.5\baselineskip}Y}
+% % A small-width column for wedging icons/clip art between panels.
+% \newcolumntype{s}{>{\centering\arraybackslash\hsize=.1\hsize}Y}
+
+% % Minimize white space between table cells.
+\setlength{\tabcolsep}{5pt}
+% % Reasonable value for white space between table rows.
+\renewcommand{\arraystretch}{1.5}
+
+\usepackage{afterpage}  % load the afterpage package
+\usepackage{longtable}
+% \usepackage{floatrow}
+
+% \floatsetup[longtable]{LTcapwidth=table}
+% Long tables with tabularx features, not interfering with the tabularx environment.
+% \usepackage{xltabular}
+
+\usepackage{enumitem}
+
+% Line breaks within table cells without using pbox.
+\usepackage{makecell}

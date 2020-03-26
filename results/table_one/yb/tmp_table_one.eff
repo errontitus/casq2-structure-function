@@ -1,0 +1,38 @@
+table_one {
+  structure {
+    name = "CASQ2 Yb"
+    pdb_file = "../../shared_pdb/solved_structures/yb/6OWW_yb.pdb"
+    mtz_file = "../../shared_pdb/solved_structures/yb/6OWW_yb_Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz"
+    data_labels = "F(+),SIGF(+),F(-),SIGF(-),merged"
+    r_free_flags_label = "FreeR_flag"
+    wavelength = 1.38571
+    cif_file = None
+    cif_directory = None
+    data_type = *xray neutron
+    unmerged_data = "../../shared_pdb/solved_structures/yb/6OWW_yb_Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_scaled_unmerged.mtz"
+    unmerged_labels = None
+    use_internal_variance = False
+    count_anomalous_pairs_separately = False
+    enable_twinning = False
+    twin_law = Auto
+  }
+  processing {
+    re_compute_r_factors = True
+    n_bins = 10
+    ligand_selection = None
+  }
+  multiprocessing {
+    nproc = 23
+    technology = *multiprocessing sge lsf pbs condor slurm
+    qsub_command = None
+  }
+  output {
+    directory = "."
+    job_title = "table 1"
+    show_missing_fields = True
+    format = *txt *csv *rtf
+    base_name = "output_anom_table_one"
+    verbose = "True"
+    text_field_separation = 2
+  }
+}

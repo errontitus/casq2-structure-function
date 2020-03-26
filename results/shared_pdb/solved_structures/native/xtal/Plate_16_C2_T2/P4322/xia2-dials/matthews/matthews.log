@@ -1,0 +1,73 @@
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+<html> <!-- CCP4 HTML LOGFILE -->
+<hr>
+<!--SUMMARY_END--></FONT></B>
+
+<a name="matthews_coefmatthews_coef"><h1>Matthews_coef</h1></a>
+<pre>
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+<pre>
+ 
+ ###############################################################
+ ###############################################################
+ ###############################################################
+ ### CCP4 7.0.072: MATTHEWS_COEF    version 7.0.072 :         ##
+ ###############################################################
+ User: errontitus  Run date: 27/ 5/2019 Run time: 13:14:34 
+
+
+ Please reference: Collaborative Computational Project, Number 4. 2011.
+ "Overview of the CCP4 suite and current developments". Acta Cryst. D67, 235-242.
+ as well as any specific reference in the program write-up.
+
+<!--SUMMARY_END--></FONT></B>
+</pre>
+
+<a name="tocMATTHEWS_COEF"><h2>Contents</h2></a>
+<ul>
+<li><a href="#refsMATTHEWS_COEF">Reference</a>
+<li><a href="#poss_keyMATTHEWS_COEF">Possible Keywords</a>
+<li><a href="#resultsMATTHEWS_COEF">Results</a>
+</ul>
+
+<a name="refsMATTHEWS_COEF"><h1>Reference</h1></a>
+<pre>
+
+ $TEXT:Reference1: $$ comment $$ 
+
+  Matthews_coef: a Very useful program written by Misha Isupov
+
+ $$
+ $SUMMARY :Reference1:  $$ Matthews_coef: $$
+ :TEXT:Reference1: $$
+</pre>
+
+<a name="poss_keyMATTHEWS_COEF"><h1>Possible Keywords</h1></a>
+<pre>
+  Keywords:  CELL SYMM MOLW NRES NMOL AUTO RESO MODE END
+</pre>
+<pre>
+ Data line--- CELL 62.5329 62.5329 213.1885 90.0000 90.0000 90.0000
+ Data line--- SYMM 95
+ Data line--- MOLW 44904.9
+ Data line--- AUTO
+</pre>
+
+<a name="resultsMATTHEWS_COEF"><h1>Results</h1></a>
+ Cell volume:        833644.625
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+<pre>
+
+For estimated molecular weight   44905.
+Nmol/asym  Matthews Coeff  %solvent       P(tot)
+________________________________________________
+  1         2.32            47.03         1.00
+________________________________________________
+</pre>
+<!--SUMMARY_END--></FONT></B>
+<B><FONT COLOR="#FF0000"><!--SUMMARY_BEGIN-->
+ MATTHEWS_COEF:  Normal Termination
+Times: User:       0.0s System:    0.0s Elapsed:     0:00  
+</pre>
+</html>
+<!--SUMMARY_END--></FONT></B>

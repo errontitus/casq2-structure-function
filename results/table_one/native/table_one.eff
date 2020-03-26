@@ -1,0 +1,38 @@
+table_one {
+  structure {
+    name = "CASQ2 Native"
+    pdb_file = "../../shared_pdb/solved_structures/native/6OWV_native.pdb"
+    mtz_file = "../../shared_pdb/solved_structures/native/6OWV_native_Plate_16_C2_T2_P4322_xia2_dials_AUTOMATIC_DEFAULT_free.mtz"
+    data_labels = ""
+    r_free_flags_label = "FreeR_flag"
+    wavelength = 1.11583
+    cif_file = None
+    cif_directory = None
+    data_type = *xray neutron
+    unmerged_data = "../../shared_pdb/solved_structures/native/6OWV_native_Plate_16_C2_T2_P4322_xia2_dials_AUTOMATIC_DEFAULT_scaled_unmerged.mtz"
+    unmerged_labels = None
+    use_internal_variance = False
+    count_anomalous_pairs_separately = False
+    enable_twinning = False
+    twin_law = Auto
+  }
+  processing {
+    re_compute_r_factors = True
+    n_bins = 10
+    ligand_selection = None
+  }
+  multiprocessing {
+    nproc = 23
+    technology = *multiprocessing sge lsf pbs condor slurm
+    qsub_command = None
+  }
+  output {
+    directory = "."
+    job_title = "table 1"
+    show_missing_fields = True
+    format = *txt *csv *rtf
+    base_name = "output_native_table_one"
+    verbose = "True"
+    text_field_separation = 2
+  }
+}

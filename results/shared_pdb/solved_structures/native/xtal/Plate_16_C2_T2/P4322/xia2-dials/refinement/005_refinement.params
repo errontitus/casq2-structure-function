@@ -1,0 +1,51 @@
+refinement.refine.strategy=individual_sites+individual_adp+occupancies+tls
+
+refinement.output.prefix=005_refined
+
+#
+#
+refinement.refine.adp {
+  tls = "chain 'A' and (resid   23  through  141 )"
+  tls = "chain 'A' and (resid  142  through  268 )"
+  tls = "chain 'A' and (resid  269  through  370 )"
+}
+
+refinement.refine {
+  occupancies {
+    individual = element Cl
+  }
+}
+
+refinement.main.place_ions = Cl
+
+#
+#
+refinement.pdb_interpretation {
+  secondary_structure {
+    protein {
+      helix {
+        serial_number = "1"
+        helix_identifier = "1"
+        selection = chain 'A' and resid 43 through 48
+      }
+      helix {
+        serial_number = "2"
+        helix_identifier = "2"
+        selection = chain 'A' and resid 69 through 83
+      }
+      helix {
+        serial_number = "3"
+        helix_identifier = "3"
+        selection = chain 'A' and resid 100 through 106
+      }
+# ...region of high-res data here (domain II)...
+# ...region of high-res data (most of domain III)...
+      helix {
+        serial_number = "12"
+        helix_identifier = "11"
+        selection = chain 'A' and resid 355 through 367
+      }
+    }
+    enabled = True
+  }
+}

@@ -1,0 +1,16 @@
+{
+    'type': 'cylinder',          # 'cylinder' or 'sphere'
+    'remove_asa_shell': False,   # True or False
+
+    'radius': 7.0,      
+
+    'chain1': 'K',              
+    'res_num1': 253,             
+    'atom1': 'NH2',             
+    'axis_offset1': 0,          
+                                
+    'chain2': 'K',              
+    'res_num2': 144,            
+    'atom2': 'OD2',              
+    'axis_offset2': -3,
+}
