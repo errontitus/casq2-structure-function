@@ -6,6 +6,7 @@ source clean.zsh
 cd ./shared_pdb
 # Builds the common/shared result objects in the required order.
 source run.zsh
+source run_apbs.zsh
 cd ..
 
 cd ./assembly_kinetics

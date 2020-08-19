@@ -1,0 +1,41 @@
+\conditionalgeometry
+% each figure gets its own page so that we can extract it into a separate eps file.
+\makeatletter
+\@fpsep\textheight
+\makeatother
+% no page numbers on figure files
+\section{} % Figures
+% \newgeometry{left=1cm,right=1cm} can be used if you have big figures that come all the way out to the edge of the page. But it's better to stick with nice 1" margins and then use a special landscape page for any wide figures.
+\singlespacing % Very important for figure captions and Texshade
+\setcounter{figure}{0}
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\thefigure}{\arabic{figure}}
+\input{figures/main_1_S173I_genetics_and_biochemistry.tex}
+\input{figures/main_2_filament_overview.tex}
+\input{figures/main_3_intra_dimer_interface.tex}
+\input{figures/main_4_inter_dimer_interface.tex}
+\input{figures/main_5_filament_cavity.tex}
+\input{figures/main_6_inter_dimer_interface_CPVT.tex}
+\input{figures/main_7_graphical_summary.tex}
+\clearpage % help to get the table onto a new page
+\section{} % Tables
+\setcounter{table}{0}
+\renewcommand{\thetable}{\arabic{table}}
+\input{tables/table_xtal_stats.tex}
+\clearpage % help to get the extended data onto a new page
+\section{} % Extended Data Figures
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\figurename}{Extended Data Fig.}
+\renewcommand{\tablename}{Extended Data Table}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\input{figures/ext_1_biochemistry.tex}
+\input{figures/ext_2_inter_dimer_interface_BSA_comparison.tex}
+\input{figures/ext_3_filament_comparison.tex}
+\input{figures/ext_4_intra_dimer_interface_maps.tex}
+\input{figures/ext_5_intra_dimer_interface_6OVW_vs_other_overlay.tex}
+\input{figures/ext_6_intra_dimer_interface_6OVW_vs_other_B_factor.tex}
+\input{figures/ext_7_inter_dimer_interface_maps.tex}
+\input{figures/ext_8_inter_dimer_interface.tex}
+\input{figures/ext_9_inter_dimer_interface_maps_non_liganded.tex}

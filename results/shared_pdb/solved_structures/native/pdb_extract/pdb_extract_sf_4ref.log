@@ -1,0 +1,39 @@
+data_info
+
+_sf_convert.error
+;
+Warning: (data block=1): 44 reflections have status assigned as '?' (changed to 'x')
+Warning: (data block=1): 44 reflections have wrong status. Not in list(o,f,x,-,<,h,l)
+Warning: No wavelength value was found in SF file (data block=1).
+
+;
+
+_sf_convert.sf_information
+;
+Note: 1 is used for free data set.
+Note: File has non-standard blockID (block_number=1: block_id=013_refined_for_deposition).
+Total number of data blocks = 1
+
+
+Data_block_id=r13_rsf,  pdbid=13_r,  block_number=1
+
+Total number of observed reflections = 34760
+Total number of observed reflections (status='o') = 32993
+Total number of observed reflections (status='f') = 1767
+Percentage for free set =   5.36
+Cell = 62.53 62.53 213.19 90.00 90.00 90.00
+Lowest resolution=   53.94 ; corresponding HKL=   1    0    2
+Highest resolution=   1.88 ; corresponding HKL=  15    2  101
+Max indices (Hmax=  33  Kmax=  23  Lmax= 113) 
+Min indices (Hmin=   0  Kmin=   0  Lmin=   0) 
+maximum value of intensity= 83813.90
+minimum value of intensity= -69.81
+<I/sigmaI> = 14.84;  <I>/<sigmaI> = 39.63; 
+Using all data:  <I/sigI>=14.84
+Using all data:  <I>/<sigI>=39.63
+Using all data:  Rsig(<sigI>/<I>)=0.025;
+The maximum value of <I/sigI>_max=78.73
+Use data with resolution >7.0 Angstrom: <I/sigI>_low=51.24
+
+Number of reflections for validation set =34760
+;

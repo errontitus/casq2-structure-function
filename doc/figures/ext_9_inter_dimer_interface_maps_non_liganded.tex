@@ -1,0 +1,29 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:inter_dimer_interface_maps_non_liganded}}
+\begin{conditionalpanel}
+\begin{tikzcanvas}{}
+    \node(S173nativemap)[inner sep=0pt,below right]{\includegraphics[width=2in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_S173_closeup_native_map_cropped.png}};
+    %
+    \node(S173_ROI_label) [above, inner sep=5pt, align=center] at (S173nativemap.north) {K87/S173/D325 Inter-Dimer Region};
+    % S173
+    \path (S173nativemap.west)++(1.5,0.25) coordinate (cS173);
+    \node(S173) [above, inner sep=0pt, font=\small, font=\bfseries] at (cS173) {S173};
+    % D325
+    \path (S173nativemap.south)++(-1.25,+0.25) coordinate (cD325);
+    \node(D325) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD325) {D325}; 
+    % D319
+    \path (S173nativemap.south)++(2,1) coordinate (cD319);
+    \node(D319) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD319) {D319}; 
+    % K87
+    \path (S173nativemap.east)++(-1.25,0.5) coordinate (cK87);
+    \node(K87) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK87) {K87}; 
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (S173nativemap.south) {Native map at 1.5 $\sigma$};
+\end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Electron density map for the S173 region at the cardiac calsequestrin inter-dimer interface]{\textbf{Electron density map for the S173 region at the cardiac calsequestrin filament's \textit{inter}-dimer interface; related to \maintextfigure~\ref{fig:inter_dimer_interface_cpvt}.}}
+\label{fig:inter_dimer_interface_maps_non_liganded}
+\end{conditionalcaption}
+\end{figure}

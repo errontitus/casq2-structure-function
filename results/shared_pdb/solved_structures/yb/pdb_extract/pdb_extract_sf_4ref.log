@@ -1,0 +1,35 @@
+data_info
+
+_sf_convert.error
+;
+Warning: (data block=1): 28206 reflections have status assigned as '?' (changed to 'x')
+Warning: (data block=1): 28206 reflections have wrong status. Not in list(o,f,x,-,<,h,l)
+Warning: No wavelength value was found in SF file (data block=1).
+
+;
+
+_sf_convert.sf_information
+;
+Note: 1 is used for free data set.
+Note: File has non-standard blockID (block_number=1: block_id=008_refined_for_deposition).
+Total number of data blocks = 1
+
+
+Data_block_id=r08_rsf,  pdbid=08_r,  block_number=1
+
+Total number of observed reflections = 29776
+Total number of observed reflections (status='o') = 28335
+Total number of observed reflections (status='f') = 1441
+Percentage for free set =   5.09
+Total number of Friedel pairs (F+/F-) = 29891
+Total number of observed F+ = 29870
+Total number of observed F- = 27963
+Sum of observed F+ and F-  = 57833
+Cell = 85.83 86.01 214.34 90.00 89.91 90.00
+Lowest resolution=  214.34 ; corresponding HKL=   0    0    1
+Highest resolution=   3.84 ; corresponding HKL=  20   10    1
+Max indices (Hmax=  22  Kmax=  22  Lmax=  55) 
+Min indices (Hmin= -22  Kmin= -22  Lmin= -55) 
+
+Number of reflections for validation set =29777
+;

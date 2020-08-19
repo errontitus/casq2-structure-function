@@ -40,7 +40,7 @@ cd output
 
 ####################### 
 
-pdb2pqr --ff=AMBER --apbs-input --chain ../../../filament/output/tetramer_deo_native_no_het.pdb ./tetramer_deo_native_no_het.pqr 
+pdb2pqr --ff=AMBER --apbs-input --chain ../../filament/output/tetramer_deo_native_no_het.pdb ./tetramer_deo_native_no_het.pqr 
 
 # | tee tetramer_deo_native_no_het_pdb2pqr.log
 

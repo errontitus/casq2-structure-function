@@ -1,0 +1,147 @@
+\newcommand{\colorDomainI}{pymolpurple}
+\newcommand{\colorDomainII}{pymolgreencyan}
+\newcommand{\colorDomainIII}{pymolslate}
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:filament_overview}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        \node(filament)[inner sep=0pt,below right]{\includegraphics[width=\linewidth,height=1.25in,keepaspectratio]{../results/filament_overview/output/overview_surface_cropped.png}};
+        %
+        \node(captionA)[inner sep=0pt,above left] at (filament.north west) {\normalsize\textbf{\figurepanela}};
+        %
+        \path (filament.south)++(-1,3.15) coordinate (filament_dimer_NW);
+        \path (filament.south)++(1,1) coordinate (filament_dimer_SE);
+        %
+        \path (filament.south)++(-1,3.15) coordinate (filament_tetramer_NW);
+        \path (filament.south)++(2.7,0.5) coordinate (filament_tetramer_SE);
+        %
+        \node(dimerrectfilament) [fit={(filament_dimer_NW) (filament_dimer_SE)}, dashedrectanglefit] {};
+        %
+        \node(dimer_dimer_rect_filament) [fit={(filament_tetramer_NW) (filament_tetramer_SE)}, dashedrectanglefit] {};
+        %
+        %
+        %
+        %
+        \node(dimer)[inner sep=0pt,right=1.5cm of filament]{\includegraphics[width=\linewidth,height=1.25in,keepaspectratio]{../results/filament_overview/output/overview_dimer_cropped.png}};
+        %
+        \node(dimerrect) [fit=(dimer), dashedrectanglefit] {};
+        \node(dimer_caption)[above, inner sep=7pt] at (dimer.north) {Dimer};
+        %        
+        \node(dimer_chainAlabel)[above, inner sep=0pt] at ([shift={(-0.125cm,-0.6cm)}]dimer.south west) {Chain A};
+%        \draw[] ([shift={(0cm,0.125cm)}]dimer_chainAlabel.north) -- ([shift={(0.25cm,0.125cm)}]dimer.south west);
+        %
+        \node(dimer_chainBlabel)[above, inner sep=0pt] at ([shift={(0.125cm,-0.6cm)}]dimer.south east) {Chain B};
+%        \draw[] ([shift={(0cm,0.125cm)}]dimer_chainBlabel.north) -- ([shift={(-0.25cm,0.125cm)}]dimer.south east);
+        % \path (dimer.south west)++(0,-0.5) coordinate (chainA);
+        % \path (dimer.south east)++(0,-0.5) coordinate (chainB);
+        % %
+        % \node(chainAlabel) [above, inner sep=2pt, align=center] at (chainA) {Chain A};
+        % \node(chainBlabel) [above, inner sep=2pt, align=center] at (chainB) {Chain B};
+        % %
+        %
+        %
+        \node(dimer_dimer)[inner sep=0pt,below=1.5cm of dimer.south,anchor=north]{\includegraphics[width=\linewidth,height=1.5in,keepaspectratio]{../results/filament_overview/output/overview_tetramer_cropped.png}};
+        %
+        \node(dimer_dimer_rect) [fit=(dimer_dimer), dashedrectanglefit] {};
+        %
+        % \path (dimer_dimer.north east)++(0,0) coordinate (dimer_dimer_chainA);
+        % \path (dimer_dimer.south east)++(0.75,1) coordinate (dimer_dimer_chainB);
+        % \path (dimer_dimer.north)++(1.5,-0.5) coordinate (dimer_dimer_chainAprime);
+        % \path (dimer_dimer.south east)++(0.75,1) coordinate (dimer_dimer_chainBprime);
+        %
+        % \node(dimer_dimer_chainAlabel)[above, inner sep=0pt] at ([shift={(-0.25cm,0.75cm)}]dimer_dimer.north west) {Chain A};
+        % \draw[] ([shift={(0cm,-0.25cm)}]dimer_dimer_chainAlabel.south) -- ([shift={(0.25cm,-0.125cm)}]dimer_dimer.north west);
+        % %
+        % \node(dimer_dimer_chainBlabel)[above, inner sep=0pt] at ([shift={(-0.25cm,0.5cm)}]dimer_dimer.north) {Chain B};
+        % \draw[] ([shift={(0cm,-0.25cm)}]dimer_dimer_chainBlabel.south) -- ([shift={(-0.25cm,-0.125cm)}]dimer_dimer.north);
+        %
+        \node(dimer_dimer_chainAprimelabel)[above, inner sep=2pt] at ([shift={(1.5cm,-0.75cm)}]dimer_dimer.north) {Chain A'};
+        %\draw[] ([shift={(0cm,0cm)}]dimer_dimer_chainAprimelabel.west) -- ([shift={(-0.25cm,0.5cm)}]dimer_dimer.east);
+        %
+        \node(dimer_dimer_chainBprimelabel)[above, inner sep=2pt] at ([shift={(-0.5cm,0.125cm)}]dimer_dimer.south) {Chain B'};
+        %\draw[] ([shift={(0cm,0cm)}]dimer_dimer_chainBprimelabel.west) -- ([shift={(-0.125cm,0.125cm)}]dimer_dimer.south east);
+        % \node(dimer_dimer_chainAlabel) [above, inner sep=2pt, align=center] at (dimer_dimer_chainA) {Chain A};
+        % \node(dimer_dimer_chainBlabel) [above, inner sep=2pt, align=center] at (dimer_dimer_chainB) {Chain B};
+        % \node(dimer_dimer_chainAprimelabel) [above, inner sep=2pt, align=center] at (dimer_dimer_chainAprime) {Chain A'};
+        % \node(dimer_dimer_chainBprimelabel) [above, inner sep=2pt, align=center] at (dimer_dimer_chainBprime) {Chain B'};
+        %
+        %
+        %
+        \path[dashed edge] (dimerrectfilament.east) edge (dimerrect.west);
+        \path[dashed edge] (dimer_dimer_rect_filament.south east) edge (dimer_dimer_rect.north west);
+        %
+        % Beginning of thioredoxin stuff
+        %
+        %
+        \newcommand{\domainlegendheight}{0.4}
+        \newcommand{\domainlegendlength}{1}
+        %
+        \node(domaindiagram)[inner sep=0pt,below=2.5cm of filament.west,anchor=west]{};
+        %
+        \node(captionB)[inner sep=0pt,above left] at (domaindiagram.north west) {\normalsize\textbf{\figurepanelb}};
+        %
+        \node(domainILabel)[above, inner sep=2pt] at ([shift={(2cm,0cm)}]domaindiagram.east) {I};
+        \node(domainIILabel)[above, inner sep=2pt] at ([shift={(4cm,0cm)}]domaindiagram.east) {II};
+        \node(domainIIILabel)[above, inner sep=2pt] at ([shift={(6cm,0cm)}]domaindiagram.east) {III};
+        \fill [\colorDomainI] ($(domainILabel.south)+(-\domainlegendlength,-\domainlegendheight)$) rectangle ($(domainILabel.south)+(\domainlegendlength,0)$);
+        \fill [\colorDomainII] ($(domainIILabel.south)+(-\domainlegendlength,-\domainlegendheight)$) rectangle ($(domainIILabel.south)+(\domainlegendlength,0)$);
+        \fill [\colorDomainIII] ($(domainIIILabel.south)+(-\domainlegendlength,-\domainlegendheight)$) rectangle ($(domainIIILabel.south)+(\domainlegendlength,0)$);
+        % 
+        \node(domaindiagramcaption)[below, inner sep=2pt] at ([shift={(0cm,-0.5cm)}]domainIILabel.south) {Thiredoxin-Like Domains};
+        \node(monomers)[inner sep=0pt,below=0.5cm of domaindiagramcaption.south,anchor=north]{\includegraphics[width=\linewidth,height=1.25in,keepaspectratio]{../results/filament_overview/output/overview_monomers_cropped.png}};
+        %
+        \node(MonomerRotator) at ([yshift=-0.35cm]monomers.north) {\AxisRotator[rotate=90]};
+        \draw[line width=0.1ex] (MonomerRotator.north) -- (MonomerRotator.south);
+        \node(MonomerRotatorLabel)[inner sep=2pt,below] at (MonomerRotator.south) {\ang{180}};  
+        %
+        \node(protomerrect) [fit={(monomers.south west) (monomers.north east)}, dashedrectanglefit] {};
+        %
+        %
+        %
+        % \node(domainI)[above, inner sep=0pt] at ([shift={(2cm,1cm)}]monomers.north) {Domain I};
+        % \draw[] ([shift={(0cm,-0.25cm)}]domainI.south) -- ([shift={(2.25cm,0.125cm)}]monomers.north);
+        % %
+        % \node(domainII)[below left, inner sep=0pt] at ([shift={(0.8cm,-0.8cm)}]monomers.south) {Domain II};
+        % \draw[] ([shift={(0cm,0.25cm)}]domainII.north) -- ([shift={(1cm,0.15cm)}]monomers.south);
+        % %
+        % \node(domainIII)[below left, inner sep=0pt] at ([shift={(0cm,-0.8cm)}]monomers.south east) {Domain III};
+        % \draw[] ([shift={(0cm,0.25cm)}]domainIII.north) -- ([shift={(-0.6cm,-0.2cm)}]monomers.south east);
+        %
+        %
+        \path (monomers.north)++(-0.75,-1) coordinate (domains);
+        %
+        \node(filament_thio)[inner sep=0pt,below=7cm of domaindiagram.west,anchor=west]{\includegraphics[width=\linewidth,height=1in,keepaspectratio]{../results/filament_overview/output/overview_surface_thioredoxins_cropped.png}};
+        %
+        \node(captionC)[inner sep=0pt,above left] at (filament_thio.north west) {\normalsize\textbf{\figurepanelc}};
+        %
+        \path (filament_thio.south)++(-0.8,0.75) coordinate (thioprotomerSW);
+        \path (filament_thio.south)++(0.8,2.6) coordinate (thioprotomerNE);
+        %
+        \node(protomerrectfilament) [fit={(thioprotomerSW) (thioprotomerNE)}, dashedrectanglefit] {};
+        %
+        %\node(filament_caption)[above, inner sep=7pt] at (filament_thio.north) {Cardiac Calsequestrin Filament};
+        %  (Colored by Thioredoxin Domain)
+        %
+        %
+        %
+        %
+        %
+        %
+        \node(filament_thio_inner)[inner sep=0pt,right=1cm of filament_thio.east,anchor=west]{\includegraphics[width=\linewidth,height=1in,keepaspectratio]{../results/filament_overview/output/overview_surface_thioredoxins_23_domain_colors_cropped.png}};
+        %
+        \node(captionD)[inner sep=0pt,above left] at (filament_thio_inner.north west) {\normalsize\textbf{\figurepaneld}};
+        %
+        \node(filament_caption)[above, inner sep=0pt] at (filament_thio_inner.north) {Thioredoxin Domain II/III Double Helix};
+        %
+        %
+        %
+        \path[dashed edge] (protomerrect.south west) edge (protomerrectfilament.north west);
+        %    
+\end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}     
+\caption[Overview of the cardiac calsequestrin filament]{\textbf{\headingsubsectiontwo}. \figurepanelcaptiona The cardiac calsequestrin candidate filament (PDB ID 6OWV) is shown, along with a representative dimeric and tetrameric assembly. Dimers are stacked on a screw axis with 90 degrees of rotation per dimer. \figurepanelcaptionb Cardiac calsequestrin monomers are colored by thioredoxin domain. The monomers are translated but remain in their dimer-forming orientation. \figurepanelcaptionc The helical character of the filament is revealed at the domain level. Viewed at the level of its thioredoxin domains (3 per protomer), the filament consists of an inner thioredoxin double helix (domains II and III) with an outer thioredoxin single helix (domain I) wrapping the double helical core. \figurepanelcaptiond The inner double helix of the filament consisting of thioredoxin domains II and III.}
+\label{fig:filament_overview}
+\end{conditionalcaption}
+\end{figure}

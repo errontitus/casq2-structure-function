@@ -1,0 +1,86 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:intra_dimer_interface_maps}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        %
+        \node(E143nativemap)[inner sep=0pt,below right]{\includegraphics[width=1.75in,keepaspectratio]{../results/dimer_interface/output/dimer_interface_E143_closeup_native_map_cropped.png}};
+        %
+        \node(D140_E143_E147_ROI_label) [above, inner sep=5pt, align=center] at (E143nativemap.north) {D140/E143/E147 Intra-Dimer Region};
+        %
+        % D140
+        \path (E143nativemap.north)++(1.3,-0.4)  coordinate (cD140);
+        \node(D140) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD140) {D140};
+        % E143
+        \path (E143nativemap.north)++(-1.9,-1)  coordinate (cE143);
+        \node(E143) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE143) {E143};
+        % E275
+        \path (E143nativemap.east)++(-0.75,0)  coordinate (cE275);
+        \node(E275) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE275) {E275};
+        % E147
+        \path (E143nativemap.west)++(0.5,-0.75)  coordinate (cE147);
+        \node(E147) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE147) {E147};
+        % D278
+        \path (E143nativemap.east)++(-0.9,-0.75)  coordinate (cD278);
+        \node(D278) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD278) {D278};
+        % D280
+        \path (E143nativemap.south)++(1,0.35)  coordinate (cD280);
+        \node(D280) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD280) {D280};
+        %
+        %
+        \node(belowcaption)[below, inner sep=5pt] at (E143nativemap.south) {Native map at 1.5 $\sigma$};
+        %
+        \node(E143ybmap)[inner sep=0pt,right=1cm of E143nativemap]{\includegraphics[width=1.75in,keepaspectratio]{../results/dimer_interface/output/dimer_interface_E143_closeup_yb_map_cropped.png}};
+        %
+        \node(belowcaption)[below, inner sep=5pt] at (E143ybmap.south) {Yb-complexed map at 1.5 $\sigma$};
+        %
+        \node(E143anommap)[inner sep=0pt,right=0cm and 1cm of E143ybmap]{\includegraphics[width=1.75in,keepaspectratio]{../results/dimer_interface/output/dimer_interface_E143_closeup_yb_map_anom_cropped.png}};
+        %
+        \node(belowcaption)[below, inner sep=5pt] at (E143anommap.south) {Yb-complexed anomalous map at 3.0 $\sigma$};
+        %
+        %
+        %
+        %
+        \node(D310nativemap)[inner sep=0pt,below=1.5cm of E143nativemap.south west,anchor=north west]{\includegraphics[width=1.75in,keepaspectratio]{../results/dimer_interface/output/dimer_interface_D310_closeup_native_map_cropped.png}};
+        %
+        \node(D310_ROI_label) [above, inner sep=5pt, align=center] at (D310nativemap.north) {D310 Intra-Dimer Region};
+        % D310
+        \path (D310nativemap.north)++(0,-0.5)  coordinate (cD310);
+        \node(D310) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD310) {D310};
+        % R251_L
+        \path (D310nativemap.west)++(0.5,-0.8)  coordinate (cR251_L);
+        \node(R251_L) [above, inner sep=0pt, font=\small, font=\bfseries] at (cR251_L) {R251};
+        % R251_R
+        \path (D310nativemap.east)++(-0.5,-0.8)  coordinate (cR251_R);
+        \node(R251_R) [above, inner sep=0pt, font=\small, font=\bfseries] at (cR251_R) {R251};
+        % K276
+        \path (D310nativemap.south)++(0,0.25)  coordinate (cK276);
+        \node(K276) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK276) {K276};
+        %
+        %
+        \node(belowcaption)[below, inner sep=5pt] at (D310nativemap.south) {Native map at 1.5 $\sigma$};
+        %
+        \node(D310ybmap)[inner sep=0pt,right=1cm of D310nativemap]{\includegraphics[width=1.75in,keepaspectratio]{../results/dimer_interface/output/dimer_interface_D310_closeup_yb_map_cropped.png}};
+        %
+        \node(belowcaption)[below, inner sep=5pt] at (D310ybmap.south) {Yb-complexed map at 1.5 $\sigma$};
+        %
+        \node(D310anommap)[inner sep=0pt,right=1cm of D310ybmap]{\includegraphics[width=1.75in,keepaspectratio]{../results/dimer_interface/output/dimer_interface_D310_closeup_yb_map_anom_cropped.png}};
+        %
+        \node(belowcaption)[below, inner sep=5pt] at (D310anommap.south) {Yb-complexed anomalous map at 3.0 $\sigma$};
+        %
+        %
+        %
+        %
+        \node(captionA)[inner sep=5pt,above left] at (E143nativemap.north west) {\normalsize\textbf{\figurepanela}};
+        \node(captionB)[inner sep=5pt,above left] at (D310nativemap.north west) {\normalsize\textbf{\figurepanelb}};
+    \end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Maps for Yb-Binding Sites at the Cardiac Calsequestrin Intra-Dimer Interface]{\textbf{Electron density and anomalous difference maps for Yb-binding sites at the cardiac calsequestrin \textit{intra}-dimer interface; related to \maintextfigure~\ref{fig:intra_dimer_interface}.} \figurepanelcaptiona Electron density and anomalous difference maps for the D140-E143-E147 region of interest. \figurepanelcaptionb Electron density and anomalous difference maps for the D310 region of interest.}
+\label{fig:intra_dimer_interface_maps}
+\end{conditionalcaption}
+\end{figure}
+
+
+
+

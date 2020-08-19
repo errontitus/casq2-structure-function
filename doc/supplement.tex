@@ -1,0 +1,23 @@
+% Always make supplement geometry optimal for figures.
+\newgeometry{left=1cm,right=1cm,top=1cm,bottom=1.0cm}
+% No page numbering in the supplement
+\pagenumbering{gobble}
+\section{} 
+\singlespacing % Very important for figure captions and Texshade
+\clearpage % Start supplement section on new page
+\section{} % No title for supplement section
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\figurename}{Supplementary Fig.}
+\renewcommand{\tablename}{Supplementary Table}
+% \renewcommand{\thefigure}{S\arabic{figure}}
+% \renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\input{supplement/intra_dimer_interface_6OVW_vs_other_interface_alignment.tex}
+\input{supplement/calsequestrin_conservation.tex}
+\clearpage
+\input{supplement/table_xtal_comparison.tex}
+\clearpage % Prevent floats from floating past the longtable (to keep floats in order, because longtable is not a float).
+\input{supplement/table_oligos.tex}
+\clearpage

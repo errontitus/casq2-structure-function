@@ -28,7 +28,7 @@ remove N*
 load ./output/6OWW_yb_refined_map_coefficients_2mFo-DFc.ccp4, yb_map
 load ./output/6OWW_yb_refined_map_coefficients_anom.ccp4, yb_map_anom
 load ../shared_pdb/solved_structures/yb/6OWW_yb.pdb, tetramer_yb
-remove tetramer_yb and not (chain H or chain C or chain E or chain B or chain Y)
+remove tetramer_yb and not (chain H or chain C or chain E or chain B)
 alter (tetramer_yb and (chain B)),chain='Z'
 alter (tetramer_yb and (chain H)),chain='A'
 alter (tetramer_yb and (chain C)),chain='B'

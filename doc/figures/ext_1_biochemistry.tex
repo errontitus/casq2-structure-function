@@ -1,0 +1,20 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:biochemistry_supplement}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        \node(WT_EDTA_plot)[inner sep=0pt,above right]{\input{../results/assembly_kinetics/output/kinetics_WT_EDTA.pgf}};
+        %
+        \node(captionA)[inner sep=0pt,above left] at (WT_EDTA_plot.north west) {\normalsize\textbf{\figurepanela}};
+        %
+        \node(S173I_No_K_plot)[inner sep=0pt,right=1.25cm of WT_EDTA_plot.east, anchor=west]{\input{../results/assembly_kinetics/output/kinetics_CPVT_mutation_S173I_0mM_K.pgf}};
+        %
+        \node(captionB)[inner sep=0pt,above left] at (S173I_No_K_plot.north west) {\normalsize\textbf{\figurepanelb}};
+        %
+    \end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Multimerization kinetics of the S173I mutant observed in 0 mM KCl]{\textbf{Turbidity assay controls; related to \maintextfigure~\ref{fig:S173I_genetics_and_biochemistry}.} \figurepanelcaptiona Stoichiometric addition of EDTA demonstrates immediate reversal of calcium-induced turbidity. \figurepanelcaptionb Turbidity assay for the S173I mutant in \SI{0}{\milli\Molar} KCl. All graphed values are mean of 3 technical replicates ± SD.}
+\label{fig:biochemistry_extended}
+\end{conditionalcaption}
+\end{figure}

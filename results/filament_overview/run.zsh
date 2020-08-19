@@ -23,7 +23,7 @@ crop ./output/overview_tetramer_oriented.png
 crop ./output/overview_monomers.png
 
 crop ./output/overview_surface_thioredoxins.png
-crop ./output/overview_surface_thioredoxins_1.png ./output/overview_surface_thioredoxins.png
-crop ./output/overview_surface_thioredoxins_23.png ./output/overview_surface_thioredoxins.png
+# crop ./output/overview_surface_thioredoxins_1.png ./output/overview_surface_thioredoxins.png
+# crop ./output/overview_surface_thioredoxins_23.png ./output/overview_surface_thioredoxins.png
 crop ./output/overview_surface_thioredoxins_1_domain_colors.png ./output/overview_surface_thioredoxins.png
 crop ./output/overview_surface_thioredoxins_23_domain_colors.png ./output/overview_surface_thioredoxins.png

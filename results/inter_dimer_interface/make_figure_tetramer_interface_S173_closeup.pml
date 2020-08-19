@@ -19,7 +19,7 @@ distance (tetramer_native and (chain A) and i. 319 and n;OE1), (tetramer_native 
 distance (tetramer_native and (chain D) and i. 319 and n;OE1), (tetramer_native and (chain C) and i. 87 and n;NZ)
 
 # sele side_chains_only, (resi 87 or resi 172-173 or resi 175 or resi 325 or resi 319) and tetramer_native
-sele side_chains_only, (resi 87 or resi 173 or resi 325 or resi 319) and tetramer_native
+sele side_chains_only, (resi 87 or resi 173 or resi 325 or resi 319 or resi 172) and tetramer_native
 # sele main_chains_only, (resi 82-83) and tetramer_native
 # sele side_chains_and_main_chains, (resi 319)
 
@@ -75,21 +75,26 @@ distance (tetramer_native and (chain C) and i. 175 and n;OD2), (tetramer_native 
 # You clicked /tetramer_native_deo_native//C/LYS`87/NZ
 # You clicked /tetramer_native_deo_native/ION/C/CL`1/CL
 
-distance (tetramer_native and (chain B) and i. 176 and n;N), (tetramer_native and (chain Y) and i. 1 and n;CL)
-distance (tetramer_native and (chain B) and i. 173 and n;OG), (tetramer_native and (chain Y) and i. 1 and n;CL)
-distance (tetramer_native and (chain C) and i. 87 and n;NZ), (tetramer_native and (chain Y) and i. 1 and n;CL)
+# distance (tetramer_native and (chain B) and i. 176 and n;N), (tetramer_native and i. 1 and n;CL)
+# distance (tetramer_native and (chain B) and i. 173 and n;OG), (tetramer_native and i. 1 and n;CL)
+# distance (tetramer_native and (chain C) and i. 87 and n;NZ), (tetramer_native and i. 1 and n;CL)
 
 hide labels
 hide dashes
 
 hide everything
 remove hetatm and (resn HOH or resn SO4)
+# keep water
+# remove hetatm and (resn SO4)
 show cartoon, tetramer_native
+# show spheres, resn HOH
+cmd.set("stick_transparency", default_stick_transparency(), "resi 172")
 side_chain_helper("side_chains_only")
 
 select view_center, (chain D and resi 325) or (chain C and resi 87)
 
 zoom view_center, -1
+#rotate x, 10
 save_image_closeup("tetramer_interface_S173_closeup")
 
 isomesh native_mesh, native_map, 1.5, side_chains_only, carve=2

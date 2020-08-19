@@ -7,11 +7,20 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
+# Try to be pretty standard here and look a bit like Graphpad.
+# Black for WT, red for first variant, blue for second variant. Circle, square, triangle.
+WT_format = 'ko'
+WT2_formant = 'go'
+variant1_format = 'rs'
+variant2_format = 'b^'
+default_marker_size = 3
+
 background_matrix_header_row = 1
 background_matrix_nrows = 8
 
 background_matrix_header_row_edta = 2
 background_matrix_nrows_edta = 1
+
 
 def background_mean_from_matrix(filename, matrix_header_row, matrix_nrows, row, start_column, stop_column):
     all_cols = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", ""]
@@ -56,50 +65,82 @@ def cleaned_well_data(filename, time_column, well_list, header_row, nrows, time_
     # raw = pd.read_csv(filepath_or_buffer=filename, header=header, sep="\t", nrows=nrows, usecols=cols)
     # print sample_label
     raw = raw_well_data(filename, time_column, well_list, header_row, nrows, handle_injection_markers)
-    print raw
+
     for well in well_list:
         if matrix_format == 1:
             background_value = background_value_from_matrix(filename, well)
         else:
             background_value = background_value_from_matrix_edta(filename, well)
-        print raw[well]
         raw[well] = raw[well].astype(float) - background_value.astype(float)
-    print "corrected"
-    print raw
-    melted = raw.melt(id_vars=(["Kinetic read"]), var_name="Well")
-    values = melted.groupby('Kinetic read', as_index=False).value.agg(['mean','std','sem'])
-    # Apparently as_index is ignored when you ask for multiple aggregations?
-    values['time_str'] = values.index
+
+    raw["time_str"] = raw["Kinetic read"]
+    if (time_format == "hh:MM:SS"):
+        raw["minutes"] = raw["time_str"].str.split(":", expand=True)[1]
+        raw["seconds"] = raw["time_str"].str.split(":", expand=True)[2]
+        raw["fractional_seconds"] = 0    
+        raw["timedelta"] = raw["minutes"].astype(float) + raw["seconds"].astype(float)/60.0 + raw["fractional_seconds"].astype(float)/100.0
+        raw["time_minutes"] = raw["timedelta"]
+    else:
+        # MM:SS.ss
+        raw["minutes"] = raw["time_str"].str.split(":", expand=True)[0]
+        raw["seconds"] = raw["time_str"].str.split(":", expand=True)[1].str.split(".", expand=True)[0]
+        raw["fractional_seconds"] = raw["time_str"].str.split(":", expand=True)[1].str.split(".", expand=True)[1]
+        raw["timedelta"] = (raw["minutes"].astype(float) * 60.0) + raw["seconds"].astype(float) + raw["fractional_seconds"].astype(float)/100.0
+        raw["time_seconds"] = raw["timedelta"]
+
+    # Downsample to make plots easier to read.
+    # See https://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/
+    if (time_format == "hh:MM:SS"):
+        raw = raw.iloc[::10,:]
+    else:
+        raw = raw.iloc[::20,:]
+
+    # Let's make a df in a nice format for a "source data" spreadsheet for a journal. 
+    # The goal of source data is to make statistical decisions transparent. Everything else should be cleaned up to highlight the statistics treatment (i.e finished background subtraction). Anyone who wants to see the totality of the pre-processing and data cleaning operations can always look at the code here (on Github).
+    raw = raw.drop(columns=['Kinetic read','time_str','minutes','seconds','fractional_seconds'],axis=1)
+    r = 1
+    for well in well_list:
+        raw["replicate_" + str(r)] = raw[well]
+        r += 1
+#    print raw
+
+    return raw 
+
+# This exists to reproduce a bug I had in the original submitted manuscript.
+# The bug made error bars in the D325A series in fig 6 larger due to using only 2 of the 3 replicates. The problem was with code that sampled well D2 twice. 
+# def normalize_for_plot_bad(input_df):
+#     # For plotting we want a further transformation to make the table fully normalized.
+# Only two replicates used.
+#     new = input_df[['timedelta', 'replicate_1', 'replicate_2']].copy()
+#     melted = new.melt(id_vars=(["timedelta"]), var_name="Well")
+#     values = melted.groupby('timedelta', as_index=False).value.agg(['mean','std','sem'])
+#     values["timedelta"] = values.index
+#     values = values.rename(columns={"mean": "well_mean", "std": "well_std", "sem": "well_sem"})
+#     values["well_error_high"] = values["well_mean"] + values["well_sem"]
+#     values["well_error_low"] = values["well_mean"] - values["well_sem"]
+
+#     # values["sample"] = sample_label
+#     # values["color"] = sample_label
+#     # values["symbol"] = sample_label
+#     # values["point_size"] = 3
+
+#     return values
+
+def normalize_for_plot(input_df):
+    # For plotting we want a further transformation to make the table fully normalized.
+    new = input_df[['timedelta', 'replicate_1', 'replicate_2', 'replicate_3']].copy()
+    melted = new.melt(id_vars=(["timedelta"]), var_name="Well")
+    values = melted.groupby('timedelta', as_index=False).value.agg(['mean','std','sem'])
+    values["timedelta"] = values.index
     values = values.rename(columns={"mean": "well_mean", "std": "well_std", "sem": "well_sem"})
-    # if use_mean_as_background_offset == 1:
-    #     background_offset = values["well_mean"].mean()
-#    values["well_mean"] = values["well_mean"].astype(float) - background_offset
     values["well_error_high"] = values["well_mean"] + values["well_sem"]
     values["well_error_low"] = values["well_mean"] - values["well_sem"]
 
-    if (time_format == "hh:MM:SS"):
-        values["minutes"] = values["time_str"].str.split(":", expand=True)[1]
-        values["seconds"] = values["time_str"].str.split(":", expand=True)[2]
-        values["fractional_seconds"] = 0    
-        values["timedelta"] = values["minutes"].astype(float) + values["seconds"].astype(float)/60.0 + values["fractional_seconds"].astype(float)/100.0
-    else:
-        # MM:SS.ss
-        values["minutes"] = values["time_str"].str.split(":", expand=True)[0]
-        values["seconds"] = values["time_str"].str.split(":", expand=True)[1].str.split(".", expand=True)[0]
-        values["fractional_seconds"] = values["time_str"].str.split(":", expand=True)[1].str.split(".", expand=True)[1]
-        values["timedelta"] = (values["minutes"].astype(float) * 60.0) + values["seconds"].astype(float) + values["fractional_seconds"].astype(float)/100.0
+    # values["sample"] = sample_label
+    # values["color"] = sample_label
+    # values["symbol"] = sample_label
+    # values["point_size"] = 3
 
-    values["sample"] = sample_label
-    values["color"] = sample_label
-    values["symbol"] = sample_label
-    values["point_size"] = 3
-
-    # Downsample to make plots easier to read.
-    if (time_format == "hh:MM:SS"):
-        values = values.iloc[::10,:]
-    else:
-        values = values.iloc[::20,:]
-    # See https://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/
     return values
 
 def clean_data_CPVT_varying_K(time_column, well_list, label):
@@ -265,13 +306,13 @@ def plot_vs_WT(df_WT, df_mutant, mutant_label, xlabel, ylabel, xlim_max, ylim_ma
     x = df_WT["timedelta"]
     y = df_WT["well_mean"]
     yerr = df_WT["well_std"]
-    WT_line = ax.errorbar(x, y, yerr, fmt='bo', markersize=2)
+    WT_line = ax.errorbar(x, y, yerr, fmt=WT_format, markersize=default_marker_size)
     WT_line.set_label("WT")
 
     x = df_mutant["timedelta"]
     y = df_mutant["well_mean"]
     yerr = df_mutant["well_std"]
-    mutant_line = ax.errorbar(x, y, yerr, fmt='rs', markersize=2)
+    mutant_line = ax.errorbar(x, y, yerr, fmt=variant1_format, markersize=default_marker_size)
     mutant_line.set_label(mutant_label)
 
     ax.legend(loc=legend_position, title=legend_title)
@@ -280,6 +321,49 @@ def plot_vs_WT(df_WT, df_mutant, mutant_label, xlabel, ylabel, xlim_max, ylim_ma
     ax.set_ylabel(ylabel)
     ax.set_xlim(0, xlim_max)
     ax.set_ylim(0, ylim_max)
+
+    ax.set_title(fig_title)
+    fig.set_size_inches(fig_height * fig_width_multiplier, fig_height)
+    fig.tight_layout(pad=0.4)
+
+    return fig
+
+
+def plot_two_variants_vs_WT(df_WT, df_variant1, variant_label1, df_variant2, variant_label2, xlabel, ylabel, xlim_max, ylim_max, fig_title, legend_title, legend_position, fig_height, fig_width_multiplier):
+    print df_WT
+
+    fig = Figure()
+    # A canvas must be manually attached to the figure (pyplot would automatically
+    # do it).  This is done by instantiating the canvas with the figure as
+    # argument.
+    FigureCanvas(fig)
+    ax = fig.add_subplot(111)
+    ax.plot([1, 2, 3])
+
+    x = df_WT["timedelta"]
+    y = df_WT["well_mean"]
+    yerr = df_WT["well_std"]
+    WT_line = ax.errorbar(x, y, yerr, fmt=WT_format, markersize=default_marker_size)
+    WT_line.set_label("WT")
+
+    x = df_variant1["timedelta"]
+    y = df_variant1["well_mean"]
+    yerr = df_variant1["well_std"]
+    mutant_line1 = ax.errorbar(x, y, yerr, fmt=variant1_format, markersize=default_marker_size)
+    mutant_line1.set_label(variant_label1)
+
+    x = df_variant2["timedelta"]
+    y = df_variant2["well_mean"]
+    yerr = df_variant2["well_std"]
+    mutant_line2 = ax.errorbar(x, y, yerr, fmt=variant2_format, markersize=default_marker_size)
+    mutant_line2.set_label(variant_label2)
+
+    ax.legend(loc=legend_position, title=legend_title)
+
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+    ax.set_xlim(0, xlim_max)
+    ax.set_ylim(-1 * 0.003, ylim_max)
 
     ax.set_title(fig_title)
     fig.set_size_inches(fig_height * fig_width_multiplier, fig_height)
@@ -302,7 +386,7 @@ def plot_WT_EDTA(df_WT, WT_label, xlabel, ylabel, xlim_max, ylim_max, fig_title,
     x = df_WT["timedelta"]
     y = df_WT["well_mean"]
     yerr = df_WT["well_std"]
-    WT_line = ax.errorbar(x, y, yerr, fmt='bo', markersize=2)
+    WT_line = ax.errorbar(x, y, yerr, fmt=WT_format, markersize=default_marker_size)
     WT_line.set_label(WT_label)
 
     ax.legend(loc=legend_position, title=legend_title)
@@ -338,25 +422,25 @@ def plot_K180R_Mg(df_WT, df_WT90, df_K180R, df_K180R90, xlabel, ylabel, xlim_max
     x = df_WT["timedelta"]
     y = df_WT["well_mean"]
     yerr = df_WT["well_std"]
-    WT_line = ax.errorbar(x, y, yerr, fmt='bo', markersize=2)
+    WT_line = ax.errorbar(x, y, yerr, fmt=WT_format, markersize=default_marker_size)
     WT_line.set_label("WT, 0 mins pre-incubation w/ Mg")
 
     x = df_WT90["timedelta"]
     y = df_WT90["well_mean"]
     yerr = df_WT90["well_std"]
-    WT_90_line = ax.errorbar(x, y, yerr, fmt='go', markersize=2)
+    WT_90_line = ax.errorbar(x, y, yerr, fmt='go', markersize=default_marker_size)
     WT_90_line.set_label("WT, 90 mins pre-incubation w/ Mg")
 
     x = df_K180R["timedelta"]
     y = df_K180R["well_mean"]
     yerr = df_K180R["well_std"]
-    K180R_line = ax.errorbar(x, y, yerr, fmt='rs', markersize=2)
+    K180R_line = ax.errorbar(x, y, yerr, fmt=variant1_format, markersize=default_marker_size)
     K180R_line.set_label("K180R, 0 mins pre-incubation w/ Mg")
 
     x = df_K180R90["timedelta"]
     y = df_K180R90["well_mean"]
     yerr = df_K180R90["well_std"]
-    K180R_90_line = ax.errorbar(x, y, yerr, fmt='ms', markersize=2)
+    K180R_90_line = ax.errorbar(x, y, yerr, fmt=variant2_format, markersize=default_marker_size)
     K180R_90_line.set_label("K180R, 90 mins pre-incubation w/ Mg")
 
     ax.set_xlabel(xlabel)
@@ -376,81 +460,81 @@ def plot_K180R_Mg(df_WT, df_WT90, df_K180R, df_K180R90, xlabel, ylabel, xlim_max
     return fig
 
 
-def plot_mixtures(df_WT, df_WT_half, df_mutant, df_mutant_mix, mutant_label, xlabel, ylabel, xlim_max, ylim_max, fig_title, legend_title, legend_position, fig_height, fig_width_multiplier):
+# def plot_mixtures(df_WT, df_WT_half, df_mutant, df_mutant_mix, mutant_label, xlabel, ylabel, xlim_max, ylim_max, fig_title, legend_title, legend_position, fig_height, fig_width_multiplier):
 
-    fig = Figure()
-    # A canvas must be manually attached to the figure (pyplot would automatically
-    # do it).  This is done by instantiating the canvas with the figure as
-    # argument.
-    FigureCanvas(fig)
-    ax = fig.add_subplot(111)
-    ax.plot([1, 2, 3])
+#     fig = Figure()
+#     # A canvas must be manually attached to the figure (pyplot would automatically
+#     # do it).  This is done by instantiating the canvas with the figure as
+#     # argument.
+#     FigureCanvas(fig)
+#     ax = fig.add_subplot(111)
+#     ax.plot([1, 2, 3])
 
-    x = df_WT["timedelta"]
-    y = df_WT["well_mean"]
-    yerr = df_WT["well_std"]
-    WT_line = ax.errorbar(x, y, yerr, fmt='bo', markersize=2)
-    WT_line.set_label("WT")
+#     x = df_WT["timedelta"]
+#     y = df_WT["well_mean"]
+#     yerr = df_WT["well_std"]
+#     WT_line = ax.errorbar(x, y, yerr, fmt='bo', markersize=default_marker_size)
+#     WT_line.set_label("WT")
 
-    x = df_mutant["timedelta"]
-    y = df_mutant["well_mean"]
-    yerr = df_mutant["well_std"]
-    mutant_line = ax.errorbar(x, y, yerr, fmt='rs', markersize=2)
-    mutant_line.set_label(mutant_label)
+#     x = df_mutant["timedelta"]
+#     y = df_mutant["well_mean"]
+#     yerr = df_mutant["well_std"]
+#     mutant_line = ax.errorbar(x, y, yerr, fmt='rs', markersize=default_marker_size)
+#     mutant_line.set_label(mutant_label)
 
-    x = df_mutant_mix["timedelta"]
-    y = df_mutant_mix["well_mean"]
-    yerr = df_mutant_mix["well_std"]
-    mix_line = ax.errorbar(x, y, yerr, fmt='cP', markersize=2)
-    mix_line.set_label(mutant_label + "/WT mix")
+#     x = df_mutant_mix["timedelta"]
+#     y = df_mutant_mix["well_mean"]
+#     yerr = df_mutant_mix["well_std"]
+#     mix_line = ax.errorbar(x, y, yerr, fmt='cP', markersize=default_marker_size)
+#     mix_line.set_label(mutant_label + "/WT mix")
 
-    ax.legend(loc=legend_position, title=legend_title)
+#     ax.legend(loc=legend_position, title=legend_title)
 
-    ax.set_xlabel(xlabel)
-    ax.set_ylabel(ylabel)
-    ax.set_xlim(0, xlim_max)
-    ax.set_ylim(0, ylim_max)
-    ax.set_title(fig_title)
+#     ax.set_xlabel(xlabel)
+#     ax.set_ylabel(ylabel)
+#     ax.set_xlim(0, xlim_max)
+#     ax.set_ylim(0, ylim_max)
+#     ax.set_title(fig_title)
 
-    fig.set_size_inches(fig_height * fig_width_multiplier, fig_height)
-    fig.tight_layout(pad=0.4)
+#     fig.set_size_inches(fig_height * fig_width_multiplier, fig_height)
+#     fig.tight_layout(pad=0.4)
 
-    return fig
+#     return fig
 
-def plot_two_K_conditions_vs_WT(df_WT0, df_WT85, df_mutant0, df_mutant85, mutant_label, xlabel, ylabel, ylim_max, fig_title, legend_title):
-    plt.figure(figsize=(1.6, 1.0))
-#    fig, ax = plt.subplots()
+# def plot_two_K_conditions_vs_WT(df_WT0, df_WT85, df_mutant0, df_mutant85, mutant_label, xlabel, ylabel, ylim_max, fig_title, legend_title):
+#     plt.figure(figsize=(1.6, 1.0))
+# #    fig, ax = plt.subplots()
 
-    x = df_WT85["timedelta"]
-    y = df_WT85["well_mean"]
-    yerr = df_WT85["well_std"]
-    plt.errorbar(x, y, yerr, fmt='bo')
-    label1 = "WT 85 mM KCl"
+#     x = df_WT85["timedelta"]
+#     y = df_WT85["well_mean"]
+#     yerr = df_WT85["well_std"]
+#     plt.errorbar(x, y, yerr, fmt='bo')
+#     label1 = "WT 85 mM KCl"
 
-    x = df_mutant85["timedelta"]
-    y = df_mutant85["well_mean"]
-    yerr = df_mutant85["well_std"]
-    plt.errorbar(x, y, yerr, fmt='rs')
-    label2 = mutant_label + " 85 mM KCl"
+#     x = df_mutant85["timedelta"]
+#     y = df_mutant85["well_mean"]
+#     yerr = df_mutant85["well_std"]
+#     plt.errorbar(x, y, yerr, fmt='rs')
+#     label2 = mutant_label + " 85 mM KCl"
 
-    x = df_WT0["timedelta"]
-    y = df_WT0["well_mean"]
-    yerr = df_WT0["well_std"]
-    plt.errorbar(x, y, yerr, fmt='cP')
-    label3 = "WT 0 mM KCl"
+#     x = df_WT0["timedelta"]
+#     y = df_WT0["well_mean"]
+#     yerr = df_WT0["well_std"]
+#     plt.errorbar(x, y, yerr, fmt='cP')
+#     label3 = "WT 0 mM KCl"
 
-    x = df_mutant0["timedelta"]
-    y = df_mutant0["well_mean"]
-    yerr = df_mutant0["well_std"]
-    plt.errorbar(x, y, yerr, fmt='m^')
-    label4 = mutant_label + " 0 mM KCl"
+#     x = df_mutant0["timedelta"]
+#     y = df_mutant0["well_mean"]
+#     yerr = df_mutant0["well_std"]
+#     plt.errorbar(x, y, yerr, fmt='m^')
+#     label4 = mutant_label + " 0 mM KCl"
 
-    plt.legend((label1, label2, label3, label4), loc="upper left", title=legend_title)
+#     plt.legend((label1, label2, label3, label4), loc="upper left", title=legend_title)
 
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
+#     plt.xlabel(xlabel)
+#     plt.ylabel(ylabel)
 
-    plt.ylim(0, ylim_max)
+#     plt.ylim(0, ylim_max)
 
-    return plt
+#     return plt
 

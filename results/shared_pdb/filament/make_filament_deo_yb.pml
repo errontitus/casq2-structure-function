@@ -10,7 +10,8 @@ remove hetatm and not elem Yb
 
 sele filament_tmp, (m001_2 and (chain H or chain C or chain E or chain B or chain A)) or (m001_1 and (chain F or chain D or chain G)) or (m000_2 and ((chain H or chain C or chain E or chain B or chain A))) or (m000_1 and (chain F))
 
-remove polymer and not filament_tmp
+# polymer and 
+remove not filament_tmp
 
 # Make polymer chain IDs sequential
 # m001_2 H C E B A

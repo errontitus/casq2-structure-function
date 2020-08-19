@@ -1,0 +1,176 @@
+\clearpage
+% Clunky way to get a reference-able title: use an empty figure. That said, putting TexShade inside a figure should also work...
+\captionsetup[figure]{labelformat=empty}
+\begin{figure}[!ht]
+%\figuretitle{Figure~\ref{fig:calsequestrin_conservation}}
+\caption[]{}
+\label{fig:calsequestrin_conservation}
+\end{figure}
+\captionsetup[figure]{labelformat=default}
+\addtocounter{figure}{-1}
+\begin{texshade}{../results/orthology/output/casq2_casq1_all_aligned.fasta}
+    % This advertised TexShade feature did not work. Instead, I manually added all annotations.
+%    \includeDSSP{CASQ2.H.sapiens}{../results/shared_pdb/monomer/output/monomer_2vaf_dssp.txt}
+    %    \includePHDtopo{1}{../results/shared_pdb/monomer/output/AQP1.phd}
+    %\secondcolumnDSSP
+    %
+    \seqtype{P}
+    \constosingleseq{1}
+    % Truncating the mouse sequence, since we are interested in the human.
+    \setends{3}{1..415}
+    % Dimer
+    \feature{ttop}{1}{140..140}{fill:$\downarrow$}{140}
+    \feature{ttop}{1}{143..143}{fill:$\downarrow$}{143}
+    \feature{ttop}{1}{147..147}{fill:$\downarrow$}{147}
+    \feature{ttop}{1}{275..275}{fill:$\downarrow$}{275}
+    \feature{ttop}{1}{278..278}{fill:$\downarrow$}{278}
+    \feature{ttop}{1}{280..280}{fill:$\downarrow$}{280}
+    \feature{ttop}{1}{310..310}{fill:$\downarrow$}{310}
+    %
+    \frameblock{1}{140..140}{Magenta[1pt]}
+    % Include the block for 144 (dimer-dimer) here, for aesthetics
+    \frameblock{1}{143..144}{Magenta[1pt]}
+    \frameblock{1}{147..147}{Magenta[1pt]}
+    \frameblock{1}{275..275}{Magenta[1pt]}
+    \frameblock{1}{278..278}{Magenta[1pt]}
+    \frameblock{1}{280..280}{Magenta[1pt]}
+    \frameblock{1}{310..310}{Magenta[1pt]}
+    % Dimer-Dimer
+    \feature{tttop}{1}{144..144}{fill:$\downarrow$}{144}
+    \feature{ttop}{1}{174..174}{fill:$\downarrow$}{174}
+    \feature{ttop}{1}{184..184}{fill:$\downarrow$}{184}
+    \feature{ttop}{1}{187..187}{fill:$\downarrow$}{187}
+    \feature{ttop}{1}{348..348}{fill:$\downarrow$}{348}
+    \feature{ttop}{1}{350..350}{fill:$\downarrow$}{350}
+    \feature{tttop}{1}{351..351}{fill:$\downarrow$}{351}
+    \feature{ttop}{1}{357..357}{fill:$\downarrow$}{357}
+    %
+%    \frameblock{1}{144..144}{Magenta[1pt]}
+    \frameblock{1}{174..174}{Magenta[1pt]}
+    \frameblock{1}{184..184}{Magenta[1pt]}
+    \frameblock{1}{187..187}{Magenta[1pt]}
+    \frameblock{1}{348..348}{Magenta[1pt]}
+    \frameblock{1}{350..351}{Magenta[1pt]}
+%    \frameblock{1}{351..351}{Magenta[1pt]}
+    \frameblock{1}{357..357}{Magenta[1pt]}
+    %
+    \frameblock{1}{87..87}{Green[1pt]}
+    \frameblock{1}{173..173}{Green[1pt]}
+    \frameblock{1}{325..325}{Green[1pt]}
+    %
+    \feature{ttop}{1}{87..87}{fill:$\downarrow$}{87}
+    \feature{tttop}{1}{173..173}{fill:$\downarrow$}{173}
+    \feature{ttop}{1}{325..325}{fill:$\downarrow$}{325}
+    %
+    \threshold{100}
+    \setsize{features}{tiny}        
+    \hideconsensus
+    \setsize{names}{scriptsize}
+    \setsize{residues}{scriptsize}
+    \setsize{ruler}{scriptsize}
+    \setsize{featurenames}{scriptsize}
+    \setsize{features}{scriptsize}
+    \setsize{numbering}{scriptsize}
+    %
+    \showruler{ttttop}{CASQ2.H.sapiens}
+%    \showruler{bottom}{CASQ1.H.sapiens}
+    %
+    % Helices (superset of secondary structure of 1SJI and 6OVW, since the latter has gaps)
+    \feature{top}{CASQ2.H.sapiens}{41..48}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{67..84}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{100..106}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{131..142}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{152..160}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{177..189}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{201..207}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{234..244}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{279..295}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{312..322}{helix}{$\alpha$}
+    \feature{top}{CASQ2.H.sapiens}{355..367}{helix}{$\alpha$}
+    %
+    % Sheets (superset of secondary structure of 1SJI and 6OVW, since the latter has gaps)
+    \feature{top}{CASQ2.H.sapiens}{35..37}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{51..57}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{89..95}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{113..118}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{121..125}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{146..148}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{166..170}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{194..198}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{213..217}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{225..226}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{249..251}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{268..273}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{303..306}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{330..335}{-->[Blue]}{$\beta$}
+    \feature{top}{CASQ2.H.sapiens}{341..344}{-->[Blue]}{$\beta$}
+    %
+    % This is confusing, because there's a 3-10 helix at residue 310, but not sure what we can do..
+    \feature{top}{CASQ2.H.sapiens}{308..310}{helix}{3-10}
+    %
+    %
+    % 1SJI STRIDE analysis
+    % LOC  AlphaHelix   ASN    41 A      LYS     47 A                            ~~~~
+    % LOC  AlphaHelix   GLN    67 A      LEU     84 A                            ~~~~
+    % LOC  AlphaHelix   ALA   100 A      LEU    106 A                            ~~~~
+    % LOC  AlphaHelix   ALA   131 A      ASP    140 A                            ~~~~
+    % LOC  AlphaHelix   LYS   152 A      ARG    160 A                            ~~~~
+    % LOC  AlphaHelix   GLU   177 A      PHE    189 A                            ~~~~
+    % LOC  AlphaHelix   LYS   201 A      LEU    207 A                            ~~~~
+    % LOC  AlphaHelix   GLU   234 A      HIS    244 A                            ~~~~
+    % LOC  AlphaHelix   ASP   256 A      GLU    262 A                            ~~~~
+    % LOC  AlphaHelix   PRO   279 A      ASN    295 A                            ~~~~
+    % LOC  AlphaHelix   PRO   312 A      THR    321 A                            ~~~~
+    % LOC  AlphaHelix   ALA   355 A      SER    367 A                            ~~~~
+    % LOC  310Helix     PRO   308 A      ASP    310 A                            ~~~~
+    % LOC  Strand       VAL    35 A      LEU     37 A                            ~~~~
+    % LOC  Strand       VAL    51 A      HIS     57 A                            ~~~~
+    % LOC  Strand       ILE    89 A      ASP     95 A                            ~~~~
+    % LOC  Strand       SER   113 A      LYS    118 A                            ~~~~
+    % LOC  Strand       ARG   121 A      PHE    125 A                            ~~~~
+    % LOC  Strand       VAL   146 A      ILE    148 A                            ~~~~
+    % LOC  Strand       LYS   166 A      PHE    170 A                            ~~~~
+    % LOC  Strand       LYS   194 A      THR    198 A                            ~~~~
+    % LOC  Strand       GLU   213 A      TYR    217 A                            ~~~~
+    % LOC  Strand       ILE   225 A      ALA    226 A                            ~~~~
+    % LOC  Strand       LEU   249 A      ARG    251 A                            ~~~~
+    % LOC  Strand       ILE   268 A      PHE    273 A                            ~~~~
+    % LOC  Strand       ILE   303 A      ILE    306 A                            ~~~~
+    % LOC  Strand       GLN   330 A      ASN    335 A                            ~~~~
+    % LOC  Strand       SER   341 A      TRP    343 A                            ~~~~
+    %
+    %
+    % 6OVW STRIDE analysis
+    % LOC  AlphaHelix   ASN    41 A      LYS     48 A                            ~~~~
+    % LOC  AlphaHelix   PHE    70 A      LEU     84 A                            ~~~~
+    % LOC  AlphaHelix   ALA   100 A      LEU    106 A                            ~~~~
+    % LOC  AlphaHelix   ALA   131 A      ILE    142 A                            ~~~~
+    % LOC  AlphaHelix   LYS   152 A      ARG    160 A                            ~~~~
+    % LOC  AlphaHelix   GLU   177 A      PHE    189 A                            ~~~~
+    % LOC  AlphaHelix   LYS   201 A      LEU    207 A                            ~~~~
+    % LOC  AlphaHelix   GLU   234 A      HIS    244 A                            ~~~~
+    % LOC  AlphaHelix   PRO   279 A      ASN    295 A                            ~~~~
+    % LOC  AlphaHelix   PRO   312 A      PHE    322 A                            ~~~~
+    % LOC  AlphaHelix   ALA   355 A      LEU    366 A                            ~~~~
+    % LOC  310Helix     PRO   308 A      ASP    310 A                            ~~~~
+    % LOC  Strand       VAL    35 A      SER     36 A                            ~~~~
+    % LOC  Strand       LEU    51 A      TYR     56 A                            ~~~~
+    % LOC  Strand       ILE    89 A      VAL     94 A                            ~~~~
+    % LOC  Strand       SER   113 A      LYS    118 A                            ~~~~
+    % LOC  Strand       ARG   121 A      PHE    125 A                            ~~~~
+    % LOC  Strand       VAL   146 A      ILE    148 A                            ~~~~
+    % LOC  Strand       LYS   166 A      PHE    170 A                            ~~~~
+    % LOC  Strand       LYS   194 A      THR    198 A                            ~~~~
+    % LOC  Strand       GLU   213 A      TYR    217 A                            ~~~~
+    % LOC  Strand       ILE   225 A      ALA    226 A                            ~~~~
+    % LOC  Strand       LEU   249 A      ARG    251 A                            ~~~~
+    % LOC  Strand       HIS   269 A      PHE    273 A                            ~~~~
+    % LOC  Strand       ILE   303 A      ILE    306 A                            ~~~~
+    % LOC  Strand       GLN   330 A      VAL    334 A                            ~~~~
+    % LOC  Strand       SER   341 A      MET    344 A                            ~~~~
+    %
+    % TexShade supports caption.
+\showcaption{\textbf{Multiple Sequence Alignment Showing Conservation Across Calsequestrins.} Residues of importance at intra-dimer and inter-dimer interfaces are indicated. Magenta boxes: residues implicated in Yb binding, related to \maintextfigure~\ref{fig:intra_dimer_interface} and \maintextfigure~\ref{fig:inter_dimer_interface}. Green boxes: residues at the 3-protomer inter-dimer interface, related to \maintextfigure~\ref{fig:inter_dimer_interface_cpvt}.}
+% ... And short caption.
+\shortcaption{Multiple sequence alignment showing conservation across calsequestrins}
+\end{texshade}

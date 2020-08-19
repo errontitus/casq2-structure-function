@@ -1,0 +1,22 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:inter_dimer_interface_supplement}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        \node(D348A_D350A_plot)[inner sep=0pt,above right]{\input{../results/assembly_kinetics/output/kinetics_interface_mutation_D348A_D350A_85mM_K.pgf}};
+        %
+        \node(captionA)[inner sep=0pt,above left] at (D348A_D350A_plot.north west) {\normalsize\textbf{\figurepanela}};
+        %
+        \node(D351A_E357A_plot)[inner sep=0pt,right=1.25cm of D348A_D350A_plot.east, anchor=west]{\input{../results/assembly_kinetics/output/kinetics_interface_mutation_D351A_E357A_85mM_K.pgf}};
+        %
+        \node(captionB)[inner sep=0pt,above left] at (D351A_E357A_plot.north west) {\normalsize\textbf{\figurepanelb}};
+    \end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Turbidity assays showing effect of alanine mutagenesis of additional Yb-binding sites at the cardiac calsequestrin inter-dimer interface]{\textbf{Turbidity assays showing effect of alanine mutagenesis of additional Yb-binding sites at the cardiac calsequestrin inter-dimer interface; related to \maintextfigure~\ref{fig:inter_dimer_interface}.} \figurepanelcaptiona Turbidity assay after alanine mutagenesis of the putative calcium-coordinating residues D348 and D350. \figurepanelcaptionb Turbidity assay after alanine mutagenesis of the putative calcium-coordinating residues D351 and E357. All graphed values are mean of 3 technical replicates ± SD.}
+\label{fig:inter_dimer_interface_extended}
+\end{conditionalcaption}
+\end{figure}
+
+
+

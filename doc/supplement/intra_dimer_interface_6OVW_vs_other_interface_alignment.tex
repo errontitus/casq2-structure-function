@@ -1,0 +1,82 @@
+% Clunky way to get a reference-able title: use an empty figure.
+\captionsetup[figure]{labelformat=empty}
+\begin{figure}[!ht]
+%\figuretitle{Figure~\ref{fig:intra_dimer_interface_msa}}
+\caption[]{}
+\label{fig:intra_dimer_interface_msa}
+\end{figure}
+\captionsetup[figure]{labelformat=default}
+\addtocounter{figure}{-1}
+\begin{texshade}{../results/inter_dimer_interface_alignment/output/pdb_interface_comparison_dimer_aligned.fasta}
+    \seqtype{P}
+    \constosingleseq{1}
+    \shadingmode[hydropathy]{functional}
+    % Order
+    % PDB.5CRG.Homo.CASQ1.D210G,PDB.5CRH.Homo.CASQ1.M53T,5CRE.Homo.CASQ1.D210G,
+    \orderseqs{PDB.6OWV.Homo.CASQ2,PDB.2VAF.Homo.CASQ2,PDB.3UOM.Homo.CASQ1,PDB.5KN1.Bos.CASQ1,PDB.5KN2.Bos.CASQ1,PDB.1A8Y.Oryct.CASQ1,PDB.1SJI.Canis.CASQ2,PDB.3TRP.Oryct.CASQ1,PDB.3TRQ.Oryct.CASQ1,PDB.3US3.Oryct.CASQ1,PDB.3V1W.Oryct.CASQ1,PDB.5CRD.Homo.CASQ1,PDB.5KN0.Bos.CASQ1,PDB.5KN3.Bos.CASQ1}
+    % Very important to align numbering to hCASQ2.
+    % Group I
+    \startnumber{PDB.6OWV.Homo.CASQ2}{22}
+    \startnumber{PDB.2VAF.Homo.CASQ2}{22} 
+    \startnumber{PDB.3UOM.Homo.CASQ1}{22} 
+    % Excluded mutants
+    % \startnumber{PDB.5CRG.Homo.CASQ1.D210G}{22} 
+    % \startnumber{PDB.5CRH.Homo.CASQ1.M53T}{22} 
+    \startnumber{PDB.5KN1.Bos.CASQ1}{22} 
+    \startnumber{PDB.5KN2.Bos.CASQ1}{22} 
+    % Group II
+    \startnumber{PDB.5CRD.Homo.CASQ1}{22} 
+    % Excluded mutant
+    % \startnumber{PDB.5CRE.Homo.CASQ1.D210G}{22} 
+    \startnumber{PDB.5KN0.Bos.CASQ1}{22} 
+    \startnumber{PDB.5KN3.Bos.CASQ1}{22} 
+    \startnumber{PDB.1SJI.Canis.CASQ2}{22} 
+    \startnumber{PDB.1A8Y.Oryct.CASQ1}{22} 
+    \startnumber{PDB.3TRP.Oryct.CASQ1}{22} 
+    \startnumber{PDB.3TRQ.Oryct.CASQ1}{22} 
+    \startnumber{PDB.3US3.Oryct.CASQ1}{22} 
+    \startnumber{PDB.3V1W.Oryct.CASQ1}{22} 
+    % % Very important to align numbering to hCASQ2. But we already do this when we save the PDBs.
+    %
+    \hidenumbering
+    % % Group I
+    % \startnumber{PDB.New.Homo.CASQ2.Native}{1}
+    % \startnumber{PDB.2VAF.Homo.CASQ2}{1} 
+    % \startnumber{PDB.3UOM.Homo.CASQ1}{-15} 
+    % \startnumber{PDB.5CRG.Homo.CASQ1.D210G}{-15} 
+    % \startnumber{PDB.5CRH.Homo.CASQ1.M53T}{-15} 
+    % \startnumber{PDB.5KN1.Bos.CASQ1}{-15} 
+    % \startnumber{PDB.5KN2.Bos.CASQ1}{-15} 
+    % % Group II
+    % \startnumber{PDB.5CRD.Homo.CASQ1}{-15} 
+    % \startnumber{PDB.5CRE.Homo.CASQ1.D210G}{-15} 
+    % \startnumber{PDB.5KN0.Bos.CASQ1}{-15} 
+    % \startnumber{PDB.5KN3.Bos.CASQ1}{-15} 
+    % \startnumber{PDB.1SJI.Canis.CASQ2}{1} 
+    % \startnumber{PDB.1A8Y.Oryctolagus.CASQ1}{-9} 
+    % \startnumber{PDB.3TRP.Oryctolagus.CASQ1}{-9} 
+    % \startnumber{PDB.3TRQ.Oryctolagus.CASQ1}{-9} 
+    % \startnumber{PDB.3US3.Oryctolagus.CASQ1}{-9} 
+    \setends{PDB.6OWV.Homo.CASQ2}{22..351}
+    \tintdefault{strong}
+    \feature{bottom}{1}{22..143}{brace[Black]}{Domain I [Black]}
+    \feature{bottom}{1}{144..246}{brace[Black]}{Domain II [Black]}
+    \feature{bottom}{1}{247..351}{brace[Black]}{Domain III [Black]}
+    \setsize{features}{tiny}        
+    \showruler{top}{1} \rulersteps{5}
+    \showlegend
+    \hideconsensus
+    \setsize{names}{scriptsize}
+    \setsize{residues}{scriptsize}
+    \setsize{ruler}{scriptsize}
+    \setsize{featurenames}{scriptsize}
+    \setsize{features}{scriptsize}
+    \setsize{numbering}{scriptsize}
+    \input{../results/inter_dimer_interface_alignment/output/pdb_dimer_interface_texshade_tints.tex}
+    \separationline{PDB.5KN2.Bos.CASQ1} 
+    \movelegend{4cm}{-3cm}
+    % TexShade supports caption.
+    \showcaption{\textbf{Multiple Sequence Alignment Comparing Intra-Dimer Interface Residues from Published Calsequestrin Structures, Related to \maintextfigure~\ref{fig:intra_dimer_interface}.} Intra-dimer interface residues are highlighted; color represents hydropathy. Alignment is grouped by dimer conformational class (top group: tightly packed dimers; bottom group: loosely packed dimers). Rotation of chains in the tightly packed dimers leads to loss of contacts near the N terminus but gain of contacts elsewhere. Calsequestrin structures 5CRE, 5CRG, and 5CRH (point mutants belonging to the same investigation as 5CRD) are omitted.}
+    % ... And short caption.
+    \shortcaption{Multiple sequence alignment of calsequestrins highlighting intra-dimer interface residues}
+\end{texshade}

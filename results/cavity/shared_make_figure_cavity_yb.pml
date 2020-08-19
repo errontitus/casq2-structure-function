@@ -68,21 +68,4 @@ sele monomer, chain F
 sele dimer_chains, chain E or chain F
 sele tetramer_chains, chain E or chain F or chain G or chain H
 
-select_dimer_yb("dimer_het", "filament_short and polymer")
-
-# Include the ends
-select_tetramer_yb("tetramer_het", "filament_short", "filament_short")
-
-sele tetramer_het_outside, tetramer_het within 4.5 of (polymer and resi 357)
-sele tetramer_het_inside, tetramer_het and not tetramer_het_outside
-sele tetramer_het_all, tetramer_het_outside or tetramer_het_inside
-
-set sphere_scale, 0.7, elem Yb
-
-# Different rotation than native filament.
-rotate y, -90
-
-orient filament_short and polymer
-zoom_complete("filament_short")
-
 hide everything 

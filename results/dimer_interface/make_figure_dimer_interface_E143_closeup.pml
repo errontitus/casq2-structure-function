@@ -18,41 +18,41 @@ hide everything
 # A 140 OD2
 # B 277 OG
 # B 309 OD1
-# distance (dimer and (chain A) and i. 136 and n;OE1), (dimer and (chain Y) and i. 18)
-# distance (dimer and (chain A) and i. 136 and n;OE2), (dimer and (chain Y) and i. 18)
-# distance (dimer and (chain A) and i. 140 and n;OD2), (dimer and (chain Y) and i. 18)
-# distance (dimer and (chain B) and i. 277 and n;OG), (dimer and (chain Y) and i. 18)
-# distance (dimer and (chain B) and i. 309 and n;OD1), (dimer and (chain Y) and i. 18)
+# distance (dimer and (chain A) and i. 136 and n;OE1), (dimer and i. 18)
+# distance (dimer and (chain A) and i. 136 and n;OE2), (dimer and i. 18)
+# distance (dimer and (chain A) and i. 140 and n;OD2), (dimer and i. 18)
+# distance (dimer and (chain B) and i. 277 and n;OG), (dimer and i. 18)
+# distance (dimer and (chain B) and i. 309 and n;OD1), (dimer and i. 18)
 
 # yb 
 # A 140 OD1
 # A 143 OE2 and 1
 # B 275 OE2 and 1
 # B 278 OD2
-distance (dimer_yb and (chain A) and i. 140 and n;OD1), (dimer_yb and (chain Y) and yb_143_A)
-distance (dimer_yb and (chain A) and i. 143 and n;OE1), (dimer_yb and (chain Y) and yb_143_A)
-distance (dimer_yb and (chain A) and i. 143 and n;OE2), (dimer_yb and (chain Y) and yb_143_A)
-distance (dimer_yb and (chain B) and i. 275 and n;OE1), (dimer_yb and (chain Y) and yb_143_A)
-distance (dimer_yb and (chain B) and i. 275 and n;OE2), (dimer_yb and (chain Y) and yb_143_A)
-# distance (dimer and (chain B) and i. 278 and n;OD2), (dimer and (chain Y) and yb_143_A)
+distance (dimer_yb and (chain A) and i. 140 and n;OD1), (dimer_yb and yb_143_A)
+distance (dimer_yb and (chain A) and i. 143 and n;OE1), (dimer_yb and yb_143_A)
+distance (dimer_yb and (chain A) and i. 143 and n;OE2), (dimer_yb and yb_143_A)
+distance (dimer_yb and (chain B) and i. 275 and n;OE1), (dimer_yb and yb_143_A)
+distance (dimer_yb and (chain B) and i. 275 and n;OE2), (dimer_yb and yb_143_A)
+# distance (dimer and (chain B) and i. 278 and n;OD2), (dimer and yb_143_A)
 
 # Yb that appears only in a higher-multiplicity structure (P 43 212 solution that we rejected, because it is pseudosymmetric)
 # A 143 OE2
 # A 147 OE2
 # B 278 OD2 
-# distance (dimer and (chain A) and i. 143 and n;OE2), (dimer and (chain Y) and i. 11)
-# distance (dimer and (chain A) and i. 147 and n;OE2), (dimer and (chain Y) and i. 11)
-# distance (dimer and (chain B) and i. 278 and n;OD2), (dimer and (chain Y) and i. 11)
+# distance (dimer and (chain A) and i. 143 and n;OE2), (dimer and i. 11)
+# distance (dimer and (chain A) and i. 147 and n;OE2), (dimer and i. 11)
+# distance (dimer and (chain B) and i. 278 and n;OD2), (dimer and i. 11)
 
 # Yb
 # A 147 OE2 and 1
 # B 278 OD2 and 1
 # B 280 OD1
-distance (dimer_yb and (chain A) and i. 147 and n;OE1), (dimer_yb and (chain Y) and yb_280_B)
-distance (dimer_yb and (chain A) and i. 147 and n;OE2), (dimer_yb and (chain Y) and yb_280_B)
-distance (dimer_yb and (chain B) and i. 278 and n;OD1), (dimer_yb and (chain Y) and yb_280_B)
-distance (dimer_yb and (chain B) and i. 278 and n;OD2), (dimer_yb and (chain Y) and yb_280_B)
-distance (dimer_yb and (chain B) and i. 280 and n;OD2), (dimer_yb and (chain Y) and yb_280_B)
+distance (dimer_yb and (chain A) and i. 147 and n;OE1), (dimer_yb and yb_280_B)
+distance (dimer_yb and (chain A) and i. 147 and n;OE2), (dimer_yb and yb_280_B)
+distance (dimer_yb and (chain B) and i. 278 and n;OD1), (dimer_yb and yb_280_B)
+distance (dimer_yb and (chain B) and i. 278 and n;OD2), (dimer_yb and yb_280_B)
+distance (dimer_yb and (chain B) and i. 280 and n;OD2), (dimer_yb and yb_280_B)
 
 hide labels
 show cartoon, dimer_yb_polymer
@@ -87,7 +87,7 @@ isomesh native_mesh, native_map, 1.5, dimer_native_residues, carve=2
 color blue, native_mesh
 show mesh, native_mesh
 show cartoon, dimer_native 
-show sticks, dimer_native_residues
+#show sticks, dimer_native_residues
 side_chain_helper("dimer_native_residues")
 save_image_closeup("dimer_interface_E143_closeup_native_map")
 

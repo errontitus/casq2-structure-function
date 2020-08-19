@@ -1,0 +1,149 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:inter_dimer_interface_maps}}
+\begin{conditionalpanel}
+\begin{tikzcanvas}{}
+    %
+    \node(D144nativemap)[inner sep=0pt,below right]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D144_E174_closeup_native_map_cropped.png}};
+    %
+    \node(D144E174label) [above, inner sep=5pt, align=center] at (D144nativemap.north) {D144/E174 Inter-Dimer Region};
+    %
+    \path (D144nativemap.west)++(0.5,1.75)  coordinate (cD144_B);
+    \path (D144nativemap.east)++(-0.5,-2)  coordinate (cD144_Aprime);
+    \node(D144_B) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD144_B) {D144};
+    \node(D144_Aprime) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD144_Aprime) {D144};
+    % 174 
+    \path (D144nativemap.south west)++(0.1,0.55) coordinate (cE174_B);
+    \path (D144nativemap.north east)++(-0.1,-0.6) coordinate (cE174_Aprime);
+    \node(E174_B) [above right, inner sep=0pt, font=\small, font=\bfseries] at (cE174_B) {E174};   
+    \node(E174_Aprime) [below left, inner sep=0pt, font=\small, font=\bfseries] at (cE174_Aprime) {E174};   
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D144nativemap.south) {Native map at 1.5 $\sigma$};
+    %
+    \node(D144ybmap)[inner sep=0pt,right=1cm of D144nativemap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D144_E174_closeup_yb_map_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D144ybmap.south) {Yb-complexed map at 1.5 $\sigma$};
+    %
+    \node(D144anommap)[inner sep=0pt,right=1cm of D144ybmap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D144_E174_closeup_yb_map_anom_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D144anommap.south) {Yb-complexed anomalous map at 3.0 $\sigma$};
+    %
+    %
+    %
+    %
+    %
+    \node(E184nativemap)[inner sep=0pt,below=1.5cm of D144nativemap.south west,anchor=north west]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_E184_E187_closeup_native_map_cropped.png}};
+    %
+    \node(E184E187label) [above, inner sep=5pt, align=center] at (E184nativemap.north) {D50/K180/E184/E187 Inter-Dimer Region};
+    % E184 
+    \path (E184nativemap.west)++(1,0.8)  coordinate (cE184);
+    \node(E184) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE184) {E184};
+    % E187 
+    \path (E184nativemap.north)++(-1,-0.4) coordinate (cE187);
+    \node(E187) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE187) {E187};        
+    % D50
+    \path (E184nativemap.east)++(-1,1) coordinate (cD50);
+    \node(D50) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD50) {D50};
+    % K180 
+    \path (E184nativemap.north)++(1,-0.4) coordinate (cK180);
+    \node(K180) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK180) {K180};
+    %
+    % Other side.
+    %
+    % E184 
+    \path (E184nativemap.east)++(-1,-1.2)  coordinate (cE184_low);
+    \node(E184_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE184_low) {E184};
+    % E187 
+    \path (E184nativemap.south)++(1,0.25) coordinate (cE187_low);
+    \node(E187_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE187_low) {E187};        
+    % D50
+    \path (E184nativemap.west)++(1,-1.4) coordinate (cD50_low);
+    \node(D50_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD50_low) {D50};
+    % K180 
+    \path (E184nativemap.south)++(-1.5,0.25) coordinate (cK180_low);
+    \node(K180_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK180_low) {K180};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (E184nativemap.south) {Native map at 1.5 $\sigma$};
+    %
+    \node(E184ybmap)[inner sep=0pt,right=1cm of E184nativemap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_E184_E187_closeup_yb_map_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (E184ybmap.south) {Yb-complexed map at 1.5 $\sigma$};
+    %
+    \node(E184anommap)[inner sep=0pt,right=1cm of E184ybmap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_E184_E187_closeup_yb_map_anom_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (E184anommap.south) {Yb-complexed anomalous map at 5.0 $\sigma$};
+    %
+    %
+    %
+    %
+    \node(D348D350nativemap)[inner sep=0pt,below=1.5cm of E184nativemap.south west,anchor=north west]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D348_D350_closeup_native_map_cropped.png}};
+    %
+    % Label
+    \node(D348D350label) [above, inner sep=5pt, align=center] at (D348D350nativemap.north) {D348/D350 Inter-Dimer Region};
+    %
+    % D348_B'
+    \path (D348D350nativemap.north)++(1.75,-1) coordinate (cD348chainD);
+    \node(D348) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD348chainD) {D348};
+    % D348_A
+    \path (D348D350nativemap.south)++(-2,+0.75) coordinate (cD348chainA);
+    \node(D348chainA) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD348chainA) {D348};
+    %
+    % D350_B'
+    \path (D348D350nativemap.south)++(2,+0.75) coordinate (cD350chainD);
+    \node(D350) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD350chainD) {D350};
+    % D350_A
+    \path (D348D350nativemap.north)++(-2,-1) coordinate (cD350chainA);
+    \node(D350chainA) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD350chainA) {D350};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D348D350nativemap.south) {Native map at 1.5 $\sigma$};
+    %
+    \node(D348D350ybmap)[inner sep=0pt,right=1cm of D348D350nativemap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D348_D350_closeup_yb_map_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D348D350ybmap.south) {Yb-complexed map at 1.5 $\sigma$};
+    %
+    \node(D348D350anommap)[inner sep=0pt,right=1cm of D348D350ybmap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D348_D350_closeup_yb_map_anom_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D348D350anommap.south) {Yb-complexed anomalous map at 3.0 $\sigma$};
+    %
+    %
+    %
+    %
+    \node(D351E357nativemap)[inner sep=0pt,below=1.5cm of D348D350nativemap.south west,anchor=north west]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D351_E357_closeup_native_map_cropped.png}};
+    %
+    % Label
+    \node(D351E357label) [above, inner sep=5pt, align=center] at (D351E357nativemap.north) {D351/E357 Inter-Dimer Region};
+    % D351
+    \path (D351E357nativemap.north)++(0,-0.75) coordinate (cD351);
+    \node(D351) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD351) {D351};
+    % E357
+    \path (D351E357nativemap.south)++(0,+0.75) coordinate (cE357);
+    \node(E357) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE357) {E357};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D351E357nativemap.south) {Native map at 1.5 $\sigma$};
+    %
+    \node(D351E357ybmap)[inner sep=0pt,right=1cm of D351E357nativemap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D351_E357_closeup_yb_map_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D351E357ybmap.south) {Yb-complexed map at 1.5 $\sigma$};
+    %
+    \node(D351E357anommap)[inner sep=0pt,right=1cm of D351E357ybmap]{\includegraphics[width=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D351_E357_closeup_yb_map_anom_cropped.png}};
+    %
+    \node(belowcaption)[below, inner sep=5pt] at (D351E357anommap.south) {Yb-complexed anomalous map at 3.0 $\sigma$};
+    %
+    %
+    %
+    %
+    \node(captionA)[inner sep=5pt,above left] at (D144nativemap.north west) {\normalsize\textbf{\figurepanela}};
+    \node(captionB)[inner sep=5pt,above left] at (E184nativemap.north west) {\normalsize\textbf{\figurepanelb}};
+    \node(captionC)[inner sep=5pt,above left] at (D348D350nativemap.north west) {\normalsize\textbf{\figurepanelc}};
+    \node(captionD)[inner sep=5pt,above left] at (D351E357nativemap.north west) {\normalsize\textbf{\figurepaneld}};
+\end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Electron density and Anomalous Difference Maps for Yb-Binding Sites at the Cardiac Calsequestrin Filament's Inter-Dimer Interface]{\textbf{Electron density and anomalous difference maps for Yb-binding Sites at the cardiac calsequestrin filament's \textit{inter}-dimer interface; related to \maintextfigure~\ref{fig:inter_dimer_interface}.} \figurepanelcaptiona Electron density and anomalous difference maps for the D144-E174 region of interest. \figurepanelcaptionb Electron density and anomalous difference maps for the D50-K180-E184-E187 region of interest. \figurepanelcaptionc Electron density and anomalous difference maps for the D348-D350 region of interest. \figurepanelcaptiond Electron density and anomalous difference maps for the D351-E357 region of interest.}
+\label{fig:inter_dimer_interface_maps}
+\end{conditionalcaption}
+\end{figure}
+
+
+
+

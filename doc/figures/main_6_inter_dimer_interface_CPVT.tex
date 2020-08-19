@@ -1,0 +1,106 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:inter_dimer_interface_cpvt}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        \node(overview1)[inner sep=0pt,below right]{\includegraphics[width=\linewidth,height=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_overview_CPVT_cropped.png}};
+        %
+        \path (overview1.north)++(-1,-2.5) coordinate (S173SW1);            
+        \path (overview1.north)++(-0.375,-1.75) coordinate (S173NE1);
+        \node(S173one) [fit={(S173SW1) (S173NE1)}, dashedrectanglefit] {};
+        %
+        \path (overview1.north)++(0.375,-2.5) coordinate (S173SW2);           
+        \path (overview1.north)++(1,-1.75) coordinate (S173NE2);
+        \node(S173two) [fit={(S173SW2) (S173NE2)}, dashedrectanglefit] {};
+        %
+        %
+        \path (overview1.north)++(-0.5,-1.75) coordinate (K180SW1);            
+        \path (overview1.north)++(0,-1.125) coordinate (K180NE1);
+        \node(K180one) [fit={(K180SW1) (K180NE1)}, dashedrectanglefit] {};
+        %
+        \path (overview1.north)++(0,-1.75) coordinate (K180SW2);           
+        \path (overview1.north)++(0.5,-1.125) coordinate (K180NE2);
+        \node(K180two) [fit={(K180SW2) (K180NE2)}, dashedrectanglefit] {};
+        %
+        \path (overview1.west)++(0,1) coordinate (chainA);           
+        \path (overview1.north)++(-2.4,-0.5) coordinate (chainB);
+        \path (overview1.north)++(2.4,-0.5) coordinate (chainAprime);
+        \path (overview1.east)++(-0.25,1) coordinate (chainBprime);
+
+        \node(chainAlabel) [above, inner sep=2pt, align=center] at (chainA) {Chain A};
+        \node(chainBlabel) [above, inner sep=2pt, align=center] at (chainB) {Chain B};
+        \node(chainAprimelabel) [above, inner sep=2pt, align=center] at (chainAprime) {Chain A'};
+        \node(chainBprimelabel) [above, inner sep=2pt, align=center] at (chainBprime) {Chain B'};
+        %
+        %
+        %
+        \node(closeup180)[inner sep=0pt,below right,right=1.5cm of overview1]{\includegraphics[width=\linewidth,height=1.5in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_K180_closeup_yb_cropped.png}};
+        \node(closeup180rect) [fit=(closeup180), dashedrectanglefit] {};
+        %
+        \node(K180_ROI_label) [above, inner sep=5pt, align=center] at (closeup180.north) {D50/K180/E184/E187 Inter-Dimer Region};
+        %
+        \node(K180Rotator) at ([yshift=-1cm]K180_ROI_label.north) {\AxisRotator};
+        \draw[line width=0.1ex] (K180Rotator.west) -- (K180Rotator.east);
+        \node(K180RotatorLabel)[inner sep=4pt,right] at (K180Rotator.east) {\ang{60}};  
+        %
+        % E184 
+        \path (closeup180.east)++(-1,-1.4)  coordinate (cE184);
+        \node(E184_label) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE184) {E184};
+        % E187 
+        \path (closeup180.east)++(-0.4,0.4) coordinate (cE187);
+        \node(E187_label) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE187) {E187};
+        % D50
+        \path (closeup180.west)++(0.75,0.4) coordinate (cD50);
+        \node(D50_label) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD50) {D50};
+        % K180 
+        \path (closeup180.west)++(2.2,0.3) coordinate (cK180);
+        \node(K180) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK180) {K180};
+        %
+        \path[dashed edge] (K180two.north east) edge (closeup180rect.north west);
+        %
+        %
+        %
+        \node(closeup173)[inner sep=0pt,below=3.5cm of overview1.south west,anchor=west]{\includegraphics[width=\linewidth,height=1.5in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_S173_closeup_cropped.png}};
+        \node(closeup173rect) [fit=(closeup173), dashedrectanglefit] {};
+        %
+        \node(S173_ROI_label) [above, inner sep=5pt, align=center] at (closeup173.north) {K87/S173/D325 Inter-Dimer Region};
+        % S173
+        \path (closeup173.west)++(1.5,0.25) coordinate (cS173);
+        \node(S173) [above, inner sep=0pt, font=\small, font=\bfseries] at (cS173) {S173};
+        % D325
+        \path (closeup173.south)++(-1.25,+0.25) coordinate (cD325);
+        \node(D325) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD325) {D325}; 
+        % D319
+        \path (closeup173.south)++(2,1) coordinate (cD319);
+        \node(D319) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD319) {D319}; 
+        % K87
+        \path (closeup173.east)++(-1.25,0.5) coordinate (cK87);
+        \node(K87) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK87) {K87}; 
+        % K172
+        \path (closeup173.west)++(2.5,-0.4) coordinate (cK172);
+        \node(K87) [above, inner sep=0pt, opacity=.4, font=\footnotesize, font=\bfseries] at (cK172) {K172}; 
+        %
+        \path[dashed edge] (S173one.south west) edge (closeup173rect.north west);
+        %
+        %
+        %
+        \node(D325A_plot)[inner sep=0pt,right=1.5cm of closeup173.east,anchor=west]{\input{../results/assembly_kinetics/output/kinetics_interface_mutation_D325A_D325I_85mM_K.pgf}};
+        %
+%        \node(closeuprectD325Aplot) [fit=(D325A_plot), dashedrectanglefit] {};
+        %
+%        \path[dashed edge] (closeup173rect.east) edge (closeuprectD325Aplot.west);
+        %
+        \node(captionA)[inner sep=10pt,above left] at (overview1.north west) {\normalsize\textbf{\figurepanela}};
+        %
+        \node(captionB)[inner sep=10pt,above left] at ([xshift=9cm]overview1.north west) {\normalsize\textbf{\figurepanelb}};
+        %
+        \node(captionC)[inner sep=10pt,above left] at (closeup173.north west) {\normalsize\textbf{\figurepanelc}};
+        %
+        \node(captionD)[inner sep=10pt,above left] at ([xshift=7cm]closeup173.north west) {\normalsize\textbf{\figurepaneld}};
+    \end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[The S173 and K180 residues are at the cardiac calsequestrin inter-dimer interface]{\textbf{\headingsubsectionseven}. \figurepanelcaptiona Inter-dimer interface residues in the vicinity of S173 and K180 shown as spheres. \figurepanelcaptionb Closeup of K180 with the adjacent E184 and E187 cation binding site, with the coordinated Yb atom shown as a sphere. \figurepanelcaptionc Hydrophilic pocket at S173. In this pocket, 3 different thioredoxin domains from 3 distinct chains interact (K87, S173, D325). K172 (backgrounded) is the most proximal of several residues that shield the pocket from bulk solvent. \figurepanelcaptiond Turbidity assay with the D325A and D325I mutations. All graphed values are mean of 3 technical replicates ± SD.}
+\label{fig:inter_dimer_interface_cpvt}
+\end{conditionalcaption}
+\end{figure}

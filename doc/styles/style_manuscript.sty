@@ -1,36 +1,29 @@
 \ProvidesPackage{style_manuscript}
 
-% My generic preprint style. Could be converted to a cls.
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 
 \RequirePackage{etoolbox}
 \RequirePackage{regexpatch}
 
-% showframe if you want to see margins.
+% Use showframe if you want to see margins.
 \usepackage[top=1.0in,left=1.0in,footskip=1.0in,marginparwidth=1.0in]{geometry}
+
+% Sometimes people ask for raggedright text, but it's a nightmare trying to get raggedright to play nicely with figures. Prefer justified text, which looks nicer anyway.
+% \usepackage[document]{ragged2e}
+% Needed to preserve paragraph indentation with ragged right. https://tex.stackexchange.com/questions/185970/raggedright-removes-paragraph-indentation
+% Have to revert to justification for texshade and figure captions.
 
 % Paragraphs and fonts
 % double space (but single space floats and captions)
 % https://tex.stackexchange.com/questions/23957/how-to-set-font-to-arial-throughout-the-entire-document
 \usepackage{setspace}
-\doublespacing
-
-\RequirePackage[T1]{fontenc}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage{stix}
-\RequirePackage[default]{opensans}
-\renewcommand{\ttdefault}{lmtt}
+% Prefer to do this section-by-section
 
 \RequirePackage{microtype}
 
-% Below, some code taken from the eLife cls to fixup bibliographies and make citations pretty.
-
-% Trueno/Open Sans requires a bigger "single" linespread.
-% \linespread{1.2}
-% \if@onehalfspacing\linespread{1.5}\fi
-% \if@doublespacing\linespread{2.0}\fi
-
 \usepackage[dvipsnames]{xcolor}
-%\RequirePackage{graphicx,xcolor}
 \RequirePackage{graphicx}
 
 \newcommand\hl[1]{\colorbox{yellow}{\textcolor{red}{#1}}}
@@ -40,41 +33,6 @@
   {}
 
 \RequirePackage{authblk}
-
-\RequirePackage{natbib}
-\renewcommand{\bibfont}{\small}
-\bibliographystyle{apalike}
-% Make author in citation italic
-\renewcommand{\NAT@nmfmt}[1]{{\bfseries\itshape\color{Gray} #1}}
-
-% ...as well as the year
-\xpatchcmd{\NAT@citex}
-{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@nm}\NAT@date}}
-{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@nm}\NAT@nmfmt{\NAT@date}}}
-{}{\PackageWarning{eLife}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{\else\unskip\NAT@spacechar\NAT@hyper@{\NAT@date}}
-{\else\unskip\NAT@spacechar\NAT@hyper@{\NAT@nmfmt{\NAT@date}}}
-{}{\PackageWarning{eLife}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{\hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}\NAT@date}
-{\hyper@natlinkbreak{\NAT@nmfmt{\NAT@aysep\NAT@spacechar}}{\@citeb\@extra@b@citeb}\NAT@nmfmt{\NAT@date}}
-{}{\PackageWarning{eLife}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{\@citea\NAT@hyper@{\NAT@date}}
-{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@date}}}
-{}{\PackageWarning{eLife}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{{\@citeb\@extra@b@citeb}\NAT@date}
-{{\@citeb\@extra@b@citeb}\NAT@nmfmt{\NAT@date}}
-{}{\PackageWarning{eLife}{Failed to patch year format in citation}}
-%% There, we're finally done with patching the year in citations.
-
-
 %
 % Patches for authblk
 %

@@ -1,0 +1,17 @@
+%\afterpage{%
+\footnotesize
+\begin{longtable}[l]{ |p{7cm}|p{10cm}| }
+\caption[Oligonucleotides used in this study]{\textbf{Oligonucleotides Used in This Study}}\\ % Important: without the line break here, compilation fails.
+\hline
+\label{tab:tableoligos}
+\textbf{Oligonucleotide} & \textbf{Sequence} \\
+\hline
+\endfirsthead
+\multicolumn{2}{@{}l}{\ldots continued} \\
+\hline
+\textbf{Oligonucleotide} & \textbf{Sequence} \\
+\hline
+\endhead
+\input{../results/materials_and_methods/output/table_oligos.tex}
+\end{longtable}
+%}%

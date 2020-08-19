@@ -9,16 +9,16 @@ side_chain_helper("D348_D350")
 show spheres, interface_yb
 
 # 348s can be bidentate, although sometimes aren't, depending on which structure we are refining.
-distance (tetramer_yb and (chain A) and i. 348 and n;OD1), (tetramer_yb and (chain Y) and interface_yb)
-distance (tetramer_yb and (chain A) and i. 348 and n;OD2), (tetramer_yb and (chain Y) and interface_yb)
+distance (tetramer_yb and (chain A) and i. 348 and n;OD1), (tetramer_yb and interface_yb)
+distance (tetramer_yb and (chain A) and i. 348 and n;OD2), (tetramer_yb and interface_yb)
 
-distance (tetramer_yb and (chain D) and i. 348 and n;OD1), (tetramer_yb and (chain Y) and interface_yb)
+distance (tetramer_yb and (chain D) and i. 348 and n;OD1), (tetramer_yb and interface_yb)
 # This one not so much in the yb structure.
-# distance (tetramer_yb and (chain D) and i. 348 and n;OD2), (tetramer_yb and (chain Y) and i. 12)
+# distance (tetramer_yb and (chain D) and i. 348 and n;OD2), (tetramer_yb and i. 12)
 
-distance (tetramer_yb and (chain A) and i. 350 and n;OD2), (tetramer_yb and (chain Y) and interface_yb)
+distance (tetramer_yb and (chain A) and i. 350 and n;OD2), (tetramer_yb and interface_yb)
 
-distance (tetramer_yb and (chain D) and i. 350 and n;OD2), (tetramer_yb and (chain Y) and interface_yb)
+distance (tetramer_yb and (chain D) and i. 350 and n;OD2), (tetramer_yb and interface_yb)
 
 hide labels
 

@@ -50,5 +50,6 @@ crop ./output/tetramer_interface_overview_CPVT_90.png
 
 crop ./output/tetramer_interface_S173_closeup.png
 crop ./output/tetramer_interface_S173_closeup_native_map.png
+
 crop ./output/tetramer_interface_K180_closeup_yb.png
 

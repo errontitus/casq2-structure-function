@@ -12,17 +12,17 @@ side_chain_helper("D351_E357")
 show spheres, interface_yb
 
 # All are bidentate
-distance (tetramer_yb and (chain A) and i. 351 and n;OD1), (tetramer_yb and (chain Y) and interface_yb_A)
-distance (tetramer_yb and (chain A) and i. 351 and n;OD2), (tetramer_yb and (chain Y) and interface_yb_A)
+distance (tetramer_yb and (chain A) and i. 351 and n;OD1), (tetramer_yb and interface_yb_A)
+distance (tetramer_yb and (chain A) and i. 351 and n;OD2), (tetramer_yb and interface_yb_A)
 
-distance (tetramer_yb and (chain A) and i. 357 and n;OE1), (tetramer_yb and (chain Y) and interface_yb_A)
-distance (tetramer_yb and (chain A) and i. 357 and n;OE2), (tetramer_yb and (chain Y) and interface_yb_A)
+distance (tetramer_yb and (chain A) and i. 357 and n;OE1), (tetramer_yb and interface_yb_A)
+distance (tetramer_yb and (chain A) and i. 357 and n;OE2), (tetramer_yb and interface_yb_A)
 
-distance (tetramer_yb and (chain D) and i. 351 and n;OD1), (tetramer_yb and (chain Y) and interface_yb_D)
-distance (tetramer_yb and (chain D) and i. 351 and n;OD2), (tetramer_yb and (chain Y) and interface_yb_D)
+distance (tetramer_yb and (chain D) and i. 351 and n;OD1), (tetramer_yb and interface_yb_D)
+distance (tetramer_yb and (chain D) and i. 351 and n;OD2), (tetramer_yb and interface_yb_D)
 
-distance (tetramer_yb and (chain D) and i. 357 and n;OE1), (tetramer_yb and (chain Y) and interface_yb_D)
-distance (tetramer_yb and (chain D) and i. 357 and n;OE2), (tetramer_yb and (chain Y) and interface_yb_D)
+distance (tetramer_yb and (chain D) and i. 357 and n;OE1), (tetramer_yb and interface_yb_D)
+distance (tetramer_yb and (chain D) and i. 357 and n;OE2), (tetramer_yb and interface_yb_D)
 
 hide labels
 

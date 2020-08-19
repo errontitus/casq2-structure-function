@@ -16,21 +16,21 @@
                            CC*                         0.998 (0.873)
 Reflections used in refinement                          29773 (2921)
    Reflections used for R-free                            1441 (147)
-                        R-work                       0.2987 (0.3637)
-                        R-free                       0.3491 (0.4158)
-                      CC(work)                         0.894 (0.766)
-                      CC(free)                         0.856 (0.574)
-  Number of non-hydrogen atoms                                 21809
+                        R-work                       0.2962 (0.3624)
+                        R-free                       0.3509 (0.4183)
+                      CC(work)                         0.891 (0.768)
+                      CC(free)                         0.821 (0.580)
+  Number of non-hydrogen atoms                                 21808
                 macromolecules                                 21720
-                       ligands                                    89
+                       ligands                                    88
               Protein residues                                  2632
-                    RMS(bonds)                                 0.005
-                   RMS(angles)                                  0.85
+                    RMS(bonds)                                 0.008
+                   RMS(angles)                                  1.23
       Ramachandran favored (%)                                 95.90
       Ramachandran allowed (%)                                  4.10
      Ramachandran outliers (%)                                  0.00
           Rotamer outliers (%)                                  0.00
-                    Clashscore                                  8.18
-              Average B-factor                                 98.65
-                macromolecules                                 98.51
-                       ligands                                133.64
+                    Clashscore                                  8.34
+              Average B-factor                                 98.76
+                macromolecules                                 98.59
+                       ligands                                138.64

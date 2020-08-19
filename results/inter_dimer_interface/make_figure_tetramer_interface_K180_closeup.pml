@@ -71,15 +71,15 @@ distance (tetramer_yb and (chain C) and i. 180 and n;NZ), (tetramer_yb and (chai
 hide dashes
 
 # E184 and E187 to Yb 
-distance (tetramer_yb and (chain B) and i. 184 and n;OE1), (tetramer_yb and (chain Y) and 184_yb_B)
-distance (tetramer_yb and (chain B) and i. 184 and n;OE2), (tetramer_yb and (chain Y) and 184_yb_B)
-distance (tetramer_yb and (chain B) and i. 187 and n;OE1), (tetramer_yb and (chain Y) and 184_yb_B)
-distance (tetramer_yb and (chain B) and i. 187 and n;OE2), (tetramer_yb and (chain Y) and 184_yb_B)
+distance (tetramer_yb and (chain B) and i. 184 and n;OE1), (tetramer_yb and 184_yb_B)
+distance (tetramer_yb and (chain B) and i. 184 and n;OE2), (tetramer_yb and 184_yb_B)
+distance (tetramer_yb and (chain B) and i. 187 and n;OE1), (tetramer_yb and 184_yb_B)
+distance (tetramer_yb and (chain B) and i. 187 and n;OE2), (tetramer_yb and 184_yb_B)
 # Other side.
-distance (tetramer_yb and (chain C) and i. 184 and n;OE1), (tetramer_yb and (chain Y) and 184_yb_C)
-distance (tetramer_yb and (chain C) and i. 184 and n;OE2), (tetramer_yb and (chain Y) and 184_yb_C)
-distance (tetramer_yb and (chain C) and i. 187 and n;OE1), (tetramer_yb and (chain Y) and 184_yb_C)
-distance (tetramer_yb and (chain C) and i. 187 and n;OE2), (tetramer_yb and (chain Y) and 184_yb_C)
+distance (tetramer_yb and (chain C) and i. 184 and n;OE1), (tetramer_yb and 184_yb_C)
+distance (tetramer_yb and (chain C) and i. 184 and n;OE2), (tetramer_yb and 184_yb_C)
+distance (tetramer_yb and (chain C) and i. 187 and n;OE1), (tetramer_yb and 184_yb_C)
+distance (tetramer_yb and (chain C) and i. 187 and n;OE2), (tetramer_yb and 184_yb_C)
 
 hide labels
 

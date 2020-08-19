@@ -134,7 +134,7 @@ def chainC_color(theme_id=1):
 def chainD_color(theme_id=1):
     if theme_id == 1:
 #        return chainB_color(1)
-        return "yelloworange"
+        return "gold"
     if theme_id == 2:
         return chainB_color(2)
     if theme_id == 3:
@@ -142,11 +142,14 @@ def chainD_color(theme_id=1):
 
 def domain_color(domain_id):
     if domain_id == 1:
-        return "violetpurple"
+        return "purple"
     if domain_id == 2:
-        return "cyan"  
+        return "greencyan"  
     if domain_id == 3:
-        return "yellow"    
+        return "slate"    
+
+def default_stick_transparency():
+    return 0.5
 
 def default_cartoon_transparency():
     return 0.5

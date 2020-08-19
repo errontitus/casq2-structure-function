@@ -55,5 +55,3 @@ clustalo -i ./output/pdb_interface_comparison_dimer.fasta -o ./output/pdb_interf
 clustalo -i ./output/pdb_interface_comparison_tetramer.fasta -o ./output/pdb_interface_comparison_tetramer_aligned.fasta --auto --force -v --output-order=input-order
 
 python make_interface_residue_lists_texshade.py
-
-# python make_interface_residue_lists_texshade_dimer.py

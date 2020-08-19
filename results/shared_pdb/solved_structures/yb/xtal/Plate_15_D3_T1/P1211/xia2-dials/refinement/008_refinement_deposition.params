@@ -37,7 +37,7 @@ refinement.refine.anomalous_scatterers {
 }
 
 refinement.target_weights {
-  wxc_scale = 0.05
+  wxc_scale = 0.01
 }
 
 refinement.mask {

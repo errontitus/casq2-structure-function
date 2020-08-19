@@ -1,0 +1,172 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:inter_dimer_interface}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+    %
+    %
+    % Overview Yb with cutaway
+    % at (current page.north)
+    \node(overview)[inner sep=0pt,below right] {\includegraphics[width=\linewidth,height=2.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_overview_yb_cropped.png}};
+    %
+    \path (overview.north)++(-0.4,-3.5) coordinate (ybD144SW);
+    \path (overview.north)++(0.4,-3) coordinate (ybD144NE);
+    \node(ybD144) [fit={(ybD144SW) (ybD144NE)}, dashedrectanglefit] {};
+    %
+    \path (overview.north)++(-0.4,-2.4) coordinate (ybE184SW);
+    \path (overview.north)++(0.4,-1.9) coordinate (ybE184NE);
+    \node(ybE184) [fit={(ybE184SW) (ybE184NE)}, dashedrectanglefit] {};
+    %
+    \path (overview.north)++(-0.4,-4.6) coordinate (ybD348SW);            
+    \path (overview.north)++(0.4,-4.1) coordinate (ybD348NE);
+    \node(ybD348) [fit={(ybD348SW) (ybD348NE)}, dashedrectanglefit] {};    
+    %
+    \path (overview.south)++(-0.5,1.25) coordinate (ybD351SW);            
+    \path (overview.south)++(0.5,1.75) coordinate (ybD351NE);
+    \node(ybD351) [fit={(ybD351SW) (ybD351NE)}, dashedrectanglefit] {};
+    %
+    %
+    \path (overview.west)++(4.5,0.65) coordinate (cavityedge);
+    \path (overview.west)++(-0.5,2.25) coordinate (cSolventCavityLabel);
+    \node(solventcavitylabel) [above, inner sep=3pt, align=center, font=\footnotesize] at (cSolventCavityLabel) {Inter-Dimer\\Solvent Cavity};
+    \path[-,thick] (cSolventCavityLabel.east) edge (cavityedge.south);
+
+    \path (overview.west)++(0.25,1) coordinate (chainA);            
+    \path (overview.north)++(-2.75,-0.5) coordinate (chainB);
+    \path (overview.north)++(2.75,-0.5) coordinate (chainAprime);
+    \path (overview.east)++(-0.25,1) coordinate (chainBprime);
+
+    \node(chainAlabel) [above, inner sep=2pt, align=center] at (chainA) {Chain A};
+    \node(chainBlabel) [above, inner sep=2pt, align=center] at (chainB) {Chain B};
+    \node(chainAprimelabel) [above, inner sep=2pt, align=center] at (chainAprime) {Chain A'};
+    \node(chainBprimelabel) [above, inner sep=2pt, align=center] at (chainBprime) {Chain B'};
+    %
+    %
+    %
+    \node(D348D350)[inner sep=0pt,below=0.5cm of overview]{\includegraphics[width=\linewidth,height=1.5in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D348_D350_closeup_yb_cropped.png}};
+    %
+    \node(closeuprectD348D350) [fit=(D348D350), dashedrectanglefit] {};
+    % Label
+    \node(D348D350label) [above, inner sep=5pt, align=center] at (D348D350.north) {D348/D350 Inter-Dimer Region};
+    %
+    \node(D348D350Rotator) at ([yshift=0.35cm]D348D350label.north) {\AxisRotator};
+    \draw[line width=0.1ex] (D348D350Rotator.west) -- (D348D350Rotator.east);
+    \node(D348D350RotatorLabel)[inner sep=4pt,right] at (D348D350Rotator.east) {\ang{90}};  
+    % D348_B'
+    \path (D348D350.north)++(1.75,-1) coordinate (cD348chainD);
+    \node(D348) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD348chainD) {D348};
+    % D348_A
+    \path (D348D350.south)++(-2,+0.75) coordinate (cD348chainA);
+    \node(D348chainA) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD348chainA) {D348};
+    %
+    % D350_B'
+    \path (D348D350.south)++(2,+0.75) coordinate (cD350chainD);
+    \node(D350) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD350chainD) {D350};
+    % D350_A
+    \path (D348D350.north)++(-2,-1) coordinate (cD350chainA);
+    \node(D350chainA) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD350chainA) {D350};
+    %
+    %
+    %
+    %        \path (overview.west)++(-3,-0.25) coordinate (anchor_D144E174);  %
+    \node(D144E174)[inner sep=0pt,left=3.5cm of D348D350.south]{\includegraphics[width=\linewidth,height=1.75in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D144_E174_closeup_yb_cropped.png}};
+    %
+    % rect
+    \node(closeuprectD144E174) [fit=(D144E174), dashedrectanglefit] {};
+    % label        
+    \node(D144E174label) [above, inner sep=5pt, align=center] at (D144E174.north) {D144/E174 Inter-Dimer Region};
+    %
+    \node(D144E174Rotator) at ([yshift=0.35cm]D144E174label.north) {\AxisRotator};
+    \draw[line width=0.1ex] (D144E174Rotator.west) -- (D144E174Rotator.east);
+    \node(D144E174RotatorLabel)[inner sep=4pt,right] at (D144E174Rotator.east) {\ang{90}};  
+    % D144 
+    \path (D144E174.west)++(0.5,1.75)  coordinate (cD144_B);
+    \path (D144E174.east)++(-0.5,-2)  coordinate (cD144_Aprime);
+    \node(D144_B) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD144_B) {D144};
+    \node(D144_Aprime) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD144_Aprime) {D144};
+    % 174 
+    \path (D144E174.south west)++(0.1,0.4) coordinate (cE174_B);
+    \path (D144E174.north east)++(-0.1,-0.6) coordinate (cE174_Aprime);
+    \node(E174_B) [above right, inner sep=0pt, font=\small, font=\bfseries] at (cE174_B) {E174};   
+    \node(E174_Aprime) [below left, inner sep=0pt, font=\small, font=\bfseries] at (cE174_Aprime) {E174};   
+    %
+    %
+    %
+    \node(D351E357)[inner sep=0pt,below=3cm of D348D350.south,anchor=center]{\includegraphics[width=\linewidth,height=1.5in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_D351_E357_closeup_yb_cropped.png}};
+    %
+    \node(closeuprectD351E357) [fit=(D351E357), dashedrectanglefit] {};
+    % Label
+    \node(D351E357label) [above, inner sep=5pt, align=center] at (D351E357.north) {D351/E357 Inter-Dimer Region};
+    % D351
+    \path (D351E357.north)++(0,-1) coordinate (cD351);
+    \node(D351) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD351) {D351};
+    % E357
+    \path (D351E357.south)++(0,+1) coordinate (cE357);
+    \node(E357) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE357) {E357};
+    %
+    \path (closeuprectD351E357.north east)++(0,5) coordinate (ybD351_waypoint);
+    \path[dashed edge] (ybD348.north west) edge (closeuprectD348D350.north west);
+    \path[dashed edge] (ybD351.north east) edge (ybD351_waypoint);
+    \path[dashed edge] (ybD351_waypoint) edge (closeuprectD351E357.north east);
+    %
+    %
+    \node(E184E187)[inner sep=0pt,right=3.5cm of D351E357.north]{\includegraphics[width=\linewidth,height=3.25in,keepaspectratio]{../results/inter_dimer_interface/output/tetramer_interface_E184_E187_closeup_yb_cropped.png}};
+    % rect
+    \node(closeuprectE184E187) [fit=(E184E187), dashedrectanglefit] {};
+    % label        
+    \node(E184E187label) [above, inner sep=5pt, align=center] at (E184E187.north) {D50/K180/E184/E187 Inter-Dimer Region};
+    % rotator
+    % \node(E184E187Rotator) at (E184E187label.north) {\AxisRotator[rotate=90]};
+    \node(E184E187Rotator) at ([yshift=0.35cm]E184E187label.north) {\AxisRotator};
+    \draw[line width=0.1ex] (E184E187Rotator.west) -- (E184E187Rotator.east);
+    \node(E184E187RotatorLabel)[inner sep=4pt,right] at (E184E187Rotator.east) {\ang{90}};  
+    % E184 
+    \path (E184E187.west)++(1,1)  coordinate (cE184);
+    \node(E184) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE184) {E184};
+    % E187 
+    \path (E184E187.north)++(-1,-0.4) coordinate (cE187);
+    \node(E187) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE187) {E187};        
+    % D50
+    \path (E184E187.east)++(-1,1) coordinate (cD50);
+    \node(D50) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD50) {D50};
+    % K180 
+    \path (E184E187.north)++(1,-0.4) coordinate (cK180);
+    \node(K180) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK180) {K180};
+    %
+    % Other side.
+    %
+    % E184 
+    \path (E184E187.east)++(-1,-1.4)  coordinate (cE184_low);
+    \node(E184_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE184_low) {E184};
+    % E187 
+    \path (E184E187.south)++(1,0.25) coordinate (cE187_low);
+    \node(E187_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cE187_low) {E187};        
+    % D50
+    \path (E184E187.west)++(1,-1.4) coordinate (cD50_low);
+    \node(D50_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cD50_low) {D50};
+    % K180 
+    \path (E184E187.south)++(-1.5,0.25) coordinate (cK180_low);
+    \node(K180_low) [above, inner sep=0pt, font=\small, font=\bfseries] at (cK180_low) {K180};
+    %
+    %
+    \path[dashed edge] (ybD144.north west) edge (closeuprectD144E174.north west);
+    \path[dashed edge] (ybE184.north east) edge (closeuprectE184E187.north east);
+    %
+%        \path (D144E174.west)++(-0.5,0) coordinate (D144A_E174A_plot_anchor);
+    %
+    \node(D144A_E174A_plot)[inner sep=0pt,anchor=west] at ([xshift=-0.75cm,yshift=-8cm]D144E174.west){\input{../results/assembly_kinetics/output/kinetics_interface_mutation_D144A_E174A_85mM_K.pgf}};
+    %
+    \node(E184A_E187A_plot)[inner sep=0pt,right=0.25cm of D144A_E174A_plot]{\input{../results/assembly_kinetics/output/kinetics_interface_mutation_E184A_E187A_85mM_K.pgf}};
+    %
+    \node(D50A_plot)[inner sep=0pt,right=0.25cm of E184A_E187A_plot]{\input{../results/assembly_kinetics/output/kinetics_interface_mutation_D50A_85mM_K.pgf}};
+    %
+    \node(captionB)[inner sep=10pt,above right] at (D144A_E174A_plot.north west) {\normalsize\textbf{\figurepanelb}};
+    %
+    \node(captionA)[inner sep=10pt,below right] at ([shift={(0cm,18cm)}]D144A_E174A_plot.north west) {\normalsize\textbf{\figurepanela}};
+\end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[The inter-dimer interface of cardiac calsequestrin]{\textbf{\headingsubsubsectionfive}. \figurepanelcaptiona Yb (magenta spheres) bound within the walled pocket formed by the inter-dimer interface, with closeups of ytterbium sites at D144 and E174, E184 and E187, D348 and D350, and D351 and D357. Thioredoxin domain II of chain A' (blue) is omitted to allow visualization of the interior of the solvent pocket formed by the inter-dimer interface. \figurepanelcaptionb Turbidity assays after alanine mutagenesis of putative calcium-binding and salt bridge residues. Left: D144A and E174A. Middle: E184A and E187A. Right: D50A. All graphed values are mean of 3 technical replicates ± SD.}
+\label{fig:inter_dimer_interface}
+\end{conditionalcaption}
+\end{figure}

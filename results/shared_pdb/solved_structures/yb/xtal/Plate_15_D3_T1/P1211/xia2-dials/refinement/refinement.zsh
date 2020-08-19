@@ -270,7 +270,7 @@ cp 007_refined_001_edited.pdb 008_starting_model.pdb
 phenix.refine Plate_15_D3_T1_P1211_xia2_dials_AUTOMATIC_DEFAULT_free.mtz 008_starting_model.pdb 008_refinement_deposition.params 
 
 # Start R-work = 0.3033, R-free = 0.3468
-# Final R-work = 0.2921, R-free = 0.3407
+# Final R-work = 0.2898, R-free = 0.3401
 
 # Further improvement unlikely.
 

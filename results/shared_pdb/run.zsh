@@ -17,9 +17,10 @@ cd ./cavity
 source run.zsh
 cd ..
 
-cd ./apbs
-source run.zsh
-cd ..
+# Does not work well when invoked this way.
+# cd ./apbs
+# source run.zsh
+# cd ..
 
 cd ./monomer
 source run.zsh

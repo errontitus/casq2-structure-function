@@ -5,7 +5,8 @@
 % Figures are implemented using the caption package and then laid out as tikzpictures 
 
 % https://tex.stackexchange.com/questions/225910/how-to-add-left-top-aligned-letter-to-latex-subcaption-figure
-\usepackage[font=footnotesize,labelfont=bf,justification=justified,singlelinecheck=false]{caption}
+% font=footnotesize,
+\usepackage[labelfont=bf,justification=justified,singlelinecheck=false]{caption}
 % \captionsetup{compatibility=false}
 % Left-align figure captions by default.
 %\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -119,23 +120,10 @@
 \newcommand{\figurepanelcaptiong}{\textbf{g}, }
 \newcommand{\figurepanelcaptionh}{\textbf{h}, }
 
-% varwidth container for figures.
-\newenvironment{fullpanelvar}
-    {%\begin{lrbox}{\mybox}
-    \begin{varwidth}[t][][b]{\dimexpr \linewidth-2\fboxsep-2\fboxrule\relax}%
-    }%
-    {\end{varwidth}%\end{lrbox}\fbox{\usebox{\mybox}}
-    }%
-
-% tikzpicture container for figures. Can be used inside a varwidth or on its own.
-\newenvironment{emptypanel}[1]
-    {\textbf{#1}\\
-    \tikzstyle{background grid}=[draw, black!50,step=.5cm]
-    \tikzstyle{every node}=[font=\scriptsize]
-    \begin{tikzpicture}[graphicblock/.style = {draw, anchor=west, inner sep=2}]
-    }
-    {\end{tikzpicture}
-}
+\newcommand{\maintextfigure}{Fig.}
+\newcommand{\extendeddatafigure}{Extended Data Fig.}
+\newcommand{\supplementaryfigure}{Supplementary Fig.}
+\newcommand{\supplementarytable}{Supplementary Table}
 
 \usepackage{etoolbox}
 
@@ -152,3 +140,52 @@
 % the style to all pictures.
 \tikzstyle{every picture}+=[remember picture]
 \tikzstyle{na} = [baseline=-.5ex]
+
+% Attempting to silence the horrifying stream of color warnings from TeXshade. Does not work.
+% See https://tex.stackexchange.com/questions/66958/how-do-you-suppress-specific-warnings-generated-by-pdflatex
+% \usepackage{silence}
+% \WarningFilter{xcolor}{Package xcolor Warning: Incompatible color definition}
+
+\newsavebox{\figsavebox}% Box to capture figure content
+
+\newif\ifshowfigures % conditional to hide figures or keep them in the document
+\newif\ifshowcaptions % conditional to hide figure captions or keep them in the document
+
+\NewEnviron{conditionalpanel}{%
+  \ifshowfigures
+    \begin{varwidth}[t][][b]{\dimexpr \linewidth-2\fboxsep-2\fboxrule\relax}%
+    \BODY
+    \end{varwidth}%\end{lrbox}\fbox{\usebox{\mybox}}
+  % \else
+  %   \begin{lrbox}{\figsavebox}
+  %   %    \BODY % Capture contents
+  %   \end{lrbox}    
+  \fi
+}
+
+\NewEnviron{conditionalcaption}{%
+  \ifshowcaptions
+    \BODY
+  % \else
+  % \begin{lrbox}{\figsavebox}
+  %   %    \BODY % Capture contents
+  %     \end{lrbox}    
+  \fi
+}
+
+% tikzpicture container for figures. Allows us to include a few defaults.
+\newenvironment{tikzcanvas}[1]
+    {\textbf{#1}\\
+    \tikzstyle{background grid}=[draw, black!50,step=.5cm]
+    \tikzstyle{every node}=[font=\scriptsize]
+    \begin{tikzpicture}[graphicblock/.style = {draw, anchor=west, inner sep=2}]
+    }
+    {\end{tikzpicture}
+}
+
+\newcommand{\conditionalgeometry}{%
+  \ifshowfigures
+    \newgeometry{left=0.75cm,right=0.75cm,top=0.75cm,bottom=1.0cm}
+  \fi
+}
+

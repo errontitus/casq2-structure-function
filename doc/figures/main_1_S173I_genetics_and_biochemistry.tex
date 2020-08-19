@@ -1,0 +1,34 @@
+\begin{figure}[!h]
+\centering
+%\figuretitle{Figure~\ref{fig:S173I_genetics_and_biochemistry}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        %
+        \node(pedigree)[inner sep=0pt] at (current page.north) {\includegraphics[width=\linewidth,height=2.75in,keepaspectratio]{../results/pedigree_S173I/output/pedigree_S173I_standalone.pdf}};
+        %
+        \node(captionA)[inner sep=0pt,above left] at (pedigree.north west) {\normalsize\textbf{\figurepanela}};
+        %
+        %
+        %
+        \node(S173I_plot)[inner sep=0pt,below=3.25cm of pedigree.south west,anchor=west]{\input{../results/assembly_kinetics/output/kinetics_CPVT_mutation_S173I_85mM_K.pgf}};
+        %
+        \node(captionB)[inner sep=0pt,above left] at (S173I_plot.north west) {\normalsize\textbf{\figurepanelb}};
+        %
+        %
+        %
+        \node(K180R_plot)[inner sep=0pt,right=0.75cm of S173I_plot]{\input{../results/assembly_kinetics/output/kinetics_CPVT_mutation_K180R_85mM_K.pgf}};
+        %
+        \node(captionC)[inner sep=0pt,above left] at (K180R_plot.north west) {\normalsize\textbf{\figurepanelc}};
+        %
+        %
+        %
+        \node(K180RMg_plot)[inner sep=0pt,below=3.25cm of S173I_plot.south west,anchor=west]{\input{../results/assembly_kinetics/output/kinetics_CPVT_mutations_K180R_Mg.pgf}};
+        %
+        \node(captionD)[inner sep=0pt,above left] at (K180RMg_plot.north west) {\normalsize\textbf{\figurepaneld}};
+    \end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Dominant cardiac calsequestrin disease mutations]{\textbf{\headingsubsectionone}. \figurepanelcaptiona Pedigree of a large extended family with the S173I mutation and a CPVT-like phenotype. CABG = coronary artery bypass graft; CAD = coronary artery disease; CHD = congenital heart disease; ETT = exercise treadmill test; MI = myocardial infarction; SCD = sudden cardiac death; SIDS = sudden infant death syndrome. \figurepanelcaptionb Multimerization kinetics of the S173I mutant observed using a turbidity assay after addition of \SI{1}{\milli\Molar} \ch{CaCl2} to purified protein (pH 7.4, \SI{20}{\milli\Molar} NaCl, \SI{85}{\milli\Molar} KCl). \figurepanelcaptionc Multimerization kinetics of the K180R mutant observed using a turbidity assay (same conditions as in \textbf{b}). \figurepanelcaptiond Multimerization kinetics of the K180R mutant observed using a turbidity assay (same conditions as in \figurepanelcaptionb but with \SI{2}{\milli\Molar} \ch{MgCl2} added prior to calcium). All graphed values are mean of 3 technical replicates ± SD.}
+\label{fig:S173I_genetics_and_biochemistry}
+\end{conditionalcaption}
+\end{figure}

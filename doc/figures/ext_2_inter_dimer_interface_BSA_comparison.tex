@@ -1,0 +1,117 @@
+\begin{figure}[!h]
+\centering
+\newcommand{\tetramerheight}{1.125in}
+%\figuretitle{Figure~\ref{fig:inter_dimer_interface_BSA_comparison}}
+\begin{conditionalpanel}
+    \begin{tikzcanvas}{}
+        \node(deo_native)[inner sep=0pt, below right] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_deo_native_oriented_cropped.png}};
+        %
+        \node (deo_native_table) [inner sep=10pt,anchor=north] at (deo_native.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_deo_native.tex}
+                % B, A’ & 734.0 \\
+                % A, A’ & 382.0 \\
+                % B, B’ & 381.0 \\
+                % A, B’ & 101.0
+            \end{tabular}
+        };
+        %
+        \node(6OVW_label) [above, inner sep=3pt, align=center] at (deo_native.north) {6OVW (This Study)\\Similar: 6OWW};
+        %
+        \node(1a8y)[inner sep=0pt,right=0.8cm of deo_native] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_1a8y_oriented_cropped.png}};
+        %
+        \node(1a8y_label) [above, inner sep=3pt, align=center] at (1a8y.north) {1A8Y\\Similar: 3TRP, 3TRQ, 3US3, 3V1W, 5CRD, 5KN0, 5KN3};
+        %
+        \node (1a8y_table) [inner sep=10pt,anchor=north] at (1a8y.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_1a8y.tex}
+            \end{tabular}
+        };
+        %
+        \node(1sji)[inner sep=0pt,right=0.8cm of 1a8y] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_1sji_oriented_cropped.png}};
+        %
+        \node(1sji_label) [above, inner sep=3pt, align=center] at (1sji.north) {1SJI};
+        %
+        \node (1sji_table) [inner sep=10pt,anchor=north] at (1sji.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_1sji.tex}
+            \end{tabular}
+        };
+        %
+        %
+        %
+        \node(2vaf)[inner sep=0pt,below=7cm of deo_native.west,anchor=west] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_2vaf_oriented_cropped.png}};
+        %
+        \node(2vaf_label) [above, inner sep=3pt, align=center] at (2vaf.north) {2VAF};
+        %
+        \node (2vaf_table) [inner sep=10pt,anchor=north] at (2vaf.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_2vaf.tex}
+            \end{tabular}
+        };
+        %
+        \node(3uom)[inner sep=0pt,below=7cm of 1a8y.west,anchor=west] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_3uom_oriented_cropped.png}};
+        %
+        \node(3uom_label) [above, inner sep=3pt, align=center] at (3uom.north) {3UOM};
+        %
+        \node (3uom_table) [inner sep=10pt,anchor=north] at (3uom.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_3uom.tex}
+            \end{tabular}
+        };
+        %
+        \node(5cre)[inner sep=0pt,below=7cm of 1sji.west,anchor=west] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_5cre_oriented_cropped.png}};
+        %
+        \node(5cre_label) [above, inner sep=3pt, align=center] at (5cre.north) {5CRE};
+        %
+        \node (5cre_table) [inner sep=10pt,anchor=north] at (5cre.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_5cre.tex}
+            \end{tabular}
+        };
+        %
+        %
+        %
+        \node(5crg)[inner sep=0pt,below=7cm of 2vaf.west,anchor=west] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_5crg_oriented_cropped.png}};
+        %
+        \node(5crg_label) [above, inner sep=3pt, align=center] at (5crg.north) {5CRG\\Similar: 5CRH};
+        %
+        \node (5crg_table) [inner sep=10pt,anchor=north] at (5crg.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_5crg.tex}
+            \end{tabular}
+        };
+        %
+        \node(5kn1)[inner sep=0pt,below=7cm of 3uom.west,anchor=west] {\includegraphics[width=\linewidth,height=\tetramerheight,keepaspectratio]{../results/inter_dimer_comparison/output/tetramer_5kn1_oriented_cropped.png}};
+        %
+        \node(5kn1_label) [above, inner sep=3pt, align=center] at (5kn1.north) {5KN1\\Similar: 5KN2};
+        %
+        \node (5kn1_table) [inner sep=10pt,anchor=north] at (5kn1.south) {
+            \begin{tabular}{c c}
+                Interface Chains & BSA (\AA\textsuperscript{2}) \\
+                \hline
+                \input{../results/inter_dimer_comparison/output/table_interface_comparison_tetramer_5kn1.tex}
+            \end{tabular}
+        };
+        %
+    \end{tikzcanvas}
+\end{conditionalpanel}
+\begin{conditionalcaption}
+\caption[Comparison of buried surface area (BSA) at putative dimer-dimer multimerization interfaces observed in all published calsequestrin structures]{\textbf{The \textit{inter}-dimer interface of the new candidate cardiac calsequestrin filament exhibits all-by-all contacts and greater buried surface area (BSA) compared to all other published calsequestrin structures; related to \maintextfigure~\ref{fig:filament_overview}.} For each published calsequestrin structure, the inter-dimer interface with the greatest buried surface area is shown. Residues with buried surface area at the interface are rendered as spheres. Where similar PDB codes are listed, inter-dimer interfaces are roughly isomorphous with the example structure shown, although the space group and unit cell used to determine the structure sometimes differ.} 
+\label{fig:inter_dimer_interface_BSA_comparison}
+\end{conditionalcaption}
+\end{figure}

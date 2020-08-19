@@ -14,12 +14,10 @@ hide everything
 # SO4
 distance (dimer_yb and (chain A) and i. 251 and n;NH1), (dimer_yb and SO4_251 and i. 4 and n;O2)
 distance (dimer_yb and (chain B) and i. 251 and n;NH2), (dimer_yb and SO4_251 and i. 4 and n;O3)
-distance (dimer_yb and (chain Y) and yb_310), (dimer_yb and SO4_251 and i. 4 and n;O2)
+distance (dimer_yb and yb_310), (dimer_yb and SO4_251 and i. 4 and n;O2)
 distance (dimer_yb and (chain B) and i. 276 and n;NZ), (dimer_yb and SO4_251 and i. 4 and n;O4)
 
-
-# distance (dimer_yb and (chain A) and i. 310 and n;OD1), (dimer_yb and (chain Y) and yb_310)
-distance (dimer_yb and (chain A) and i. 310 and n;OD1), (dimer_yb and (chain Y) and yb_310)
+distance (dimer_yb and (chain A) and i. 310 and n;OD1), (dimer_yb and yb_310)
 
 hide labels
 

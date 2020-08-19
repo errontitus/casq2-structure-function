@@ -34,6 +34,21 @@ set sphere_scale, 0.8, elem Yb
 cmd.set("transparency", 0.95, "new_filament")
 cmd.set("transparency", 0.7, "cavity")
 
+select_dimer_yb("dimer_het", "new_filament and polymer")
+
+# Include the ends
+select_tetramer_yb("tetramer_het", "new_filament", "new_filament")
+
+sele tetramer_het_outside, tetramer_het within 4.5 of (polymer and resi 357)
+sele tetramer_het_inside, tetramer_het and not tetramer_het_outside
+sele tetramer_het_all, tetramer_het_outside or tetramer_het_inside
+
+# Different rotation than native filament.
+rotate y, -90
+
+orient new_filament and polymer
+zoom_complete("new_filament")
+
 # Outside Yb
 sele outside_yb, (elem Yb within 4.5 of new_filament) and not (dimer_het or tetramer_het_inside)
 color green, outside_yb
