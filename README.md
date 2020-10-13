@@ -1,6 +1,8 @@
-X-ray crystallographic studies of the cardiac calsequestrin protein and its role in familial arrhythmia.
+Figures for The structure of a calsequestrin filament reveals mechanisms of familial arrhythmia (2020).
 
-See https://www.biorxiv.org/content/10.1101/672303v2.
+Nature Structural & Molecular Biology: https://doi.org/10.1038/s41594-020-0510-9
+
+Biorxiv: https://www.biorxiv.org/content/10.1101/672303v2.
 
 Notes:
 
