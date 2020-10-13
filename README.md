@@ -1,4 +1,4 @@
-Figures for The structure of a calsequestrin filament reveals mechanisms of familial arrhythmia (2020).
+The structure of a calsequestrin filament reveals mechanisms of familial arrhythmia (2020).
 
 Nature Structural & Molecular Biology: https://doi.org/10.1038/s41594-020-0510-9
 
